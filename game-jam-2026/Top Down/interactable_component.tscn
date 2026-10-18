@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bd1ygvo32gmjs"]
+
+[ext_resource type="Script" uid="uid://bnwb8nm08j6fa" path="res://Top Down/interactable_component.gd" id="1_fdde6"]
+
+[node name="InteractableComponent" type="Node2D" unique_id=287546589]
+script = ExtResource("1_fdde6")

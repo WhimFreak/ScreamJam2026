@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://beqwwoca5sjyp"]
 
 [ext_resource type="Script" uid="uid://bfp3hf2viaem0" path="res://Menus/pause_menu.gd" id="1_3flnu"]
+[ext_resource type="PackedScene" uid="uid://d4jdnqavtwhod" path="res://Top Down/player.tscn" id="2_fv5ia"]
+[ext_resource type="PackedScene" uid="uid://4qqrgafsssyi" path="res://Top Down/test_interactable.tscn" id="3_obwmc"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
 bg_color = Color(0.007843138, 0, 0, 0.20784314)
@@ -94,5 +96,11 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3flnu")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
 text = "RETURN TO MENU"
+
+[node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
+position = Vector2(272, 258)
+
+[node name="TestInteractable" parent="." unique_id=827824888 instance=ExtResource("3_obwmc")]
+position = Vector2(498, 148)
 
 [connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/ReturnButton" to="PauseMenu" method="_on_return_button_pressed"]
