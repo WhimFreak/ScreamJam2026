@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bdmp4dtbta3et"]
 
 [ext_resource type="Script" uid="uid://cwg7fxbvwh4fv" path="res://Menus/main_menu.gd" id="1_jf8mj"]
+[ext_resource type="Theme" uid="uid://dtoy06e212sb0" path="res://Resources/main_theme.tres" id="2_p3jrs"]
 
 [sub_resource type="Gradient" id="Gradient_nhx3u"]
 offsets = PackedFloat32Array(0)
@@ -9,29 +10,11 @@ colors = PackedColorArray(0.09019608, 0, 0, 1)
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
 gradient = SubResource("Gradient_nhx3u")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.539872, 0, 0, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jf8mj"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jf8mj"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.9804899, 0.023698956, 4.235506e-06, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_p3jrs"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p3jrs"]
-bg_color = Color(0.13032195, 0.12820646, 0.13665754, 1)
-border_width_left = 2
-border_width_top = 2
-border_width_right = 2
-border_width_bottom = 2
-border_color = Color(0.539872, 0, 0, 1)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_at0u2"]
 
 [node name="MainMenu" type="Control" unique_id=663416573]
 layout_mode = 3
@@ -51,68 +34,102 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = SubResource("GradientTexture2D_xrivr")
 
-[node name="TitleLabel" type="Label" parent="." unique_id=1741527425]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -332.0
-offset_top = -68.0
-offset_right = 50.0
-offset_bottom = 31.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 72
-text = "TITLE HERE"
-
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1799292985]
 layout_mode = 1
-anchors_preset = 3
-anchor_left = 1.0
-anchor_top = 1.0
-anchor_right = 1.0
+anchors_preset = 9
 anchor_bottom = 1.0
-offset_left = -320.0
-offset_top = -203.0
-offset_right = -64.0
-offset_bottom = -51.0
-grow_horizontal = 0
-grow_vertical = 0
+offset_left = 48.0
+offset_top = 41.0
+offset_right = 430.0
+offset_bottom = -47.0
+grow_vertical = 2
+theme_override_constants/separation = 8
+
+[node name="Title" type="HBoxContainer" parent="VBoxContainer" unique_id=1638144916]
+layout_mode = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/Title" unique_id=297752910]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="NOT" type="Label" parent="VBoxContainer/Title/VBoxContainer" unique_id=41917486]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "NOT"
+
+[node name="OUR" type="Label" parent="VBoxContainer/Title/VBoxContainer" unique_id=1741527425]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "OUR"
+
+[node name="FAULT" type="Label" parent="VBoxContainer/Title" unique_id=998573332]
+layout_mode = 2
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, -32)
+theme_override_font_sizes/font_size = 156
+text = "FAULT"
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=55022146]
 custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jf8mj")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p3jrs")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_p3jrs")
+size_flags_horizontal = 0
+size_flags_vertical = 10
+theme = ExtResource("2_p3jrs")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_jf8mj")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_jf8mj")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_jf8mj")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jf8mj")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_jf8mj")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jf8mj")
 text = "PLAY"
+alignment = 0
 
-[node name="OptionsButton" type="Button" parent="VBoxContainer" unique_id=464390972]
+[node name="AboutButton" type="Button" parent="VBoxContainer" unique_id=464390972]
 custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jf8mj")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p3jrs")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_p3jrs")
-text = "OPTIONS"
+size_flags_horizontal = 0
+theme = ExtResource("2_p3jrs")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p3jrs")
+text = "ABOUT"
+alignment = 0
+
+[node name="CreditsButton" type="Button" parent="VBoxContainer" unique_id=432382883]
+custom_minimum_size = Vector2(256, 48)
+layout_mode = 2
+size_flags_horizontal = 0
+theme = ExtResource("2_p3jrs")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_p3jrs")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_p3jrs")
+text = "CREDITS"
+alignment = 0
 
 [node name="QuitButton" type="Button" parent="VBoxContainer" unique_id=180992902]
 custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
-theme_override_font_sizes/font_size = 24
-theme_override_styles/normal = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/pressed = SubResource("StyleBoxFlat_xrivr")
-theme_override_styles/hover = SubResource("StyleBoxFlat_jf8mj")
-theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_p3jrs")
-theme_override_styles/disabled = SubResource("StyleBoxFlat_p3jrs")
+size_flags_horizontal = 0
+theme = ExtResource("2_p3jrs")
+theme_override_font_sizes/font_size = 48
+theme_override_styles/normal = SubResource("StyleBoxEmpty_at0u2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_at0u2")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_at0u2")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_at0u2")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_at0u2")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_at0u2")
 text = "QUIT"
+alignment = 0
 
 [connection signal="pressed" from="VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="VBoxContainer/QuitButton" to="." method="_on_quit_button_pressed"]
