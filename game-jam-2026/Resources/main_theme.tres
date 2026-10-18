@@ -1,8 +1,11 @@
 [gd_resource type="Theme" format=3 uid="uid://dtoy06e212sb0"]
 
+[ext_resource type="FontFile" uid="uid://dnv45ss03g80c" path="res://Assets/Fonts/Satisfy-Regular.ttf" id="1_rpoj5"]
+
 [resource]
 Button/colors/font_color = Color(1, 1, 1, 1)
 Button/colors/font_focus_color = Color(1, 1, 1, 1)
 Button/colors/font_hover_color = Color(1, 0.88235295, 0.74509805, 1)
 Button/colors/font_hover_pressed_color = Color(1, 1, 1, 1)
 Button/colors/font_pressed_color = Color(1, 1, 1, 1)
+Button/fonts/font = ExtResource("1_rpoj5")
