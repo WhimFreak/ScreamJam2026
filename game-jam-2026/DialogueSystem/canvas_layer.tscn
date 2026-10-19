@@ -10,6 +10,7 @@
 [sub_resource type="Resource" id="Resource_ktsms"]
 script = ExtResource("3_qm6hb")
 text = "Yes"
+target_line_idx = 1
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_2t2me"]
@@ -20,7 +21,18 @@ metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 [sub_resource type="Resource" id="Resource_vn4vu"]
 script = ExtResource("2_r44pi")
 choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_ktsms"), SubResource("Resource_2t2me")])
-text = "Hello! cdhibvsinvosbuvbsinv"
+text = "Hello! "
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_iswho"]
+script = ExtResource("3_qm6hb")
+text = "continue"
+metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
+
+[sub_resource type="Resource" id="Resource_h5v0o"]
+script = ExtResource("2_r44pi")
+choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_iswho")])
+text = "continue?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t0g4"]
@@ -35,7 +47,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4gve0")
-dialogue_items = Array[ExtResource("2_r44pi")]([SubResource("Resource_vn4vu")])
+dialogue_items = Array[ExtResource("2_r44pi")]([SubResource("Resource_vn4vu"), SubResource("Resource_h5v0o")])
 
 [node name="Portrait" type="TextureRect" parent="DialogueUI" unique_id=55594273]
 unique_name_in_owner = true
@@ -49,10 +61,10 @@ grow_vertical = 2
 [node name="DialoguePanel" type="PanelContainer" parent="DialogueUI" unique_id=1621811198]
 layout_mode = 1
 anchors_preset = -1
-anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = 58.0
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("2_ssx1n")
@@ -80,13 +92,9 @@ layout_mode = 2
 size_flags_horizontal = 3
 text = "yes"
 
-[node name="Choice2" type="Button" parent="DialogueUI/DialoguePanel/DialogueContent/ChoicesBox" unique_id=823453214]
-layout_mode = 2
-size_flags_horizontal = 3
-text = "Yes"
-
 [node name="DialogueVoicePlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=2063617730]
 unique_name_in_owner = true
 stream = ExtResource("5_yyecf")
 
 [node name="SoundEffectPlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=1671635211]
+unique_name_in_owner = true
