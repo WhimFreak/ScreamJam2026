@@ -32,7 +32,6 @@ metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 [sub_resource type="Resource" id="Resource_h5v0o"]
 script = ExtResource("2_r44pi")
 choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_iswho")])
-delay_before_next = 2.0
 text = "continue?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
