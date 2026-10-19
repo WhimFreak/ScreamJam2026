@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://4qqrgafsssyi"]
+
+[ext_resource type="Script" uid="uid://c8y0np6kep2wk" path="res://Top Down/test_interactable.gd" id="1_e6gw8"]
+[ext_resource type="Texture2D" uid="uid://wtaho0tp23wl" path="res://Assets/Placeholders/tv.png" id="1_fuv6p"]
+[ext_resource type="Texture2D" uid="uid://c8oykmnoxpg07" path="res://Assets/Placeholders/tv_forecast.png" id="2_e6gw8"]
+[ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="3_kxh7f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(75, 21)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 67.0
+
+[node name="TestInteractable" type="StaticBody2D" unique_id=827824888]
+script = ExtResource("1_e6gw8")
+
+[node name="Tv" type="Sprite2D" parent="." unique_id=1604935844]
+scale = Vector2(3, 3)
+texture = ExtResource("1_fuv6p")
+
+[node name="TvForecast" type="Sprite2D" parent="." unique_id=1623404734]
+visible = false
+position = Vector2(0, -15)
+scale = Vector2(3, 3)
+texture = ExtResource("2_e6gw8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1373527575]
+position = Vector2(-0.5, 19.5)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="InteractableComponent" parent="." unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("3_kxh7f")]
+area_2d = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="InteractableComponent" unique_id=267507256]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent/Area2D" unique_id=1659140203]
+shape = SubResource("CircleShape2D_xrivr")
+
+[connection signal="player_interacted" from="InteractableComponent" to="." method="_on_interactable_component_player_interacted"]

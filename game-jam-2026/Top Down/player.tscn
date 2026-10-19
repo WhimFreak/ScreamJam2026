@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://d4jdnqavtwhod"]
+
+[ext_resource type="Script" uid="uid://b1aobv0og76eb" path="res://Top Down/player.gd" id="1_mb655"]
+[ext_resource type="Texture2D" uid="uid://j662l5a1p20m" path="res://Assets/Placeholders/PlaceholderPlayer1.png" id="1_qf6oi"]
+[ext_resource type="Texture2D" uid="uid://mr7yuxwicrcx" path="res://Assets/Placeholders/PlaceholderPlayer2.png" id="2_mb655"]
+[ext_resource type="Texture2D" uid="uid://c7nqopcrcuxwt" path="res://Assets/Placeholders/PlaceholderPlayer3.png" id="3_7fve4"]
+[ext_resource type="FontFile" uid="uid://m5ud83a43cit" path="res://Assets/Fonts/CaacupeOne-Regular.ttf" id="5_7fve4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_qf6oi")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mb655")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qf6oi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_7fve4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_qf6oi")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 4.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
+size = Vector2(27, 54.75)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 84.00595
+
+[node name="Player" type="CharacterBody2D" unique_id=688360018]
+script = ExtResource("1_mb655")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=616338019]
+position = Vector2(-5, -11)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_xrivr")
+animation = &"walk"
+frame_progress = 0.65344715
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837843684]
+position = Vector2(0, 26.375)
+shape = SubResource("RectangleShape2D_xrivr")
+
+[node name="InteractionRange" type="Area2D" parent="." unique_id=1403771244]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange" unique_id=777809344]
+shape = SubResource("CircleShape2D_xrivr")
+
+[node name="InteractionLabel" type="RichTextLabel" parent="." unique_id=2131236536]
+visible = false
+offset_left = -20.0
+offset_top = -94.0
+offset_right = 20.0
+offset_bottom = -61.0
+theme_override_fonts/normal_font = ExtResource("5_7fve4")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[pulse][E]"
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="area_entered" from="InteractionRange" to="." method="_on_interaction_range_area_entered"]
+[connection signal="area_exited" from="InteractionRange" to="." method="_on_interaction_range_area_exited"]

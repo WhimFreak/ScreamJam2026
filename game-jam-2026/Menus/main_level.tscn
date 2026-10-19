@@ -1,0 +1,106 @@
+[gd_scene format=3 uid="uid://beqwwoca5sjyp"]
+
+[ext_resource type="Script" uid="uid://bfp3hf2viaem0" path="res://Menus/pause_menu.gd" id="1_3flnu"]
+[ext_resource type="PackedScene" uid="uid://d4jdnqavtwhod" path="res://Top Down/player.tscn" id="2_fv5ia"]
+[ext_resource type="PackedScene" uid="uid://4qqrgafsssyi" path="res://Top Down/test_interactable.tscn" id="3_obwmc"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0.007843138, 0, 0, 0.20784314)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmjuh"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.539872, 0, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3flnu"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.9804899, 0.023698956, 4.235506e-06, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_chd2j"]
+bg_color = Color(0.13032195, 0.12820646, 0.13665754, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.539872, 0, 0, 1)
+
+[node name="MainLevel" type="Node2D" unique_id=2017510965]
+
+[node name="Label" type="Label" parent="." unique_id=245035998]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 571.0
+offset_top = 306.0
+offset_right = 611.0
+offset_bottom = 329.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Hi :)"
+
+[node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1697650757]
+process_mode = 3
+script = ExtResource("1_3flnu")
+
+[node name="PausePanel" type="Panel" parent="PauseMenu" unique_id=1014631181]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PausePanel" unique_id=814541264]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.0
+offset_top = -76.0
+offset_right = 128.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="OptionsButton" type="Button" parent="PauseMenu/PausePanel/VBoxContainer" unique_id=36983998]
+custom_minimum_size = Vector2(256, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmjuh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lmjuh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3flnu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
+text = "OPTIONS"
+
+[node name="ReturnButton" type="Button" parent="PauseMenu/PausePanel/VBoxContainer" unique_id=541403879]
+custom_minimum_size = Vector2(256, 48)
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+theme_override_styles/normal = SubResource("StyleBoxFlat_lmjuh")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_lmjuh")
+theme_override_styles/hover = SubResource("StyleBoxFlat_3flnu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
+text = "RETURN TO MENU"
+
+[node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
+position = Vector2(272, 258)
+
+[node name="TestInteractable" parent="." unique_id=827824888 instance=ExtResource("3_obwmc")]
+position = Vector2(498, 148)
+
+[connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/ReturnButton" to="PauseMenu" method="_on_return_button_pressed"]
