@@ -1,8 +1,111 @@
 [gd_scene format=3 uid="uid://beqwwoca5sjyp"]
 
 [ext_resource type="Script" uid="uid://bfp3hf2viaem0" path="res://Menus/pause_menu.gd" id="1_3flnu"]
+[ext_resource type="Script" uid="uid://o2b4cq8ntnay" path="res://Menus/main_level.gd" id="1_obwmc"]
 [ext_resource type="PackedScene" uid="uid://d4jdnqavtwhod" path="res://Top Down/player.tscn" id="2_fv5ia"]
-[ext_resource type="PackedScene" uid="uid://4qqrgafsssyi" path="res://Top Down/test_interactable.tscn" id="3_obwmc"]
+[ext_resource type="Resource" uid="uid://jhweq8crsduc" path="res://DialogueSystem/DialogueTrees/intro_therapy.tres" id="3_q672b"]
+[ext_resource type="FontFile" uid="uid://m5ud83a43cit" path="res://Assets/Fonts/CaacupeOne-Regular.ttf" id="4_b7mpt"]
+[ext_resource type="PackedScene" uid="uid://bjoug8gmbvr5r" path="res://DialogueSystem/canvas_layer.tscn" id="5_fgf5d"]
+[ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="5_qtdy1"]
+
+[sub_resource type="Animation" id="Animation_y46r3"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen/YouCantRunAway:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScreen/VBoxContainer/IAmNotRunningAway:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen/VBoxContainer/IKnowWhatIDid:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_obwmc"]
+resource_name = "intro"
+length = 13.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlackScreen/YouCantRunAway:visible_ratio")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.73333263, 3.7333326, 4.7333326),
+"transitions": PackedFloat32Array(1, 0, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlackScreen/VBoxContainer/IAmNotRunningAway:visible_ratio")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(5.366666, 7.8333325, 11.699999),
+"transitions": PackedFloat32Array(1, 0, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlackScreen/VBoxContainer/IKnowWhatIDid:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(8.733333, 10.433332, 11.699999),
+"transitions": PackedFloat32Array(1, 0, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("DialogueUI")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(12.833333),
+"transitions": PackedFloat32Array(1),
+"values": [{
+"args": [ExtResource("3_q672b")],
+"method": &"set_dialogue_tree"
+}]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fgf5d"]
+_data = {
+&"RESET": SubResource("Animation_y46r3"),
+&"intro": SubResource("Animation_obwmc")
+}
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
 bg_color = Color(0.007843138, 0, 0, 0.20784314)
@@ -32,6 +135,7 @@ border_width_bottom = 2
 border_color = Color(0.539872, 0, 0, 1)
 
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
+script = ExtResource("1_obwmc")
 
 [node name="Label" type="Label" parent="." unique_id=245035998]
 anchors_preset = 8
@@ -47,8 +151,89 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Hi :)"
 
+[node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
+position = Vector2(166, 192)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
+libraries/ = SubResource("AnimationLibrary_fgf5d")
+autoplay = &"intro"
+
+[node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
+layer = 5
+
+[node name="BlackOverlay" type="ColorRect" parent="BlackScreen" unique_id=1144414068]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="YouCantRunAway" type="RichTextLabel" parent="BlackScreen" unique_id=946196420]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0.27398866, 0.21327004, 1)
+theme_override_fonts/normal_font = ExtResource("4_b7mpt")
+theme_override_font_sizes/normal_font_size = 48
+bbcode_enabled = true
+text = "[shake]YOU CAN'T RUN AWAY..."
+fit_content = true
+autowrap_mode = 0
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="BlackScreen" unique_id=1534931078]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -20.0
+offset_right = 168.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="IAmNotRunningAway" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=267774569]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("5_qtdy1")
+bbcode_enabled = true
+text = "I am not running away."
+fit_content = true
+autowrap_mode = 0
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="IKnowWhatIDid" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=404477357]
+layout_mode = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+theme_override_fonts/normal_font = ExtResource("5_qtdy1")
+bbcode_enabled = true
+text = "I know what I did."
+fit_content = true
+autowrap_mode = 0
+horizontal_alignment = 1
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
+
+[node name="DialogueUI" parent="." unique_id=1556033828 instance=ExtResource("5_fgf5d")]
+layer = 6
+
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1697650757]
 process_mode = 3
+layer = 7
 script = ExtResource("1_3flnu")
 
 [node name="PausePanel" type="Panel" parent="PauseMenu" unique_id=1014631181]
@@ -96,11 +281,5 @@ theme_override_styles/hover = SubResource("StyleBoxFlat_3flnu")
 theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
 text = "RETURN TO MENU"
-
-[node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(272, 258)
-
-[node name="TestInteractable" parent="." unique_id=827824888 instance=ExtResource("3_obwmc")]
-position = Vector2(498, 148)
 
 [connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/ReturnButton" to="PauseMenu" method="_on_return_button_pressed"]
