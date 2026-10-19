@@ -104,7 +104,7 @@ func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> vo
 		var button := Button.new()
 		button.text = choice.text
 		if button.text == "continue":
-			button.size_flags_horizontal = Control.SIZE_SHRINK_END
+			button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
 		else:
 			button.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 		choices_box.add_child(button)
