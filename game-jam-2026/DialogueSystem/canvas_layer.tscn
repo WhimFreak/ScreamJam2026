@@ -1,0 +1,100 @@
+[gd_scene format=3 uid="uid://bjoug8gmbvr5r"]
+
+[ext_resource type="Script" uid="uid://c6yd235aug8p7" path="res://DialogueSystem/dialogue_ui.gd" id="1_4gve0"]
+[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="2_r44pi"]
+[ext_resource type="Theme" uid="uid://dstt480wtvela" path="res://Themes/Dialogue_theme.tres" id="2_ssx1n"]
+[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="3_qm6hb"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_gisau"]
+[ext_resource type="AudioStream" uid="uid://cy1qrpm4ftrhn" path="res://testing_assets/talking_synth.ogg" id="5_yyecf"]
+
+[sub_resource type="Resource" id="Resource_ktsms"]
+script = ExtResource("3_qm6hb")
+text = "Yes"
+target_line_idx = 1
+metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
+
+[sub_resource type="Resource" id="Resource_2t2me"]
+script = ExtResource("3_qm6hb")
+text = "No"
+metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
+
+[sub_resource type="Resource" id="Resource_vn4vu"]
+script = ExtResource("2_r44pi")
+choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_ktsms"), SubResource("Resource_2t2me")])
+text = "Hello! "
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_iswho"]
+script = ExtResource("3_qm6hb")
+text = "continue"
+metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
+
+[sub_resource type="Resource" id="Resource_h5v0o"]
+script = ExtResource("2_r44pi")
+choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_iswho")])
+text = "continue?"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t0g4"]
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=1556033828]
+
+[node name="DialogueUI" type="Control" parent="." unique_id=941485854]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4gve0")
+dialogue_items = Array[ExtResource("2_r44pi")]([SubResource("Resource_vn4vu"), SubResource("Resource_h5v0o")])
+
+[node name="Portrait" type="TextureRect" parent="DialogueUI" unique_id=55594273]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_vertical = 2
+
+[node name="DialoguePanel" type="PanelContainer" parent="DialogueUI" unique_id=1621811198]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 58.0
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("2_ssx1n")
+theme_override_styles/panel = SubResource("StyleBoxEmpty_4t0g4")
+
+[node name="DialogueContent" type="VBoxContainer" parent="DialogueUI/DialoguePanel" unique_id=516025455]
+layout_mode = 2
+
+[node name="DialogueText" type="RichTextLabel" parent="DialogueUI/DialoguePanel/DialogueContent" unique_id=577963861]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+theme = ExtResource("2_ssx1n")
+text = "Hello!"
+fit_content = true
+
+[node name="ChoicesBox" type="HBoxContainer" parent="DialogueUI/DialoguePanel/DialogueContent" unique_id=342962425]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 6
+size_flags_stretch_ratio = 0.5
+
+[node name="Choice1" type="Button" parent="DialogueUI/DialoguePanel/DialogueContent/ChoicesBox" unique_id=79132935]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "yes"
+
+[node name="DialogueVoicePlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=2063617730]
+unique_name_in_owner = true
+stream = ExtResource("5_yyecf")
+
+[node name="SoundEffectPlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=1671635211]
+unique_name_in_owner = true
