@@ -23,7 +23,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_i1u5e"]
 script = ExtResource("1_npei6")
-delay_before_next = 1.0
+delay_before_next = 0.5
 text = "But maybe I did do things which led to that."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -40,7 +40,73 @@ portrait = ExtResource("4_oj845")
 text = "You know what…. You should really start talking and socializing more."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
+[sub_resource type="Resource" id="Resource_rdqbo"]
+script = ExtResource("1_npei6")
+portrait = ExtResource("4_oj845")
+text = "I know it wouldn’t bring her back, but that’s something you have to accept and move on."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_a4a14"]
+script = ExtResource("1_npei6")
+delay_before_next = 0.5
+text = "Don't you come under 'more'?"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_eguiy"]
+script = ExtResource("1_npei6")
+delay_before_next = 1.0
+portrait = ExtResource("4_oj845")
+text = "..."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_a8nu7"]
+script = ExtResource("1_npei6")
+text = "Alright, I'll try."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_3p4yq"]
+script = ExtResource("1_npei6")
+text = "I only came here since May wants me to get sorted out and start back up."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_iq8m7"]
+script = ExtResource("1_npei6")
+text = "Don’t know if it’s working though..."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_1v2cy"]
+script = ExtResource("1_npei6")
+text = "But I guess you never know until you try."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_j05eh"]
+script = ExtResource("1_npei6")
+portrait = ExtResource("4_oj845")
+text = "Believe me son… You will get your answers, but first you have to let it go."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_eut1p"]
+script = ExtResource("1_npei6")
+text = "Mhmm…. Well, I think I should go now."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_u67jc"]
+script = ExtResource("1_npei6")
+text = "May made plans with the group today, and she was really strict about me being there."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_nv1j6"]
+script = ExtResource("1_npei6")
+text = "She even said she'd pick me up."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_4vygj"]
+script = ExtResource("1_npei6")
+portrait = ExtResource("4_oj845")
+text = "Ah, that’s really good to hear. I'll see you then."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
 [resource]
 script = ExtResource("2_utxen")
-dialogue_items = Array[ExtResource("1_npei6")]([SubResource("Resource_quxoa"), SubResource("Resource_oj845"), SubResource("Resource_i1u5e"), SubResource("Resource_10y5h"), SubResource("Resource_ujjlp")])
+dialogue_items = Array[ExtResource("1_npei6")]([SubResource("Resource_quxoa"), SubResource("Resource_oj845"), SubResource("Resource_i1u5e"), SubResource("Resource_10y5h"), SubResource("Resource_ujjlp"), SubResource("Resource_rdqbo"), SubResource("Resource_a4a14"), SubResource("Resource_eguiy"), SubResource("Resource_a8nu7"), SubResource("Resource_3p4yq"), SubResource("Resource_iq8m7"), SubResource("Resource_1v2cy"), SubResource("Resource_j05eh"), SubResource("Resource_eut1p"), SubResource("Resource_u67jc"), SubResource("Resource_nv1j6"), SubResource("Resource_4vygj")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

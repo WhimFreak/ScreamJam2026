@@ -9,8 +9,16 @@ extends CharacterBody2D
 var interactables_in_range: Array[InteractableComponent]
 
 var last_dir: Vector2
+var can_act: bool = true
+
+func _ready() -> void:
+	Events.disable_player_action.connect(func(): can_act = false)
+	Events.enable_player_action.connect(func(): can_act = true)
 
 func _process(delta: float) -> void:
+	if not can_act:
+		return
+		
 	var dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	velocity = velocity.move_toward(dir * speed, accel * delta)
@@ -31,6 +39,8 @@ func _process(delta: float) -> void:
 	
 # Interaction
 func _input(event: InputEvent) -> void:
+	if not can_act:
+		return
 	if event.is_action_pressed("interact") and not interactables_in_range.is_empty():
 		interactables_in_range[0].player_interacted.emit()
 	

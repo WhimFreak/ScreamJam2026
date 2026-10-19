@@ -13,9 +13,6 @@ signal dialogue_finished
 var _text_tween: Tween
 var current_item: DialogueItem
 var can_force_advance: bool = true # Fix for multiclicking causing jank
-
-func _ready() -> void:
-	start_tree()
 	
 func start_tree():
 	show()
@@ -75,6 +72,10 @@ func _on_text_finished(item_index: int) -> void:
 		await get_tree().create_timer(item.auto_advance_delay).timeout
 		advance(item_index, item_index + 1)
 		return
+	
+	# Prevents error message when no choice
+	if choices_box.get_children().is_empty():
+		return
 
 	var button_tween := create_tween()
 	for button : Button in choices_box.get_children():
@@ -82,12 +83,17 @@ func _on_text_finished(item_index: int) -> void:
 		button_tween.tween_property(button, "modulate:a", 1.0, 0.3)
 
 func advance(from_index: int, target_index: int) -> void:
-	var delay := dialogue_tree.dialogue_items[from_index].delay_before_next
+	var item := dialogue_tree.dialogue_items[from_index]
+	if item.signal_on_advance:
+		Events.emit_signal(item.signal_on_advance)
+	
+	var delay := item.delay_before_next
 	if delay > 0.0:
 		can_force_advance = false
 		visible = false
 		await get_tree().create_timer(delay).timeout
 		can_force_advance = true
+		
 	show_text(target_index)
 
 func slide_in() -> void:
@@ -123,6 +129,9 @@ func _get_configuration_warnings() -> PackedStringArray:
 
 # If no choice, clicking anywhere progresses
 func _input(event: InputEvent) -> void:
+	if not current_item:
+		return
+		
 	if event.is_action_pressed("left_mouse") and current_item.click_advance and can_force_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
 		if _text_tween.is_running():
