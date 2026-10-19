@@ -76,13 +76,13 @@ corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
 [resource]
-default_font_size = 40
-Button/font_sizes/font_size = 25
+default_font_size = 16
+Button/font_sizes/font_size = 16
 Button/fonts/font = ExtResource("1_h5v0o")
 Button/styles/hover = SubResource("StyleBoxFlat_h5v0o")
 Button/styles/normal = SubResource("StyleBoxFlat_xjhej")
 Button/styles/pressed = SubResource("StyleBoxFlat_iswho")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
-RichTextLabel/font_sizes/normal_font_size = 30
+RichTextLabel/font_sizes/normal_font_size = 16
 RichTextLabel/fonts/normal_font = ExtResource("1_h5v0o")
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_vn4vu")
