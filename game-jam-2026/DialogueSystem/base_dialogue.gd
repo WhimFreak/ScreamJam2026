@@ -6,5 +6,6 @@ class_name BaseDialogue extends Resource
 @export_group("text")
 @export_multiline var text := ""
 
-@export_group("sound")
-@export var sound := preload("res://testing_assets/talking_synth.ogg")
+@export_group("sounds")
+@export var dialogue_sound := preload("res://testing_assets/talking_synth.ogg")
+@export var sound_effect: AudioStream = null
