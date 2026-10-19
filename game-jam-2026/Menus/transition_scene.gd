@@ -13,7 +13,7 @@ func change_scene(path: String):
 	ResourceLoader.load_threaded_request(path)
 	goal_path = path
 	
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	var status = ResourceLoader.load_threaded_get_status(goal_path)
 	if status == ResourceLoader.THREAD_LOAD_LOADED:
 		var new_scene = ResourceLoader.load_threaded_get(goal_path)

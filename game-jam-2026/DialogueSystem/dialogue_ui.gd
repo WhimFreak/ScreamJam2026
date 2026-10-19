@@ -2,7 +2,7 @@ extends Control
 
 signal dialogue_finished
 
-@export var dialogue_items: Array[DialogueItem] : set = set_dialogue_items
+@export var dialogue_tree: DialogueTree
 
 @onready var portrait : TextureRect = %Portrait
 @onready var dialogue_text : RichTextLabel = %DialogueText
@@ -11,38 +11,33 @@ signal dialogue_finished
 @onready var sound_effect_player: AudioStreamPlayer = %SoundEffectPlayer
 
 var _text_tween: Tween
+var current_item: DialogueItem
 
 func _ready() -> void:
 	show_text(0)
 
 func show_text(current_item_index: int) -> void:
-	
-	if current_item_index < 0 or current_item_index >= dialogue_items.size():
+	if current_item_index < 0 or current_item_index >= dialogue_tree.dialogue_items.size():
 		dialogue_finished.emit()
 		return
 	
-	
-	var current_item := dialogue_items[current_item_index]
+	current_item = dialogue_tree.dialogue_items[current_item_index]
 	visible = true
-	
 	
 	if _text_tween and _text_tween.is_valid():
 		_text_tween.kill()
 	dialogue_voice_player.stop()
-	
 	
 	dialogue_text.text = current_item.text
 	portrait.texture = current_item.portrait
 	dialogue_text.visible_ratio = 0.0
 	create_buttons(current_item_index, current_item.choices)
 	
-	
 	if current_item.sound_effect != null:
 		sound_effect_player.stream = current_item.sound_effect
 		sound_effect_player.play()
 	else:
 		sound_effect_player.stop()
-	
 	
 	_text_tween = create_tween()
 	var text_appearing_duration: float = current_item["text"].length() / 30.0
@@ -53,7 +48,6 @@ func show_text(current_item_index: int) -> void:
 	dialogue_voice_player.play(sound_start_position)
 	_text_tween.finished.connect(dialogue_voice_player.stop)
 	
-	
 	for button : Button in choices_box.get_children():
 			button.modulate.a = 0
 			button.disabled = true
@@ -61,15 +55,16 @@ func show_text(current_item_index: int) -> void:
 	_text_tween.finished.connect(_on_text_finished.bind(current_item_index))
 	
 	slide_in()
-	
-
 
 func _on_text_finished(item_index: int) -> void:
-	var item := dialogue_items[item_index]
+	var item := dialogue_tree.dialogue_items[item_index]
+	dialogue_text.visible_ratio = 1.0
 
-	if item.choices.is_empty():
+	if item.choices.is_empty() and not item.click_advance:
 		# No choices: go straight to the next entry in the array
 		# (after the item's delay, if one is set).
+		# (text stays on screen for a while based on auto_advance_delay)
+		await get_tree().create_timer(item.auto_advance_delay).timeout
 		advance(item_index, item_index + 1)
 		return
 
@@ -79,23 +74,21 @@ func _on_text_finished(item_index: int) -> void:
 		button_tween.tween_property(button, "modulate:a", 1.0, 0.3)
 
 func advance(from_index: int, target_index: int) -> void:
-	var delay := dialogue_items[from_index].delay_before_next
+	var delay := dialogue_tree.dialogue_items[from_index].delay_before_next
 	if delay > 0.0:
 		visible = false
 		await get_tree().create_timer(delay).timeout
 	show_text(target_index)
 
-
 func slide_in() -> void:
 	var slide_tween := create_tween()
 	slide_tween.set_ease(Tween.EASE_OUT)
 	portrait.position.x = get_viewport_rect().size.x / 7
-	slide_tween.tween_property(portrait, "position:x", 0, 0.3)
+	slide_tween.tween_property(portrait, "position:x", 17, 0.3)
 	portrait.modulate.a = 0
 	slide_tween.parallel().tween_property(portrait, "modulate:a", 1, 0.2)
 	
 func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> void:
-
 	for button in choices_box.get_children():
 		choices_box.remove_child(button)
 		button.queue_free()
@@ -113,13 +106,17 @@ func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> vo
 		else:
 			button.pressed.connect(advance.bind(item_index, choice.target_line_idx))
 
-func set_dialogue_items(new_dialogue_items: Array[DialogueItem]) -> void:
-	for index in new_dialogue_items.size():
-		if new_dialogue_items[index] == null:
-			new_dialogue_items[index] = DialogueItem.new()
-	dialogue_items = new_dialogue_items
-
 func _get_configuration_warnings() -> PackedStringArray:
-	if dialogue_items.is_empty():
+	if dialogue_tree.dialogue_items.is_empty():
 		return ["You need at least one dialogue item for the dialogue system to work."]
 	return []
+
+# If no choice, clicking anywhere progresses
+func _input(event: InputEvent) -> void:
+	if event.is_action_pressed("left_mouse") and current_item.click_advance:
+		var idx: int = dialogue_tree.dialogue_items.find(current_item)
+		if _text_tween.is_running():
+			_text_tween.kill()
+			_on_text_finished(idx)
+		elif current_item.choices.is_empty():
+			advance(idx, idx + 1)

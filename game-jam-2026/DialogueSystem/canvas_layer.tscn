@@ -1,41 +1,9 @@
 [gd_scene format=3 uid="uid://bjoug8gmbvr5r"]
 
 [ext_resource type="Script" uid="uid://c6yd235aug8p7" path="res://DialogueSystem/dialogue_ui.gd" id="1_4gve0"]
-[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="2_r44pi"]
 [ext_resource type="Theme" uid="uid://dstt480wtvela" path="res://Themes/Dialogue_theme.tres" id="2_ssx1n"]
-[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="3_qm6hb"]
+[ext_resource type="Resource" uid="uid://jhweq8crsduc" path="res://DialogueSystem/DialogueTrees/intro_therapy.tres" id="2_x6hhp"]
 [ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_gisau"]
-[ext_resource type="AudioStream" uid="uid://cy1qrpm4ftrhn" path="res://testing_assets/talking_synth.ogg" id="5_yyecf"]
-[ext_resource type="Texture2D" uid="uid://b0x13fyugbge0" path="res://testing_assets/sanji.png" id="6_qm6hb"]
-
-[sub_resource type="Resource" id="Resource_ktsms"]
-script = ExtResource("3_qm6hb")
-text = "Yes"
-target_line_idx = 1
-metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
-
-[sub_resource type="Resource" id="Resource_2t2me"]
-script = ExtResource("3_qm6hb")
-text = "No"
-metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
-
-[sub_resource type="Resource" id="Resource_vn4vu"]
-script = ExtResource("2_r44pi")
-choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_ktsms"), SubResource("Resource_2t2me")])
-text = "Hello! "
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_iswho"]
-script = ExtResource("3_qm6hb")
-text = "continue"
-metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
-
-[sub_resource type="Resource" id="Resource_h5v0o"]
-script = ExtResource("2_r44pi")
-choices = Array[ExtResource("3_qm6hb")]([SubResource("Resource_iswho")])
-portrait = ExtResource("6_qm6hb")
-text = "continue?"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t0g4"]
 
@@ -49,20 +17,24 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_4gve0")
-dialogue_items = Array[ExtResource("2_r44pi")]([SubResource("Resource_vn4vu"), SubResource("Resource_h5v0o")])
+dialogue_tree = ExtResource("2_x6hhp")
 
 [node name="Portrait" type="TextureRect" parent="DialogueUI" unique_id=55594273]
 unique_name_in_owner = true
+custom_minimum_size = Vector2(96, 96)
+custom_maximum_size = Vector2(96, 96)
 layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.13100001
-anchor_right = 0.13100001
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -108.91202
-offset_top = 83.0
-offset_right = 185.08798
-offset_bottom = -269.0
-grow_vertical = 2
+offset_left = -303.0
+offset_top = -234.0
+offset_right = -207.0
+offset_bottom = -138.0
+grow_horizontal = 2
+grow_vertical = 0
 texture = ExtResource("4_gisau")
 expand_mode = 1
 
@@ -73,7 +45,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = 64.0
+offset_top = 47.0
 offset_right = -8.0
 offset_bottom = -8.0
 grow_horizontal = 2
@@ -94,7 +66,7 @@ text = "Hello!"
 [node name="ChoicesBox" type="HBoxContainer" parent="DialogueUI/DialoguePanel/DialogueContent" unique_id=342962425]
 unique_name_in_owner = true
 layout_mode = 2
-size_flags_vertical = 3
+size_flags_vertical = 8
 size_flags_stretch_ratio = 0.5
 
 [node name="Choice1" type="Button" parent="DialogueUI/DialoguePanel/DialogueContent/ChoicesBox" unique_id=79132935]
