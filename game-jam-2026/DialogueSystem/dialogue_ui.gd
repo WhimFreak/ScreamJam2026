@@ -1,7 +1,5 @@
 extends Control
 
-signal dialogue_finished
-
 @export var dialogue_tree: DialogueTree
 
 @onready var portrait : TextureRect = %Portrait
@@ -13,9 +11,6 @@ signal dialogue_finished
 var _text_tween: Tween
 var current_item: DialogueItem
 var is_transitioning: bool = true  # true while advancing between lines; blocks all input
-
-func _ready() -> void:
-	start_tree()
 	
 func start_tree():
 	show()
@@ -24,8 +19,8 @@ func start_tree():
 
 func show_text(current_item_index: int) -> void:
 	if current_item_index < 0 or current_item_index >= dialogue_tree.dialogue_items.size():
-		dialogue_finished.emit()
 		Events.enable_player_action.emit()
+		Events.tree_finished.emit(dialogue_tree)
 		hide()
 		return
 	
@@ -81,6 +76,10 @@ func _on_text_finished(item_index: int) -> void:
 		advance(item_index, item_index + 1)
 		return
 
+	# Prevents message errors when no choice
+	if choices_box.get_children().is_empty():
+		return
+		
 	var button_tween := create_tween()
 	for button : Button in choices_box.get_children():
 		button.disabled = false
@@ -91,10 +90,14 @@ func advance(from_index: int, target_index: int) -> void:
 		return
 	is_transitioning = true
 	
+	var item: DialogueItem = dialogue_tree.dialogue_items[from_index]
+	if item.signal_on_advance:
+		Events.emit_signal(item.signal_on_advance)
+	
 	for button : Button in choices_box.get_children():
 		button.disabled = true
 	
-	var delay := dialogue_tree.dialogue_items[from_index].delay_before_next
+	var delay := item.delay_before_next
 	if delay > 0.0:
 		visible = false
 		await get_tree().create_timer(delay).timeout
@@ -134,7 +137,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 func _input(event: InputEvent) -> void:
 	if is_transitioning:
 		return
-	if event.is_action_pressed("left_mouse") and current_item.click_advance:
+	if (event.is_action_pressed("left_mouse") or event.is_action_pressed("space")) and current_item.click_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
 		if _text_tween and _text_tween.is_valid() and _text_tween.is_running():
 			_text_tween.set_speed_scale(3.0)

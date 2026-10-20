@@ -1,10 +1,12 @@
+class_name Player
 extends CharacterBody2D
 
-@export var speed: float = 200
+@export var speed: float = 50
 @export var accel: float = 1500
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_label: RichTextLabel = $InteractionLabel
+@onready var interaction_range: Area2D = $InteractionRange
 
 var interactables_in_range: Array[InteractableComponent]
 
@@ -17,6 +19,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if not can_act:
+		interaction_label.hide()
 		return
 		
 	var dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
@@ -31,18 +34,17 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.play("default")
 		
 	# Face towards the last direction even when stopped
-	animated_sprite_2d.flip_h = last_dir.x < 0
-	
-	# Code on scene objects so they render properly when overlapping. There's probably a
-	# cleaner way to do this but this works for now
-	z_index = round(position.y)
+	if last_dir.x != 0:
+		animated_sprite_2d.flip_h = last_dir.x < 0
 	
 # Interaction
 func _input(event: InputEvent) -> void:
 	if not can_act:
+		animated_sprite_2d.play("default")
 		return
+		
 	if event.is_action_pressed("interact") and not interactables_in_range.is_empty():
-		interactables_in_range[0].player_interacted.emit()
+		interactables_in_range[0].player_interacted.emit(self)
 	
 func _on_interaction_range_area_entered(area: Area2D) -> void:
 	if area.get_parent() is InteractableComponent:
