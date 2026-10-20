@@ -34,10 +34,6 @@ func _process(delta: float) -> void:
 	# Face towards the last direction even when stopped
 	animated_sprite_2d.flip_h = last_dir.x < 0
 	
-	## Code on scene objects so they render properly when overlapping. There's probably a
-	## cleaner way to do this but this works for now
-	#z_index = round(position.y)
-	
 # Interaction
 func _input(event: InputEvent) -> void:
 	if not can_act:
