@@ -32,7 +32,8 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.play("default")
 		
 	# Face towards the last direction even when stopped
-	animated_sprite_2d.flip_h = last_dir.x < 0
+	if last_dir.x != 0:
+		animated_sprite_2d.flip_h = last_dir.x < 0
 	
 # Interaction
 func _input(event: InputEvent) -> void:

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://bjxhvbj6sxsyp"]
+
+[ext_resource type="Texture2D" uid="uid://di7abupyvfja4" path="res://Assets/Placeholders/PlaceholderMay.png" id="1_t7rll"]
+[ext_resource type="Script" uid="uid://cgwsyvjffm04d" path="res://Top Down/npc.gd" id="1_uuujm"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_o3xy0"]
+[ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="2_uuujm"]
+[ext_resource type="Resource" uid="uid://cnthtrwxhve2h" path="res://DialogueSystem/DialogueTrees/may_conversation_1.tres" id="3_o3xy0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+radius = 14.035668
+
+[node name="MayNPC" type="Node2D" unique_id=1332711641]
+script = ExtResource("1_uuujm")
+dialogue_trees = Array[ExtResource("2_o3xy0")]([ExtResource("3_o3xy0")])
+interactable = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=815685991]
+position = Vector2(0, -11)
+texture = ExtResource("1_t7rll")
+
+[node name="InteractableComponent" parent="." unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("2_uuujm")]
+visible = false
+position = Vector2(0, -11)
+area_2d = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="InteractableComponent" unique_id=287229995]
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent/Area2D" unique_id=1932437138]
+position = Vector2(1, 2)
+shape = SubResource("CircleShape2D_xrivr")
