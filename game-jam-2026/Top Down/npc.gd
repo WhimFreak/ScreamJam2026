@@ -16,9 +16,13 @@ signal dialogue_start_request(tree: DialogueTree)
 
 func _ready() -> void:
 	interactable_component.player_interacted.connect(on_interact)
+	Events.tree_finished.connect(on_tree_finished)
 	
 	await area_2d.ready
 	interactable = interactable
 	
 func on_interact(_player: Player):
 	dialogue_start_request.emit(dialogue_trees[next_tree_idx])
+	
+func on_tree_finished(_tree: DialogueTree):
+	pass

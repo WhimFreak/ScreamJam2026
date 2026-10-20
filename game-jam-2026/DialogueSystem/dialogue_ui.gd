@@ -1,7 +1,5 @@
 extends Control
 
-signal dialogue_finished
-
 @export var dialogue_tree: DialogueTree
 
 @onready var portrait : TextureRect = %Portrait
@@ -21,8 +19,8 @@ func start_tree():
 
 func show_text(current_item_index: int) -> void:
 	if current_item_index < 0 or current_item_index >= dialogue_tree.dialogue_items.size():
-		dialogue_finished.emit()
 		Events.enable_player_action.emit()
+		Events.tree_finished.emit(dialogue_tree)
 		hide()
 		return
 	
@@ -139,7 +137,7 @@ func _get_configuration_warnings() -> PackedStringArray:
 func _input(event: InputEvent) -> void:
 	if is_transitioning:
 		return
-	if event.is_action_pressed("left_mouse") and current_item.click_advance:
+	if (event.is_action_pressed("left_mouse") or event.is_action_pressed("space")) and current_item.click_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
 		if _text_tween and _text_tween.is_valid() and _text_tween.is_running():
 			_text_tween.set_speed_scale(3.0)

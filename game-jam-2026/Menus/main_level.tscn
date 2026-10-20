@@ -209,10 +209,10 @@ position = Vector2(113, 281)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 libraries/ = SubResource("AnimationLibrary_fgf5d")
+autoplay = &"intro"
 
 [node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
 layer = 5
-visible = false
 
 [node name="BlackOverlay" type="ColorRect" parent="BlackScreen" unique_id=1144414068]
 anchors_preset = 15

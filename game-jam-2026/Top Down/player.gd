@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var interaction_label: RichTextLabel = $InteractionLabel
+@onready var interaction_range: Area2D = $InteractionRange
 
 var interactables_in_range: Array[InteractableComponent]
 
@@ -18,6 +19,7 @@ func _ready() -> void:
 
 func _process(delta: float) -> void:
 	if not can_act:
+		interaction_label.hide()
 		return
 		
 	var dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")

@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bjxhvbj6sxsyp"]
 
+[ext_resource type="Script" uid="uid://2a22v6lu8gqe" path="res://Top Down/may_npc.gd" id="1_o3xy0"]
 [ext_resource type="Texture2D" uid="uid://di7abupyvfja4" path="res://Assets/Placeholders/PlaceholderMay.png" id="1_t7rll"]
-[ext_resource type="Script" uid="uid://cgwsyvjffm04d" path="res://Top Down/npc.gd" id="1_uuujm"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_o3xy0"]
 [ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="2_uuujm"]
 [ext_resource type="Resource" uid="uid://cnthtrwxhve2h" path="res://DialogueSystem/DialogueTrees/may_conversation_1.tres" id="3_o3xy0"]
@@ -10,7 +10,7 @@
 radius = 14.035668
 
 [node name="MayNPC" type="Node2D" unique_id=1332711641]
-script = ExtResource("1_uuujm")
+script = ExtResource("1_o3xy0")
 dialogue_trees = Array[ExtResource("2_o3xy0")]([ExtResource("3_o3xy0")])
 interactable = true
 
