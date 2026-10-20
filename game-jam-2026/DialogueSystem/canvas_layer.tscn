@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bjoug8gmbvr5r"]
 
 [ext_resource type="Script" uid="uid://c6yd235aug8p7" path="res://DialogueSystem/dialogue_ui.gd" id="1_4gve0"]
+[ext_resource type="Script" uid="uid://bjjbto0fl4brq" path="res://DialogueSystem/dialogue_canvas_layer.gd" id="1_fxxkg"]
 [ext_resource type="Theme" uid="uid://dstt480wtvela" path="res://Themes/Dialogue_theme.tres" id="2_ssx1n"]
 [ext_resource type="Resource" uid="uid://jhweq8crsduc" path="res://DialogueSystem/DialogueTrees/intro_therapy.tres" id="2_x6hhp"]
 [ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_gisau"]
@@ -8,8 +9,10 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t0g4"]
 
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1556033828]
+script = ExtResource("1_fxxkg")
 
 [node name="DialogueUI" type="Control" parent="." unique_id=941485854]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,6 +65,7 @@ layout_mode = 2
 size_flags_vertical = 3
 theme = ExtResource("2_ssx1n")
 text = "Hello!"
+visible_characters_behavior = 1
 
 [node name="ChoicesBox" type="HBoxContainer" parent="DialogueUI/DialoguePanel/DialogueContent" unique_id=342962425]
 unique_name_in_owner = true
