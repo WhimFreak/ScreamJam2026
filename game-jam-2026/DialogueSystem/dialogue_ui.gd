@@ -12,7 +12,7 @@ signal dialogue_finished
 
 var _text_tween: Tween
 var current_item: DialogueItem
-var can_force_advance: bool = true # Fix for multiclicking causing jank
+var is_transitioning: bool = true  # true while advancing between lines; blocks all input
 
 func _ready() -> void:
 	start_tree()
@@ -54,7 +54,6 @@ func show_text(current_item_index: int) -> void:
 	var sound_max_offset := maxf(dialogue_voice_player.stream.get_length() - text_appearing_duration, 0.0)
 	var sound_start_position := randf() * sound_max_offset
 	dialogue_voice_player.play(sound_start_position)
-	_text_tween.finished.connect(dialogue_voice_player.stop)
 	
 	for button : Button in choices_box.get_children():
 			button.modulate.a = 0
@@ -63,16 +62,22 @@ func show_text(current_item_index: int) -> void:
 	_text_tween.finished.connect(_on_text_finished.bind(current_item_index))
 	
 	slide_in()
+	
+	is_transitioning = false  # reveal is now running; input is allowed again (to skip or wait)
 
 func _on_text_finished(item_index: int) -> void:
-	var item := dialogue_tree.dialogue_items[item_index]
+	if item_index != dialogue_tree.dialogue_items.find(current_item):
+		return  # stale call from a skipped/killed tween, ignore
+	
 	dialogue_text.visible_ratio = 1.0
+	dialogue_voice_player.stop()
+
+	var item := dialogue_tree.dialogue_items[item_index]
 
 	if item.choices.is_empty() and not item.click_advance:
-		# No choices: go straight to the next entry in the array
-		# (after the item's delay, if one is set).
-		# (text stays on screen for a while based on auto_advance_delay)
+		is_transitioning = true
 		await get_tree().create_timer(item.auto_advance_delay).timeout
+		is_transitioning = false
 		advance(item_index, item_index + 1)
 		return
 
@@ -82,12 +87,17 @@ func _on_text_finished(item_index: int) -> void:
 		button_tween.tween_property(button, "modulate:a", 1.0, 0.3)
 
 func advance(from_index: int, target_index: int) -> void:
+	if is_transitioning:
+		return
+	is_transitioning = true
+	
+	for button : Button in choices_box.get_children():
+		button.disabled = true
+	
 	var delay := dialogue_tree.dialogue_items[from_index].delay_before_next
 	if delay > 0.0:
-		can_force_advance = false
 		visible = false
 		await get_tree().create_timer(delay).timeout
-		can_force_advance = true
 	show_text(target_index)
 
 func slide_in() -> void:
@@ -121,13 +131,12 @@ func _get_configuration_warnings() -> PackedStringArray:
 		return ["You need at least one dialogue item for the dialogue system to work."]
 	return []
 
-# If no choice, clicking anywhere progresses
 func _input(event: InputEvent) -> void:
-	if event.is_action_pressed("left_mouse") and current_item.click_advance and can_force_advance:
+	if is_transitioning:
+		return
+	if event.is_action_pressed("left_mouse") and current_item.click_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
-		if _text_tween.is_running():
-			_text_tween.kill()
-			_on_text_finished(idx)
+		if _text_tween and _text_tween.is_running():
+			_text_tween.set_speed_scale(3.0) 
 		elif current_item.choices.is_empty():
 			advance(idx, idx + 1)
-			
