@@ -67,6 +67,12 @@ left_mouse={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_1="Player"
+2d_physics/layer_2="Walls"
+2d_physics/layer_3="InteractableArea"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
@@ -75,3 +81,4 @@ left_mouse={
 
 textures/canvas_textures/default_texture_filter=0
 rendering_device/driver.windows="d3d12"
+environment/defaults/default_clear_color=Color(0.099985994, 0.099985994, 0.099985994, 1)

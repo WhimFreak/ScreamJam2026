@@ -5,5 +5,5 @@ extends StaticBody2D
 func _ready() -> void:
 	z_index = round(position.y)
 
-func _on_interactable_component_player_interacted() -> void:
+func _on_interactable_component_player_interacted(_player: Player) -> void:
 	tv_forecast.visible = not tv_forecast.visible

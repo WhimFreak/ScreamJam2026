@@ -2,11 +2,18 @@
 
 [ext_resource type="Script" uid="uid://bfp3hf2viaem0" path="res://Menus/pause_menu.gd" id="1_3flnu"]
 [ext_resource type="Script" uid="uid://o2b4cq8ntnay" path="res://Menus/main_level.gd" id="1_obwmc"]
+[ext_resource type="PackedScene" uid="uid://y2khw3gins6v" path="res://environment scenes/therapy_room.tscn" id="2_b7mpt"]
 [ext_resource type="PackedScene" uid="uid://d4jdnqavtwhod" path="res://Top Down/player.tscn" id="2_fv5ia"]
 [ext_resource type="Resource" uid="uid://jhweq8crsduc" path="res://DialogueSystem/DialogueTrees/intro_therapy.tres" id="3_q672b"]
 [ext_resource type="FontFile" uid="uid://m5ud83a43cit" path="res://Assets/Fonts/CaacupeOne-Regular.ttf" id="4_b7mpt"]
+[ext_resource type="Script" uid="uid://bnwb8nm08j6fa" path="res://Top Down/interactable_component.gd" id="4_qtdy1"]
+[ext_resource type="Script" uid="uid://ctrftbm6akwx3" path="res://Top Down/teleporter.gd" id="4_y46r3"]
 [ext_resource type="PackedScene" uid="uid://bjoug8gmbvr5r" path="res://DialogueSystem/canvas_layer.tscn" id="5_fgf5d"]
 [ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="5_qtdy1"]
+[ext_resource type="PackedScene" uid="uid://bmlbt24a14chh" path="res://environment scenes/therapy_outdoors.tscn" id="6_ch1tp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
+size = Vector2(32, 10)
 
 [sub_resource type="Animation" id="Animation_y46r3"]
 length = 0.001
@@ -135,24 +142,65 @@ border_width_bottom = 2
 border_color = Color(0.539872, 0, 0, 1)
 
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
+y_sort_enabled = true
 script = ExtResource("1_obwmc")
 
-[node name="Label" type="Label" parent="." unique_id=245035998]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = 571.0
-offset_top = 306.0
-offset_right = 611.0
-offset_bottom = 329.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Hi :)"
+[node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
+unique_name_in_owner = true
+position = Vector2(87, 89)
+zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(166, 192)
+position = Vector2(41, 100)
+
+[node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
+position = Vector2(-123, -34)
+
+[node name="DoorToOutdoor" type="Node2D" parent="TherapyRoom" unique_id=191470821 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+position = Vector2(207, 210)
+script = ExtResource("4_y46r3")
+teleporter_to = NodePath("../../TherapyOutdoors/DoorToTherapy")
+player_pos = NodePath("Marker2D")
+static_camera = true
+camera_pos = Vector2(87, 89)
+
+[node name="Marker2D" type="Marker2D" parent="TherapyRoom/DoorToOutdoor" unique_id=956198005]
+position = Vector2(1, -16)
+
+[node name="InteractableComponent" type="Node2D" parent="TherapyRoom/DoorToOutdoor" unique_id=450202623 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("4_qtdy1")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
+
+[node name="Area2D" type="Area2D" parent="TherapyRoom/DoorToOutdoor/InteractableComponent" unique_id=666110042]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TherapyRoom/DoorToOutdoor/InteractableComponent/Area2D" unique_id=2083130817]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_ch1tp")
+
+[node name="TherapyOutdoors" parent="." unique_id=2077428685 instance=ExtResource("6_ch1tp")]
+position = Vector2(265, -63)
+
+[node name="DoorToTherapy" type="Node2D" parent="TherapyOutdoors" unique_id=2013214948 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+position = Vector2(-32, -111)
+script = ExtResource("4_y46r3")
+teleporter_to = NodePath("../../TherapyRoom/DoorToOutdoor")
+player_pos = NodePath("Marker2D")
+
+[node name="InteractableComponent" type="Node2D" parent="TherapyOutdoors/DoorToTherapy" unique_id=1819433744 node_paths=PackedStringArray("area_2d")]
+position = Vector2(207, 209)
+script = ExtResource("4_qtdy1")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
+
+[node name="Area2D" type="Area2D" parent="TherapyOutdoors/DoorToTherapy/InteractableComponent" unique_id=1016212370]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TherapyOutdoors/DoorToTherapy/InteractableComponent/Area2D" unique_id=638014502]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_ch1tp")
+
+[node name="Marker2D" type="Marker2D" parent="TherapyOutdoors/DoorToTherapy" unique_id=1060786634]
+position = Vector2(208, 218)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 libraries/ = SubResource("AnimationLibrary_fgf5d")

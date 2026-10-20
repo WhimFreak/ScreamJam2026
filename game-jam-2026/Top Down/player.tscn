@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://d4jdnqavtwhod"]
 
 [ext_resource type="Script" uid="uid://b1aobv0og76eb" path="res://Top Down/player.gd" id="1_mb655"]
-[ext_resource type="Texture2D" uid="uid://br3fvru66e7ye" path="res://Assets/Placeholders/SmallPlaceholderPlayer1.png" id="2_7fve4"]
-[ext_resource type="Texture2D" uid="uid://dfaqc74rtn8ej" path="res://Assets/Placeholders/SmallPlaceholderPlayer2.png" id="3_brhrl"]
-[ext_resource type="Texture2D" uid="uid://dyrg88agfm43o" path="res://Assets/Placeholders/SmallPlaceholderPlayer3.png" id="4_y8dvw"]
+[ext_resource type="Texture2D" uid="uid://btw1txr308kqu" path="res://Assets/Placeholders/SmallPlaceholderPlayer1.png" id="2_7fve4"]
+[ext_resource type="Texture2D" uid="uid://bwa1ewrvl615f" path="res://Assets/Placeholders/SmallPlaceholderPlayer2.png" id="3_brhrl"]
+[ext_resource type="Texture2D" uid="uid://dpb8qdbk4y7rh" path="res://Assets/Placeholders/SmallPlaceholderPlayer3.png" id="4_y8dvw"]
 [ext_resource type="FontFile" uid="uid://m5ud83a43cit" path="res://Assets/Fonts/CaacupeOne-Regular.ttf" id="5_7fve4"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_xrivr"]
@@ -27,7 +27,7 @@ animations = [{
 "texture": ExtResource("4_y8dvw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_brhrl")
+"texture": ExtResource("2_7fve4")
 }],
 "loop": 1,
 "name": &"walk",
@@ -35,36 +35,41 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xrivr"]
-size = Vector2(27, 31.375)
+size = Vector2(12, 17)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
-radius = 82.006096
+radius = 25.079872
 
 [node name="Player" type="CharacterBody2D" unique_id=688360018]
+collision_mask = 2
 script = ExtResource("1_mb655")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=616338019]
-scale = Vector2(2, 2)
+position = Vector2(0, -10)
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"walk"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=837843684]
-position = Vector2(0, 11)
+position = Vector2(0, -6.5)
 shape = SubResource("RectangleShape2D_xrivr")
 
 [node name="InteractionRange" type="Area2D" parent="." unique_id=1403771244]
+position = Vector2(0, -4)
+collision_layer = 0
+collision_mask = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionRange" unique_id=777809344]
+position = Vector2(0, -4)
 shape = SubResource("CircleShape2D_xrivr")
 
 [node name="InteractionLabel" type="RichTextLabel" parent="." unique_id=2131236536]
 visible = false
-offset_left = -20.0
-offset_top = -94.0
-offset_right = 20.0
-offset_bottom = -61.0
+offset_left = -19.0
+offset_top = -44.0
+offset_right = 21.0
+offset_bottom = -11.0
 theme_override_fonts/normal_font = ExtResource("5_7fve4")
-theme_override_font_sizes/normal_font_size = 24
+theme_override_font_sizes/normal_font_size = 8
 bbcode_enabled = true
 text = "[pulse][E]"
 fit_content = true
