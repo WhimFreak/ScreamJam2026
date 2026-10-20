@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bjoug8gmbvr5r" path="res://DialogueSystem/canvas_layer.tscn" id="5_fgf5d"]
 [ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="5_qtdy1"]
 [ext_resource type="PackedScene" uid="uid://bmlbt24a14chh" path="res://environment scenes/therapy_outdoors.tscn" id="6_ch1tp"]
+[ext_resource type="PackedScene" uid="uid://bjxhvbj6sxsyp" path="res://Top Down/may_npc.tscn" id="7_a5am4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -202,12 +203,16 @@ shape = SubResource("RectangleShape2D_ch1tp")
 [node name="Marker2D" type="Marker2D" parent="TherapyOutdoors/DoorToTherapy" unique_id=1060786634]
 position = Vector2(208, 218)
 
+[node name="MayNPC" parent="TherapyOutdoors" unique_id=1332711641 instance=ExtResource("7_a5am4")]
+unique_name_in_owner = true
+position = Vector2(113, 281)
+
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 libraries/ = SubResource("AnimationLibrary_fgf5d")
-autoplay = &"intro"
 
 [node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
 layer = 5
+visible = false
 
 [node name="BlackOverlay" type="ColorRect" parent="BlackScreen" unique_id=1144414068]
 anchors_preset = 15
