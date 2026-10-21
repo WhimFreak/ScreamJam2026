@@ -11,12 +11,14 @@
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
 signal_on_advance = "fade_in"
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "It's not your fault."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_oj845"]
 script = ExtResource("1_npei6")
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "You could have never guessed.. that this could have happened."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -24,24 +26,28 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_i1u5e"]
 script = ExtResource("1_npei6")
 delay_before_next = 0.5
+character_name = "Rudy"
 text = "But maybe I did do things which led to that."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_10y5h"]
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ujjlp"]
 script = ExtResource("1_npei6")
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "You know what…. You should really start talking and socializing more."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rdqbo"]
 script = ExtResource("1_npei6")
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "I know it wouldn’t bring her back, but that’s something you have to accept and move on."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -49,59 +55,70 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_a4a14"]
 script = ExtResource("1_npei6")
 delay_before_next = 0.5
+character_name = "Rudy"
 text = "Don't you come under 'more'?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_eguiy"]
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a8nu7"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "Alright, I'll try."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3p4yq"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "I only came here since May wants me to get sorted out and start back up."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_iq8m7"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "Don’t know if it’s working though..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_1v2cy"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "But I guess you never know until you try."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_j05eh"]
 script = ExtResource("1_npei6")
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "Believe me son… You will get your answers, but first you have to let it go."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_eut1p"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "Mhmm…. Well, I think I should go now."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_u67jc"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "May made plans with the group today, and she was really strict about me being there."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_nv1j6"]
 script = ExtResource("1_npei6")
+character_name = "Rudy"
 text = "She even said she'd pick me up."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_4vygj"]
 script = ExtResource("1_npei6")
+character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "Ah, that’s really good to hear. I'll see you then."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
