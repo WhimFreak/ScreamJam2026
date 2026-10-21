@@ -1,0 +1,62 @@
+[gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://bmthpfl2tbbkd"]
+
+[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_55ump"]
+[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_w6lk2"]
+[ext_resource type="AudioStream" uid="uid://cy1qrpm4ftrhn" path="res://testing_assets/talking_synth.ogg" id="3_5ceii"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_i4f0b"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_27ahm"]
+
+[sub_resource type="Resource" id="Resource_qs3oe"]
+script = ExtResource("1_55ump")
+text = "I think I need to puke…."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_j15xm"]
+script = ExtResource("1_55ump")
+text = "Hell I don’t even know what to think of"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_u4a67"]
+script = ExtResource("1_55ump")
+text = "Where to start......"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_vwn1g"]
+script = ExtResource("1_55ump")
+text = "Ohh…."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_5mq8a"]
+script = ExtResource("1_55ump")
+text = "for a while, I forgot I was with them."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_20tyg"]
+script = ExtResource("1_55ump")
+text = "It was my fault joining may....."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_sq56n"]
+script = ExtResource("1_55ump")
+text = "I should have just went home."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_aijll"]
+script = ExtResource("1_55ump")
+text = "or maybe.."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_c5vim"]
+script = ExtResource("1_55ump")
+text = "It's my fault for how things are now...."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_oiso2"]
+script = ExtResource("1_55ump")
+text = "I think I need to wake up...."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[resource]
+script = ExtResource("5_27ahm")
+dialogue_items = Array[ExtResource("1_55ump")]([SubResource("Resource_qs3oe"), SubResource("Resource_j15xm"), SubResource("Resource_u4a67"), SubResource("Resource_vwn1g"), SubResource("Resource_5mq8a"), SubResource("Resource_20tyg"), SubResource("Resource_sq56n"), SubResource("Resource_aijll"), SubResource("Resource_c5vim"), SubResource("Resource_oiso2")])
+metadata/_custom_type_script = "uid://dq5m317pm5mk6"

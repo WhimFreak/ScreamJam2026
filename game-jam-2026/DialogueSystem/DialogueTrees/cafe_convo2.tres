@@ -1,0 +1,92 @@
+[gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://dg620lcleuhem"]
+
+[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_om4f4"]
+[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_6ibqm"]
+[ext_resource type="AudioStream" uid="uid://cy1qrpm4ftrhn" path="res://testing_assets/talking_synth.ogg" id="3_rlfq2"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_pl2px"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_b0k55"]
+
+[sub_resource type="Resource" id="Resource_m7sxa"]
+script = ExtResource("1_om4f4")
+text = "MC , are you okay???"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_8e8q0"]
+script = ExtResource("1_om4f4")
+text = "I am so sorry for what happened!!!"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_occkl"]
+script = ExtResource("1_om4f4")
+text = "I shouldn’t have invited Mark."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_wp56q"]
+script = ExtResource("1_om4f4")
+text = "it’s all my fault"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ty25m"]
+script = ExtResource("1_om4f4")
+text = "(she is almost about to cry)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_xoro4"]
+script = ExtResource("1_om4f4")
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_6bgmg"]
+script = ExtResource("1_om4f4")
+text = "(I don’t want another person to break because of me)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_8q8ch"]
+script = ExtResource("1_om4f4")
+text = "It’s okay may..
+"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_dp33p"]
+script = ExtResource("1_om4f4")
+text = "Really, it's alright. I just…"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_qgbsf"]
+script = ExtResource("1_om4f4")
+text = "I think I should head home, I’ll catch up with you later."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_12tud"]
+script = ExtResource("1_om4f4")
+text = "should I walk you home?"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_knp0d"]
+script = ExtResource("1_om4f4")
+text = "no it’s going to be alright"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_2eiqw"]
+script = ExtResource("1_om4f4")
+text = "okay, if you say so.."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ufytj"]
+script = ExtResource("1_om4f4")
+text = "but please take care rudy.."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_513vo"]
+script = ExtResource("1_om4f4")
+text = "call me anytime you need me.."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_082o8"]
+script = ExtResource("1_om4f4")
+text = "Yeah sure!"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[resource]
+script = ExtResource("5_b0k55")
+dialogue_items = Array[ExtResource("1_om4f4")]([SubResource("Resource_m7sxa"), SubResource("Resource_8e8q0"), SubResource("Resource_occkl"), SubResource("Resource_wp56q"), SubResource("Resource_ty25m"), SubResource("Resource_xoro4"), SubResource("Resource_6bgmg"), SubResource("Resource_8q8ch"), SubResource("Resource_dp33p"), SubResource("Resource_qgbsf"), SubResource("Resource_12tud"), SubResource("Resource_knp0d"), SubResource("Resource_2eiqw"), SubResource("Resource_ufytj"), SubResource("Resource_513vo"), SubResource("Resource_082o8")])
+metadata/_custom_type_script = "uid://dq5m317pm5mk6"
