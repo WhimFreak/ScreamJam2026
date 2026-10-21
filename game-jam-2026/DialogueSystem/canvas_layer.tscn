@@ -14,13 +14,11 @@ content_margin_left = 20.0
 content_margin_top = 10.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
-bg_color = Color(0.44980806, 0.5754051, 0.90373063, 1)
-border_width_left = 10
-border_width_top = 10
-border_width_right = 10
-border_width_bottom = 10
-border_color = Color(0.09120984, 0.26692972, 0.44834042, 1)
-border_blend = true
+bg_color = Color(0.19215687, 0.36078432, 0.627451, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_color = Color(0.09019608, 0.15686275, 0.26666668, 1)
 corner_radius_top_left = 20
 corner_radius_top_right = 20
 
@@ -49,9 +47,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -300.0
-offset_top = -269.0
+offset_top = -251.0
 offset_right = -204.0
-offset_bottom = -173.0
+offset_bottom = -155.0
 grow_horizontal = 2
 grow_vertical = 0
 texture = ExtResource("4_gisau")
@@ -64,7 +62,7 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_left = 8.0
-offset_top = 8.0
+offset_top = 24.0
 offset_right = -8.0
 offset_bottom = -8.0
 grow_horizontal = 2
@@ -74,6 +72,7 @@ theme_override_styles/panel = SubResource("StyleBoxEmpty_4t0g4")
 
 [node name="DialogueContent" type="VBoxContainer" parent="DialogueUI/DialoguePanel" unique_id=516025455]
 layout_mode = 2
+theme_override_constants/separation = 0
 
 [node name="CharacterName" type="Label" parent="DialogueUI/DialoguePanel/DialogueContent" unique_id=184972013]
 unique_name_in_owner = true
