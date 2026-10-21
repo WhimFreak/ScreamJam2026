@@ -28,6 +28,7 @@ corner_radius_top_right = 20
 script = ExtResource("1_fxxkg")
 
 [node name="DialogueUI" type="Control" parent="." unique_id=941485854]
+visible = false
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0

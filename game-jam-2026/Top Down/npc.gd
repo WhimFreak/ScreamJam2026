@@ -22,6 +22,8 @@ func _ready() -> void:
 	interactable = interactable
 	
 func on_interact(_player: Player):
+	if not interactable:
+		return
 	dialogue_start_request.emit(dialogue_trees[next_tree_idx])
 	
 func on_tree_finished(_tree: DialogueTree):
