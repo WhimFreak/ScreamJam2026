@@ -3,10 +3,11 @@
 [ext_resource type="Script" uid="uid://cwg7fxbvwh4fv" path="res://Menus/main_menu.gd" id="1_jf8mj"]
 [ext_resource type="FontFile" uid="uid://m5ud83a43cit" path="res://Assets/Fonts/CaacupeOne-Regular.ttf" id="2_at0u2"]
 [ext_resource type="Theme" uid="uid://dtoy06e212sb0" path="res://Resources/main_theme.tres" id="2_p3jrs"]
+[ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="4_11gta"]
 
 [sub_resource type="Gradient" id="Gradient_nhx3u"]
-offsets = PackedFloat32Array(0)
-colors = PackedColorArray(0.09019608, 0, 0, 1)
+offsets = PackedFloat32Array(0.09453782)
+colors = PackedColorArray(0.02980168, 0.022736495, 0.052169725, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
 gradient = SubResource("Gradient_nhx3u")
@@ -41,7 +42,7 @@ anchors_preset = 9
 anchor_bottom = 1.0
 offset_left = 33.0
 offset_top = 9.5
-offset_right = 415.0
+offset_right = 384.0
 offset_bottom = -15.5
 grow_vertical = 2
 theme_override_constants/separation = 0
@@ -56,7 +57,7 @@ theme_override_constants/separation = -32
 [node name="NOT" type="Label" parent="VBoxContainer/Title/VBoxContainer" unique_id=41917486]
 layout_mode = 2
 theme_override_fonts/font = ExtResource("2_at0u2")
-theme_override_font_sizes/font_size = 48
+theme_override_font_sizes/font_size = 60
 text = "NOT"
 
 [node name="OUR" type="Label" parent="VBoxContainer/Title/VBoxContainer" unique_id=1741527425]
@@ -71,7 +72,7 @@ size_flags_vertical = 0
 offset_transform_enabled = true
 offset_transform_position = Vector2(0, -24)
 theme_override_fonts/font = ExtResource("2_at0u2")
-theme_override_font_sizes/font_size = 109
+theme_override_font_sizes/font_size = 121
 text = "FAULT"
 
 [node name="PlayButton" type="Button" parent="VBoxContainer" unique_id=55022146]
@@ -80,7 +81,8 @@ layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 10
 theme = ExtResource("2_p3jrs")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_11gta")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_jf8mj")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_jf8mj")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_jf8mj")
@@ -95,7 +97,8 @@ custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("2_p3jrs")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_11gta")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p3jrs")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p3jrs")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3jrs")
@@ -110,7 +113,8 @@ custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("2_p3jrs")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_11gta")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_p3jrs")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_p3jrs")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_p3jrs")
@@ -125,7 +129,8 @@ custom_minimum_size = Vector2(256, 48)
 layout_mode = 2
 size_flags_horizontal = 0
 theme = ExtResource("2_p3jrs")
-theme_override_font_sizes/font_size = 32
+theme_override_fonts/font = ExtResource("4_11gta")
+theme_override_font_sizes/font_size = 30
 theme_override_styles/normal = SubResource("StyleBoxEmpty_at0u2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_at0u2")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_at0u2")
