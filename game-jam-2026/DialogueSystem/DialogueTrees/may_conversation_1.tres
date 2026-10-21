@@ -9,46 +9,54 @@
 
 [sub_resource type="Resource" id="Resource_sgrwm"]
 script = ExtResource("1_htiv8")
+character_name = "May"
 portrait = ExtResource("4_drmyx")
 text = "HERE YOU ARE! How did it go?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rqe4x"]
 script = ExtResource("1_htiv8")
+character_name = "Rudy"
 text = "I don’t know yet. I guess this stuff takes time."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_peqf4"]
 script = ExtResource("1_htiv8")
 delay_before_next = 0.5
+character_name = "May"
 portrait = ExtResource("4_drmyx")
 text = "Oh don’t worry about it, you're not the type to give up. You inspire me a lot, you know? No way I'm letting you fall off."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_22pjp"]
 script = ExtResource("1_htiv8")
+character_name = "Rudy"
 text = "I guess..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_kebsw"]
 script = ExtResource("1_htiv8")
+character_name = "May"
 portrait = ExtResource("4_drmyx")
 text = "Well anyway, the group's hanging out over at HamJam. We're already late, so let’s hurry up."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_drmyx"]
 script = ExtResource("1_htiv8")
+character_name = "Rudy"
 text = "May… Is this really necessary? I don’t know If I-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6tlgw"]
 script = ExtResource("1_htiv8")
+character_name = "May"
 portrait = ExtResource("4_drmyx")
 text = "-deserve it? Oh please, don’t start with that right now. Let’s just go already!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_cnwnk"]
 script = ExtResource("1_htiv8")
+character_name = "Rudy"
 text = "Sorry, you're right. Let's go."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
