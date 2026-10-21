@@ -54,6 +54,18 @@ tracks/2/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("BlackScreen/YouCantRunAway:self_modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
 
 [sub_resource type="Animation" id="Animation_obwmc"]
 resource_name = "intro"
@@ -65,10 +77,10 @@ tracks/0/path = NodePath("BlackScreen/YouCantRunAway:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0.73333263, 3.7333326, 4.7333326),
+"times": PackedFloat32Array(0.73333335, 3.7333326, 4.7333336),
 "transitions": PackedFloat32Array(1, 0, 1),
 "update": 0,
-"values": [0.0, 1.0, 0.0]
+"values": [1.0, 1.0, 1.0]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -107,6 +119,18 @@ tracks/3/keys = {
 "args": [ExtResource("3_q672b")],
 "method": &"set_dialogue_tree"
 }]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlackScreen/YouCantRunAway:self_modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.73333335, 3.7333336, 4.766667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgf5d"]
@@ -223,6 +247,7 @@ grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
 [node name="YouCantRunAway" type="RichTextLabel" parent="BlackScreen" unique_id=946196420]
+self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -234,11 +259,11 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/default_color = Color(1, 0.27398866, 0.21327004, 1)
+theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("4_b7mpt")
 theme_override_font_sizes/normal_font_size = 48
 bbcode_enabled = true
-text = "[shake]YOU CAN'T RUN AWAY..."
+text = "You can't run away..."
 fit_content = true
 autowrap_mode = 0
 visible_characters = 0
@@ -250,15 +275,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -168.0
+offset_left = -176.0
 offset_top = -20.0
-offset_right = 168.0
-offset_bottom = 20.0
+offset_right = 176.0
+offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 
 [node name="IAmNotRunningAway" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=267774569]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("5_qtdy1")
 bbcode_enabled = true
@@ -270,6 +296,7 @@ visible_ratio = 0.0
 
 [node name="IKnowWhatIDid" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=404477357]
 layout_mode = 2
+size_flags_vertical = 3
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 theme_override_fonts/normal_font = ExtResource("5_qtdy1")
 bbcode_enabled = true

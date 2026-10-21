@@ -7,6 +7,7 @@ extends Control
 @onready var choices_box : HBoxContainer = %ChoicesBox
 @onready var dialogue_voice_player: AudioStreamPlayer = %DialogueVoicePlayer
 @onready var sound_effect_player: AudioStreamPlayer = %SoundEffectPlayer
+@onready var character_name: Label = %CharacterName
 
 var _text_tween: Tween
 var current_item: DialogueItem
@@ -30,6 +31,9 @@ func show_text(current_item_index: int) -> void:
 	if _text_tween and _text_tween.is_valid():
 		_text_tween.kill()
 	dialogue_voice_player.stop()
+	
+	character_name.text = current_item.character_name
+	character_name.visible = not current_item.character_name.is_empty()
 	
 	dialogue_text.text = current_item.text
 	portrait.texture = current_item.portrait
