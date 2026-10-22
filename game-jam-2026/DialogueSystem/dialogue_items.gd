@@ -7,6 +7,7 @@ class_name DialogueItem extends BaseDialogue
 
 @export_group("timing")
 @export_range(0.0, 60.0, 0.1, "or_greater", "suffix:s") var delay_before_next : float = 0.0
+@export var base_speed: float = 1
 
 @export_group("effect")
 @export var signal_on_advance: String

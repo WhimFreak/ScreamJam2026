@@ -19,7 +19,6 @@ position = Vector2(0, -11)
 texture = ExtResource("1_t7rll")
 
 [node name="InteractableComponent" parent="." unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("2_uuujm")]
-visible = false
 position = Vector2(0, -11)
 area_2d = NodePath("Area2D")
 

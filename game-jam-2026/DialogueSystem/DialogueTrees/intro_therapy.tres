@@ -10,7 +10,7 @@
 [sub_resource type="Resource" id="Resource_quxoa"]
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
-signal_on_advance = "fade_in"
+signal_on_advance = "fade_to_color"
 character_name = "Rosila"
 portrait = ExtResource("4_oj845")
 text = "It's not your fault."

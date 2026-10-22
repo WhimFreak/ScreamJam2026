@@ -8,30 +8,29 @@
 
 [sub_resource type="Resource" id="Resource_h18ob"]
 script = ExtResource("1_guyx0")
-text = "Knock knock knock"
+delay_before_next = 2.0
+text = "(Just a few splashes and I'll be golden.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rp8jb"]
 script = ExtResource("1_guyx0")
-text = "Someone’s at door.."
+character_name = "Rudy"
+text = "(..huh? There's someone at the door.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5xjo7"]
 script = ExtResource("1_guyx0")
-text = "Knock knock knock"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_4jp8f"]
-script = ExtResource("1_guyx0")
-text = "who’s there?"
+delay_before_next = 2.0
+character_name = "Rudy"
+text = "Guys?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_m0sdt"]
 script = ExtResource("1_guyx0")
-text = "(There is no answer…..)"
+text = "(I sigh and quickly wipe my face dry. I should go check that out.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_ybuti")
-dialogue_items = Array[ExtResource("1_guyx0")]([SubResource("Resource_h18ob"), SubResource("Resource_rp8jb"), SubResource("Resource_5xjo7"), SubResource("Resource_4jp8f"), SubResource("Resource_m0sdt")])
+dialogue_items = Array[ExtResource("1_guyx0")]([SubResource("Resource_h18ob"), SubResource("Resource_rp8jb"), SubResource("Resource_5xjo7"), SubResource("Resource_m0sdt")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

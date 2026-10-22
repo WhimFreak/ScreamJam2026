@@ -9,534 +9,596 @@
 [sub_resource type="Resource" id="Resource_estei"]
 script = ExtResource("1_0pbus")
 character_name = "Abigail"
-text = "Finally!! You are here!"
+text = "Finally, you're here!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_r44pi"]
 script = ExtResource("1_0pbus")
-text = "We’re really sorry guys! There’s a lot of traffic today due to the Carnival nearby..."
+character_name = "May"
+text = "We’re really sorry guys! Traffic's rough today with the Carnival nearby."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_qm6hb"]
 script = ExtResource("1_0pbus")
-text = "For a second I thought you guys weren’t coming along!"
+character_name = "Abigail"
+text = "That makes sense. For a second there, I thought you guys weren’t coming along!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_gisau"]
 script = ExtResource("1_0pbus")
-text = "yeah! I have inhaled like 2 pizzas already while waiting…"
+character_name = "Mark"
+text = "Yeah! I must have inhaled like 2 whole boxes of pizza already."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_yyecf"]
 script = ExtResource("1_0pbus")
-text = "(yeah, mark hasn’t changed at all..)"
+character_name = "Rudy"
+text = "(Yeah, Mark hasn’t changed at all.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ktsms"]
 script = ExtResource("1_0pbus")
-text = "….."
+delay_before_next = 0.5
+character_name = "Abigail"
+text = ". . ."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_2t2me"]
 script = ExtResource("1_0pbus")
-text = "umm… sorry about that !"
+delay_before_next = 0.5
+character_name = "Mark"
+text = "I'll umm.. order you guys more."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_fkywb"]
 script = ExtResource("1_0pbus")
-text = "So…., where were we?"
+character_name = "Mark"
+text = "So, where were we?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_je0y3"]
 script = ExtResource("1_0pbus")
-text = "yeah, the carnival. It’s been too long since I went to one."
+character_name = "Mark"
+text = "Oh yeah, the carnival! It’s been too long since I went to one."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_b3rig"]
 script = ExtResource("1_0pbus")
-text = "WE WERE AT them being late !!!!!"
+character_name = "Abigail"
+text = "[shake]We were at them being late!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_owin8"]
 script = ExtResource("1_0pbus")
-text = "( Abigail is as always, that one girl who gets overly conscious about things)
+character_name = "Rudy"
+text = "(Abigail as always, gets overly conscious about things.)
 "
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_k5o0u"]
 script = ExtResource("1_0pbus")
-text = "( I guess there’s nothing bad about it, just that I don’t relate to that trait that much)"
+character_name = "Rudy"
+text = "(I guess there’s nothing wrong about it, though we're way different in that regard.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_1me10"]
 script = ExtResource("1_0pbus")
-text = "( or maybe I just can’t)"
+character_name = "Rudy"
+text = "(I don't think I can afford to care the way she does.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_hhu8m"]
 script = ExtResource("1_0pbus")
-text = "oh…right. I am sorry again!"
+character_name = "Mark"
+text = "Oh right. I'm sorry again!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_80swo"]
 script = ExtResource("1_0pbus")
-text = "I’m starting to think I should’ve stayed home."
+character_name = "Rudy"
+text = "Well now, I’m starting to think I should’ve stayed home."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_k2rqm"]
 script = ExtResource("1_0pbus")
-text = "(may stares the shit out of me)"
+character_name = "Rudy"
+text = "(I try to ignore May staring the shit out of me.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0u6xh"]
 script = ExtResource("1_0pbus")
-text = "Abigail - PLease don’t say that!!"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_2fd1a"]
-script = ExtResource("1_0pbus")
-text = "I am really happy you came today!"
+character_name = "Abigail"
+text = "Oh, please don’t say that! We're really happy you came today!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_noo73"]
 script = ExtResource("1_0pbus")
-text = "Too late anyways. We have a strict attendance policy. One absence and we sell your belongings."
+character_name = "Mark"
+text = "You're too late, anyway. We have a strict attendance policy. One absence and we sell your belongings."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_mji5h"]
 script = ExtResource("1_0pbus")
-text = "We sold his dignity years ago. Nobody wanted to buy it."
+character_name = "Abigail"
+text = "Right, Mark. If we did that, you'd have nothing left to sell but your dignity. And nobody wants to buy that."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_jffff"]
 script = ExtResource("1_0pbus")
-text = "You people are why I have trust issues!!"
+character_name = "Mark"
+text = "Well, I'm early today, aren't I?!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_fk3jp"]
 script = ExtResource("1_0pbus")
-text = "(I let out a small laugh. May notices but doesn't make a big deal out of it.)"
+character_name = "Rudy"
+text = "(I let out a small laugh. May notices and smiles smugly, lowering her voice.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_4e6pm"]
 script = ExtResource("1_0pbus")
+character_name = "May"
 text = "See? Five minutes in and you're already having fun."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_65ca2"]
 script = ExtResource("1_0pbus")
+character_name = "Rudy"
 text = "I laughed once."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ya2rd"]
 script = ExtResource("1_0pbus")
+character_name = "May"
 text = "I'll take it."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_df1bg"]
 script = ExtResource("1_0pbus")
-text = "what you two blabbering! Anyways… I ordered refreshments for ya’all in advance!"
+character_name = "Mark"
+text = "What you two blabbering about? Well anyway, I ordered drinks for ya’ll in advance!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_drmks"]
 script = ExtResource("1_0pbus")
-text = "since when did you become so caring?!"
+character_name = "May"
+text = "Since when did you become so caring?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ursju"]
 script = ExtResource("1_0pbus")
-text = "from the day your boy got into a relationship."
+character_name = "Mark"
+text = "Since the day your boy got into a relationship?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_kt203"]
 script = ExtResource("1_0pbus")
-text = "bullshit! You don’t have a girlfriend"
+character_name = "May"
+text = "Bullshit, you don’t have a girlfriend."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3w4rw"]
 script = ExtResource("1_0pbus")
-text = "more like… you can’t have a girlfriend."
+character_name = "Abigail"
+text = "More like… you can’t have a girlfriend."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_dm4vr"]
 script = ExtResource("1_0pbus")
-text = "oh don’t hate me cuz I am beautiful n-"
+character_name = "Mark"
+text = "Careful, you two. Your jealousy's showing~"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_i54vc"]
 script = ExtResource("1_0pbus")
-text = "The devs would advise you to not complete that joke!"
+character_name = "May"
+text = "Gross."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_lpwm6"]
 script = ExtResource("1_0pbus")
-text = "yeah, devs my ass !!"
+character_name = "Abigail"
+text = "Gross."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0ojwt"]
 script = ExtResource("1_0pbus")
-text = "( ? devs will remember that)"
+character_name = "Rudy"
+text = "Gross."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_i6v1t"]
 script = ExtResource("1_0pbus")
-text = "Sometimes I get reminded by these two, that there is a whole different world about videogames out there.."
+delay_before_next = 3.0
+signal_on_advance = "fade_to_black_then_color"
+character_name = "Mark"
+text = "Alright, alright, I get it! Don't encourage them, Rudy."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_x3fca"]
 script = ExtResource("1_0pbus")
-text = "I know right ! well it’s been so long since we got together that I forgot about these niche references.."
+character_name = "Abigail"
+text = "Gosh, It’s been so long since we last got together, huh?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5bcis"]
 script = ExtResource("1_0pbus")
-text = "And I know things haven't exactly been easy for you rudy.."
+character_name = "Abigail"
+text = "I know things haven't exactly been easy for you, Rudy."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_cxjyd"]
 script = ExtResource("1_0pbus")
+character_name = "Rudy"
 text = "(The table grows a little quieter, but not uncomfortably so)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_k63s5"]
 script = ExtResource("1_0pbus")
-text = "You don't have to talk about anything you don't want to..."
+character_name = "Abigail"
+text = "Hey, you don't have to talk about anything you don't want to."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3x1tn"]
 script = ExtResource("1_0pbus")
+character_name = "Abigail"
 text = "I just want you to know that we haven't forgotten you, okay?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_crq3r"]
 script = ExtResource("1_0pbus")
-text = "(I look down at my drink)"
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "(I look down at my drink.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0pbus"]
 script = ExtResource("1_0pbus")
-text = "Sometimes I just think about what is real and what could have been real."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_300mh"]
-script = ExtResource("1_0pbus")
-text = "Real.."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_l3lep"]
-script = ExtResource("1_0pbus")
-text = "( Is this guy for real ?!)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_ia8e2"]
-script = ExtResource("1_0pbus")
-text = "That's not the comforting comparison you think about!"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_718xj"]
-script = ExtResource("1_0pbus")
-text = "That’s true. We are trying to establish solidarity here…"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_nb3rr"]
-script = ExtResource("1_0pbus")
-text = "(I smile faintly)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_ty5vu"]
-script = ExtResource("1_0pbus")
-text = "I know. Thanks."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_ux3b5"]
-script = ExtResource("1_0pbus")
-text = "You don't have to catch up with everyone, you know."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_18frt"]
-script = ExtResource("1_0pbus")
-text = "(She speaks gently, without making me look directly at her.)"
+character_name = "Rudy"
+text = "Well.. sometimes I just.. wonder how much of what I remember is real and how much isn't."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0yqc5"]
 script = ExtResource("1_0pbus")
-text = "You can just be here. That's enough for today."
+character_name = "Rudy"
+text = "Been working things out with my therapist. I don't want you guys thinking I'm crazy."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_300mh"]
+script = ExtResource("1_0pbus")
+character_name = "Mark"
+text = "Eh, I've got plenty active imagination too."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_l3lep"]
+script = ExtResource("1_0pbus")
+character_name = "Rudy"
+text = "(I sigh.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_718xj"]
+script = ExtResource("1_0pbus")
+character_name = "Mark"
+text = "Hey, just trying to relate here! I don't think you're crazy."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_nb3rr"]
+script = ExtResource("1_0pbus")
+character_name = "Rudy"
+text = "I know, thanks."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ux3b5"]
+script = ExtResource("1_0pbus")
+character_name = "May"
+text = "You don't have to catch us up on all of it today, you know. You can just be here."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5xda3"]
 script = ExtResource("1_0pbus")
-text = "(I look at her. For a moment, I don't know what to say)"
+character_name = "Rudy"
+text = "(I look at her. It takes a moment for the words to come.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_dtdr2"]
 script = ExtResource("1_0pbus")
-text = "I think I needed to hear that...."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_2bjm1"]
-script = ExtResource("1_0pbus")
-text = "Then I'm glad you came."
+character_name = "Rudy"
+text = "Thanks, I needed to hear that.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_pb4ad"]
 script = ExtResource("1_0pbus")
-text = "(She gives me a small smile. I return it as well)"
+character_name = "May"
+text = "(She gives me a small smile. I return it.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_n4dus"]
 script = ExtResource("1_0pbus")
-text = " Okay, this is getting dangerously wholesome!"
+character_name = "Mark"
+text = "Okay, this is getting dangerously wholesome!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_cee64"]
 script = ExtResource("1_0pbus")
-text = "Well then how about this…"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_y1rqq"]
-script = ExtResource("1_0pbus")
-text = "Your haircut looks like you lost a bet with a lawn mower!"
+character_name = "Abigail"
+text = "Hey Mark, your haircut looks like you lost a bet with a lawn mower."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8pha5"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "There it is. My people."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_b6l1u"]
 script = ExtResource("2_300mh")
 text = "I've had worse days"
-target_line_idx = 60
+target_line_idx = 54
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_r2cj4"]
 script = ExtResource("2_300mh")
-text = "I actually had a good time"
-target_line_idx = 64
+text = "I'm having a good time"
+target_line_idx = 58
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_ik3ie"]
 script = ExtResource("1_0pbus")
 choices = Array[ExtResource("2_300mh")]([SubResource("Resource_b6l1u"), SubResource("Resource_r2cj4")])
 click_advance = false
+character_name = "May"
 text = "So?.... Be honest. Was coming here really that terrible?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_88eib"]
 script = ExtResource("1_0pbus")
+character_name = "Rudy"
 text = "Let's say, I've had worse days."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_mapdo"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "That's basically a five-star review from him!"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_rkoaw"]
+script = ExtResource("1_0pbus")
+click_advance = false
+character_name = "May"
+text = "I'll take it."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vxuos"]
 script = ExtResource("1_0pbus")
-text = "I'll put it on our restaurant page"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_6m540"]
-script = ExtResource("2_300mh")
-text = "just kidding!"
-metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
-
-[sub_resource type="Resource" id="Resource_jf370"]
-script = ExtResource("2_300mh")
-text = "yeah..."
-metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
-
-[sub_resource type="Resource" id="Resource_rkoaw"]
-script = ExtResource("1_0pbus")
-choices = Array[ExtResource("2_300mh")]([SubResource("Resource_6m540"), SubResource("Resource_jf370")])
-click_advance = false
-text = "I'll take it."
+character_name = "Abigail"
+text = "One day, we'll get a real compliment from you, Rudy."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3axj6"]
 script = ExtResource("1_0pbus")
-text = "I actually had a good time!!"
+character_name = "Rudy"
+text = "I'm actually having a good time."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_l3qvu"]
 script = ExtResource("1_0pbus")
-text = "(May looks genuinely pleased)"
+character_name = "Rudy"
+text = "(May grins. She looks genuinely pleased.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_s1mou"]
 script = ExtResource("1_0pbus")
-text = "Yeah?"
+character_name = "May"
+text = "Yeaaah?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_7tss4"]
 script = ExtResource("1_0pbus")
-text = "Yeah. I think I needed this more than I realized."
+character_name = "Rudy"
+text = "Yeah. Turns out I needed this more than I realized."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_tl1pj"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "Someone record the date. We have achieved a positive review."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6omly"]
 script = ExtResource("1_0pbus")
+delay_before_next = 3.0
+signal_on_advance = "fade_to_black_then_color"
+character_name = "Abigail"
 text = "Don't ruin it."
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_u2vtl"]
-script = ExtResource("1_0pbus")
-text = "(The group has been sitting together for a while. Empty cups and plates cover the table)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_ym6hf"]
-script = ExtResource("1_0pbus")
-text = "(Mark leans back in his chair, looking far too pleased with himself)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_682c1"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "You know what? We should do this every week."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ym6hf"]
+script = ExtResource("1_0pbus")
+character_name = "Rudy"
+text = "(Mark is leaning back on his chair, looking far too pleased.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_51idl"]
 script = ExtResource("1_0pbus")
+character_name = "Abigail"
 text = "I guess broo.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_gl40u"]
 script = ExtResource("1_0pbus")
-text = "NO I am being serious"
+character_name = "Mark"
+text = "No. I am being serious!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_s3xol"]
 script = ExtResource("1_0pbus")
-text = " I'd be happy with that."
+character_name = "May"
+text = "I'd be happy with that."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_enbcl"]
 script = ExtResource("1_0pbus")
-text = "Of course you would. Especially now that Rudy is finally coming out of his cave."
+character_name = "Mark"
+text = "Of course you'd be. Especially now that Rudy is finally coming out of his cave."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_2eyrr"]
 script = ExtResource("1_0pbus")
-text = "Mark.."
+character_name = "May"
+text = "Mark."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_e7r0u"]
 script = ExtResource("1_0pbus")
-text = "What? I'm happy he's here!"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_nlxav"]
-script = ExtResource("1_0pbus")
-text = "Then just say that!"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_ehwbg"]
-script = ExtResource("1_0pbus")
-text = "Fine! I'm happy you're here, man."
+character_name = "Mark"
+text = "What? I'm also happy he's here!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_886v0"]
 script = ExtResource("1_0pbus")
-text = "(He gives me an exaggerated thumbs-up)"
+character_name = "Rudy"
+text = "(He gives me an exaggerated thumbs-up. Abigail shakes her head and sighs.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rherf"]
 script = ExtResource("1_0pbus")
-text = "Seriously, though!! It's good seeing you smile again..."
+character_name = "Mark"
+text = "Seriously though, man! It's good to see your smile again."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6k1rk"]
 script = ExtResource("1_0pbus")
-text = "(I nod, a little embarrassed)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_xu4jm"]
-script = ExtResource("1_0pbus")
-text = "Thanks, man."
+character_name = "Rudy"
+text = "(I nod, a little embarrassed.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_4h8vv"]
 script = ExtResource("1_0pbus")
-text = "Besides, May's been trying to get you out for ages. .."
+character_name = "Mark"
+text = "Besides, May's been trying to get you out for ages..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_fflk1"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "I'm pretty sure she's been waiting for this moment since forever!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rcdxe"]
 script = ExtResource("1_0pbus")
-text = "What is THAT supposed to mean?"
+character_name = "May"
+text = "Now what is THAT supposed to mean?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_d77vw"]
 script = ExtResource("1_0pbus")
-text = "Oh, come on. Don't act like we don't know?"
+character_name = "Mark"
+text = "Oh, come on. What do you think it means?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3fxvc"]
 script = ExtResource("1_0pbus")
+character_name = "Abigail"
 text = "Mark. Leave it."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_h30t1"]
 script = ExtResource("1_0pbus")
-text = "What? I'm just saying what everyone already knows. You've always had a thing for him."
+character_name = "Mark"
+text = "What? It's not like Rudy doesn't know already. You've always had a thing for him."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_fad1b"]
 script = ExtResource("1_0pbus")
-text = "(May's face changes. She looks embarrassed and immediately glances at me)"
+character_name = "Rudy"
+text = "(May's face changes. She looks worrily at me, her cheeks flushed a bright pink.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_uk7jt"]
 script = ExtResource("1_0pbus")
-text = "(maybe I did had a clue about this, but I have just started notice this)"
+character_name = "Rudy"
+text = "(I guess the thought had crossed my mind, but only recently.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8djf2"]
 script = ExtResource("1_0pbus")
-text = "(does it matter anyways?)"
+character_name = "Rudy"
+text = "(Does it even matter anyway?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_t6dw7"]
 script = ExtResource("1_0pbus")
+character_name = "May"
 text = "Can we please not do this right now?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_d1qdp"]
 script = ExtResource("1_0pbus")
+character_name = "Mark"
 text = "I'm not making fun of you! It's kind of sweet, actually."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_2dgb5"]
 script = ExtResource("1_0pbus")
-text = "You're making it weird. Stop."
+character_name = "Abigail"
+text = "Jesus, Mark, read the room. You're making it weird."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6mmp3"]
 script = ExtResource("1_0pbus")
+delay_before_next = 0.5
+character_name = "Mark"
+text = "Fine, fine. I'm just saying..."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ia8e2"]
+script = ExtResource("1_0pbus")
 click_advance = false
-delay_before_next = 3.0
-text = "Fine, fine. I'm just saying... now that Ava's gone, you finally have a chance, right?"
+auto_advance_delay = 1.0
+delay_before_next = 4.0
+base_speed = 0.5
+signal_on_advance = "slow_fade_to_black"
+character_name = "Mark"
+text = "Now that Ava's gone, you finally have a chance, right?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_qxla0"]
 script = ExtResource("1_0pbus")
-text = "(Is this real?)"
+delay_before_next = 1.0
+character_name = "Rudy"
+text = "(..huh?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_duayl"]
 script = ExtResource("1_0pbus")
-text = "(It just can’t be)"
+delay_before_next = 1.0
+base_speed = 0.5
+character_name = "Rudy"
+text = "(That name..)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_18frt"]
+script = ExtResource("1_0pbus")
+click_advance = false
+auto_advance_delay = 1.0
+character_name = "Abigail"
+text = "Mark! Oh my god."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ty5vu"]
+script = ExtResource("1_0pbus")
+character_name = "Rudy"
+text = "(My eyes blur and my breath quickens. I can't pay attention to them right now.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("6_nb3rr")
-dialogue_items = Array[ExtResource("1_0pbus")]([SubResource("Resource_estei"), SubResource("Resource_r44pi"), SubResource("Resource_qm6hb"), SubResource("Resource_gisau"), SubResource("Resource_yyecf"), SubResource("Resource_ktsms"), SubResource("Resource_2t2me"), SubResource("Resource_fkywb"), SubResource("Resource_je0y3"), SubResource("Resource_b3rig"), SubResource("Resource_owin8"), SubResource("Resource_k5o0u"), SubResource("Resource_1me10"), SubResource("Resource_hhu8m"), SubResource("Resource_80swo"), SubResource("Resource_k2rqm"), SubResource("Resource_0u6xh"), SubResource("Resource_2fd1a"), SubResource("Resource_noo73"), SubResource("Resource_mji5h"), SubResource("Resource_jffff"), SubResource("Resource_fk3jp"), SubResource("Resource_4e6pm"), SubResource("Resource_65ca2"), SubResource("Resource_ya2rd"), SubResource("Resource_df1bg"), SubResource("Resource_drmks"), SubResource("Resource_ursju"), SubResource("Resource_kt203"), SubResource("Resource_3w4rw"), SubResource("Resource_dm4vr"), SubResource("Resource_i54vc"), SubResource("Resource_lpwm6"), SubResource("Resource_0ojwt"), SubResource("Resource_i6v1t"), SubResource("Resource_x3fca"), SubResource("Resource_5bcis"), SubResource("Resource_cxjyd"), SubResource("Resource_k63s5"), SubResource("Resource_3x1tn"), SubResource("Resource_crq3r"), SubResource("Resource_0pbus"), SubResource("Resource_300mh"), SubResource("Resource_l3lep"), SubResource("Resource_ia8e2"), SubResource("Resource_718xj"), SubResource("Resource_nb3rr"), SubResource("Resource_ty5vu"), SubResource("Resource_ux3b5"), SubResource("Resource_18frt"), SubResource("Resource_0yqc5"), SubResource("Resource_5xda3"), SubResource("Resource_dtdr2"), SubResource("Resource_2bjm1"), SubResource("Resource_pb4ad"), SubResource("Resource_n4dus"), SubResource("Resource_cee64"), SubResource("Resource_y1rqq"), SubResource("Resource_8pha5"), SubResource("Resource_ik3ie"), SubResource("Resource_88eib"), SubResource("Resource_mapdo"), SubResource("Resource_vxuos"), SubResource("Resource_rkoaw"), SubResource("Resource_3axj6"), SubResource("Resource_l3qvu"), SubResource("Resource_s1mou"), SubResource("Resource_7tss4"), SubResource("Resource_tl1pj"), SubResource("Resource_6omly"), SubResource("Resource_u2vtl"), SubResource("Resource_ym6hf"), SubResource("Resource_682c1"), SubResource("Resource_51idl"), SubResource("Resource_gl40u"), SubResource("Resource_s3xol"), SubResource("Resource_enbcl"), SubResource("Resource_2eyrr"), SubResource("Resource_e7r0u"), SubResource("Resource_nlxav"), SubResource("Resource_ehwbg"), SubResource("Resource_886v0"), SubResource("Resource_rherf"), SubResource("Resource_6k1rk"), SubResource("Resource_xu4jm"), SubResource("Resource_4h8vv"), SubResource("Resource_fflk1"), SubResource("Resource_rcdxe"), SubResource("Resource_d77vw"), SubResource("Resource_3fxvc"), SubResource("Resource_h30t1"), SubResource("Resource_fad1b"), SubResource("Resource_uk7jt"), SubResource("Resource_8djf2"), SubResource("Resource_t6dw7"), SubResource("Resource_d1qdp"), SubResource("Resource_2dgb5"), SubResource("Resource_6mmp3"), SubResource("Resource_qxla0"), SubResource("Resource_duayl")])
+dialogue_items = Array[ExtResource("1_0pbus")]([SubResource("Resource_estei"), SubResource("Resource_r44pi"), SubResource("Resource_qm6hb"), SubResource("Resource_gisau"), SubResource("Resource_yyecf"), SubResource("Resource_ktsms"), SubResource("Resource_2t2me"), SubResource("Resource_fkywb"), SubResource("Resource_je0y3"), SubResource("Resource_b3rig"), SubResource("Resource_owin8"), SubResource("Resource_k5o0u"), SubResource("Resource_1me10"), SubResource("Resource_hhu8m"), SubResource("Resource_80swo"), SubResource("Resource_k2rqm"), SubResource("Resource_0u6xh"), SubResource("Resource_noo73"), SubResource("Resource_mji5h"), SubResource("Resource_jffff"), SubResource("Resource_fk3jp"), SubResource("Resource_4e6pm"), SubResource("Resource_65ca2"), SubResource("Resource_ya2rd"), SubResource("Resource_df1bg"), SubResource("Resource_drmks"), SubResource("Resource_ursju"), SubResource("Resource_kt203"), SubResource("Resource_3w4rw"), SubResource("Resource_dm4vr"), SubResource("Resource_i54vc"), SubResource("Resource_lpwm6"), SubResource("Resource_0ojwt"), SubResource("Resource_i6v1t"), SubResource("Resource_x3fca"), SubResource("Resource_5bcis"), SubResource("Resource_cxjyd"), SubResource("Resource_k63s5"), SubResource("Resource_3x1tn"), SubResource("Resource_crq3r"), SubResource("Resource_0pbus"), SubResource("Resource_0yqc5"), SubResource("Resource_300mh"), SubResource("Resource_l3lep"), SubResource("Resource_718xj"), SubResource("Resource_nb3rr"), SubResource("Resource_ux3b5"), SubResource("Resource_5xda3"), SubResource("Resource_dtdr2"), SubResource("Resource_pb4ad"), SubResource("Resource_n4dus"), SubResource("Resource_cee64"), SubResource("Resource_8pha5"), SubResource("Resource_ik3ie"), SubResource("Resource_88eib"), SubResource("Resource_mapdo"), SubResource("Resource_rkoaw"), SubResource("Resource_vxuos"), SubResource("Resource_3axj6"), SubResource("Resource_l3qvu"), SubResource("Resource_s1mou"), SubResource("Resource_7tss4"), SubResource("Resource_tl1pj"), SubResource("Resource_6omly"), SubResource("Resource_682c1"), SubResource("Resource_ym6hf"), SubResource("Resource_51idl"), SubResource("Resource_gl40u"), SubResource("Resource_s3xol"), SubResource("Resource_enbcl"), SubResource("Resource_2eyrr"), SubResource("Resource_e7r0u"), SubResource("Resource_886v0"), SubResource("Resource_rherf"), SubResource("Resource_6k1rk"), SubResource("Resource_4h8vv"), SubResource("Resource_fflk1"), SubResource("Resource_rcdxe"), SubResource("Resource_d77vw"), SubResource("Resource_3fxvc"), SubResource("Resource_h30t1"), SubResource("Resource_fad1b"), SubResource("Resource_uk7jt"), SubResource("Resource_8djf2"), SubResource("Resource_t6dw7"), SubResource("Resource_d1qdp"), SubResource("Resource_2dgb5"), SubResource("Resource_6mmp3"), SubResource("Resource_ia8e2"), SubResource("Resource_qxla0"), SubResource("Resource_duayl"), SubResource("Resource_18frt"), SubResource("Resource_ty5vu")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"
