@@ -8,85 +8,91 @@
 
 [sub_resource type="Resource" id="Resource_m7sxa"]
 script = ExtResource("1_om4f4")
-text = "MC , are you okay???"
+character_name = "May"
+text = "Oh my god, you're out! Are you alright?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8e8q0"]
 script = ExtResource("1_om4f4")
-text = "I am so sorry for what happened!!!"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_occkl"]
-script = ExtResource("1_om4f4")
-text = "I shouldn’t have invited Mark."
+character_name = "May"
+text = "I am so sorry for what happened! I shouldn’t have invited Mark. He said he wouldn't bring it up but-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_wp56q"]
 script = ExtResource("1_om4f4")
-text = "it’s all my fault"
+character_name = "May"
+text = "Oh, this is all my fault!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ty25m"]
 script = ExtResource("1_om4f4")
-text = "(she is almost about to cry)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_xoro4"]
-script = ExtResource("1_om4f4")
+character_name = "Rudy"
+text = "(She rushes her words out, almost about to cry.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6bgmg"]
 script = ExtResource("1_om4f4")
-text = "(I don’t want another person to break because of me)"
+character_name = "Rudy"
+text = "(I really don’t want another person to break because of me)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8q8ch"]
 script = ExtResource("1_om4f4")
-text = "It’s okay may..
+character_name = "Rudy"
+text = "It’s okay, May.
 "
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_dp33p"]
 script = ExtResource("1_om4f4")
-text = "Really, it's alright. I just…"
+character_name = "Rudy"
+text = "Really, it's alright. I just.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_qgbsf"]
 script = ExtResource("1_om4f4")
-text = "I think I should head home, I’ll catch up with you later."
+character_name = "Rudy"
+text = "I think I should head home, I’ll catch up with you later, okay?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_12tud"]
 script = ExtResource("1_om4f4")
-text = "should I walk you home?"
+character_name = "May"
+text = "I should walk you home at least."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_knp0d"]
 script = ExtResource("1_om4f4")
-text = "no it’s going to be alright"
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "Seriously May, I'm going to be alright"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_2eiqw"]
 script = ExtResource("1_om4f4")
-text = "okay, if you say so.."
+character_name = "May"
+text = "Okay, if you say so.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ufytj"]
 script = ExtResource("1_om4f4")
-text = "but please take care rudy.."
+character_name = "May"
+text = "Just.. please take care of yourself, Rudy.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_513vo"]
 script = ExtResource("1_om4f4")
-text = "call me anytime you need me.."
+character_name = "May"
+text = "And know you can call me anytime you need me.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_082o8"]
 script = ExtResource("1_om4f4")
-text = "Yeah sure!"
+character_name = "Rudy"
+text = "I know, May."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_b0k55")
-dialogue_items = Array[ExtResource("1_om4f4")]([SubResource("Resource_m7sxa"), SubResource("Resource_8e8q0"), SubResource("Resource_occkl"), SubResource("Resource_wp56q"), SubResource("Resource_ty25m"), SubResource("Resource_xoro4"), SubResource("Resource_6bgmg"), SubResource("Resource_8q8ch"), SubResource("Resource_dp33p"), SubResource("Resource_qgbsf"), SubResource("Resource_12tud"), SubResource("Resource_knp0d"), SubResource("Resource_2eiqw"), SubResource("Resource_ufytj"), SubResource("Resource_513vo"), SubResource("Resource_082o8")])
+dialogue_items = Array[ExtResource("1_om4f4")]([SubResource("Resource_m7sxa"), SubResource("Resource_8e8q0"), SubResource("Resource_wp56q"), SubResource("Resource_ty25m"), SubResource("Resource_6bgmg"), SubResource("Resource_8q8ch"), SubResource("Resource_dp33p"), SubResource("Resource_qgbsf"), SubResource("Resource_12tud"), SubResource("Resource_knp0d"), SubResource("Resource_2eiqw"), SubResource("Resource_ufytj"), SubResource("Resource_513vo"), SubResource("Resource_082o8")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

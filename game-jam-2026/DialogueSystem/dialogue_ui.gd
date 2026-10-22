@@ -33,10 +33,12 @@ func show_text(current_item_index: int) -> void:
 	current_item = dialogue_tree.dialogue_items[current_item_index]
 	visible = true
 
+	MusicPlayer.volume_db = current_item.music_volume_db
 	if current_item.music:
 		MusicPlayer.play(current_item.music, current_item.music_fade_time)
 	elif current_item.stop_music:
 		MusicPlayer.stop(current_item.music_fade_time)
+	
 
 	if _text_tween and _text_tween.is_valid():
 		_text_tween.kill()
@@ -186,6 +188,6 @@ func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("left_mouse") or event.is_action_pressed("space")) and current_item.click_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
 		if _text_tween and _text_tween.is_valid() and _text_tween.is_running():
-			_text_tween.set_speed_scale(4.0)
+			_text_tween.set_speed_scale(40.0)
 		elif current_item.choices.is_empty():
 			advance(idx, idx + 1)
