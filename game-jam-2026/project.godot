@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 TransitionScene="*uid://duy44x8ais6b2"
 Events="*uid://dlic5j5p7g7h6"
+MusicPlayer="*res://Global/music_player.gd"
 
 [display]
 
