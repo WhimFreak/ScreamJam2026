@@ -4,7 +4,7 @@ extends Control
 
 @onready var portrait : TextureRect = %Portrait
 @onready var dialogue_text : RichTextLabel = %DialogueText
-@onready var choices_box : HBoxContainer = %ChoicesBox
+@onready var choices_box : VBoxContainer = %ChoicesBox
 @onready var dialogue_voice_player: AudioStreamPlayer = %DialogueVoicePlayer
 @onready var sound_effect_player: AudioStreamPlayer = %SoundEffectPlayer
 @onready var character_name: Label = %CharacterName
@@ -47,6 +47,7 @@ func show_text(current_item_index: int) -> void:
 		sound_effect_player.stop()
 	
 	_text_tween = create_tween()
+	_text_tween.set_speed_scale(current_item.base_speed)
 	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	_text_tween.tween_property(dialogue_text, "visible_ratio", 1.0, text_appearing_duration)
 	dialogue_voice_player.stream = current_item.dialogue_sound
@@ -123,10 +124,7 @@ func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> vo
 	for choice in choices_data:
 		var button := Button.new()
 		button.text = choice.text
-		if button.text == "continue":
-			button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
-		else:
-			button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_CENTER
+		button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
 		choices_box.add_child(button)
 		if choice.is_quit:
 			button.pressed.connect(get_tree().quit)
@@ -144,6 +142,6 @@ func _input(event: InputEvent) -> void:
 	if (event.is_action_pressed("left_mouse") or event.is_action_pressed("space")) and current_item.click_advance:
 		var idx: int = dialogue_tree.dialogue_items.find(current_item)
 		if _text_tween and _text_tween.is_valid() and _text_tween.is_running():
-			_text_tween.set_speed_scale(3.0)
+			_text_tween.set_speed_scale(4.0)
 		elif current_item.choices.is_empty():
 			advance(idx, idx + 1)

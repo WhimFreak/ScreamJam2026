@@ -56,6 +56,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_cnwnk"]
 script = ExtResource("1_htiv8")
+signal_on_advance = "enable_cafe_scene"
 character_name = "Rudy"
 text = "Sorry, you're right. Let's go."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

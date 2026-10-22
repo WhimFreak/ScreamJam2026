@@ -11,7 +11,9 @@
 [ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="5_qtdy1"]
 [ext_resource type="PackedScene" uid="uid://bmlbt24a14chh" path="res://environment scenes/therapy_outdoors.tscn" id="6_ch1tp"]
 [ext_resource type="PackedScene" uid="uid://bjxhvbj6sxsyp" path="res://Top Down/may_npc.tscn" id="7_a5am4"]
+[ext_resource type="Script" uid="uid://ba4jr8srd3k3x" path="res://Menus/door_to_cafe.gd" id="8_6ottg"]
 [ext_resource type="PackedScene" uid="uid://5ppdxt1owkfc" path="res://environment scenes/cafe.tscn" id="8_jmgod"]
+[ext_resource type="PackedScene" uid="uid://4fsmj4xgt06v" path="res://environment scenes/wash_room.tscn" id="10_6ottg"]
 [ext_resource type="FontFile" uid="uid://dnv45ss03g80c" path="res://Assets/Fonts/Satisfy-Regular.ttf" id="13_4q0ph"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
@@ -177,7 +179,7 @@ position = Vector2(87, 89)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(36, 97)
+position = Vector2(38, 96)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
@@ -234,7 +236,7 @@ position = Vector2(113, 281)
 
 [node name="DoorToCafe" type="Node2D" parent="TherapyOutdoors" unique_id=1432927365 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 position = Vector2(-32, 94)
-script = ExtResource("4_y46r3")
+script = ExtResource("8_6ottg")
 teleporter_to = NodePath("../../Cafe/DoorToOutdoor")
 player_pos = NodePath("Marker2D")
 
@@ -245,6 +247,7 @@ area_2d = NodePath("Area2D")
 metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
 
 [node name="Area2D" type="Area2D" parent="TherapyOutdoors/DoorToCafe/InteractableComponent" unique_id=427200217]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TherapyOutdoors/DoorToCafe/InteractableComponent/Area2D" unique_id=1552851831]
 position = Vector2(1, -2)
@@ -253,14 +256,43 @@ shape = SubResource("RectangleShape2D_ch1tp")
 [node name="Marker2D" type="Marker2D" parent="TherapyOutdoors/DoorToCafe" unique_id=557052894]
 position = Vector2(208, 199)
 
+[node name="WashRoom" parent="." unique_id=261706072 instance=ExtResource("10_6ottg")]
+position = Vector2(-67, 293)
+
+[node name="DoorToCafe" type="Node2D" parent="WashRoom" unique_id=845662315 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+z_index = 1
+position = Vector2(105, 85)
+script = ExtResource("4_y46r3")
+teleporter_to = NodePath(".")
+player_pos = NodePath("Marker2D")
+static_camera = true
+camera_pos = Vector2(77, 410)
+
+[node name="InteractableComponent" type="Node2D" parent="WashRoom/DoorToCafe" unique_id=135129802 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("4_qtdy1")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
+
+[node name="Area2D" type="Area2D" parent="WashRoom/DoorToCafe/InteractableComponent" unique_id=1188312250]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WashRoom/DoorToCafe/InteractableComponent/Area2D" unique_id=1990447712]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_ch1tp")
+
+[node name="Marker2D" type="Marker2D" parent="WashRoom/DoorToCafe" unique_id=1679894859]
+position = Vector2(71, 4)
+
 [node name="Cafe" parent="." unique_id=451866016 instance=ExtResource("8_jmgod")]
-position = Vector2(-72, 276)
+position = Vector2(704, -34)
 
 [node name="DoorToOutdoor" type="Node2D" parent="Cafe" unique_id=31864474 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 position = Vector2(208, -81)
 script = ExtResource("4_y46r3")
 teleporter_to = NodePath("../../TherapyOutdoors/DoorToCafe")
 player_pos = NodePath("Marker2D")
+static_camera = true
+camera_pos = Vector2(1040, 62)
 
 [node name="InteractableComponent" type="Node2D" parent="Cafe/DoorToOutdoor" unique_id=1965559642 node_paths=PackedStringArray("area_2d")]
 position = Vector2(207, 209)
@@ -269,13 +301,14 @@ area_2d = NodePath("Area2D")
 metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
 
 [node name="Area2D" type="Area2D" parent="Cafe/DoorToOutdoor/InteractableComponent" unique_id=1425842873]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cafe/DoorToOutdoor/InteractableComponent/Area2D" unique_id=598325110]
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="Cafe/DoorToOutdoor" unique_id=1954434112]
-position = Vector2(208, 199)
+position = Vector2(101, 174)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 libraries/ = SubResource("AnimationLibrary_fgf5d")
@@ -285,6 +318,7 @@ autoplay = &"intro"
 layer = 5
 
 [node name="BlackOverlay" type="ColorRect" parent="BlackScreen" unique_id=1144414068]
+modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0

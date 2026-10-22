@@ -3,4 +3,5 @@ extends NPC
 func on_tree_finished(tree: DialogueTree):
 	if tree == dialogue_trees[next_tree_idx]:
 		interactable = false
-		next_tree_idx += 1
+		if dialogue_trees.size() > next_tree_idx + 1:
+			next_tree_idx += 1
