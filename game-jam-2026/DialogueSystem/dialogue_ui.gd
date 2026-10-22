@@ -8,7 +8,10 @@ extends Control
 @onready var dialogue_voice_player: AudioStreamPlayer = %DialogueVoicePlayer
 @onready var sound_effect_player: AudioStreamPlayer = %SoundEffectPlayer
 @onready var character_name: Label = %CharacterName
+## Sibling node drawn behind the DialogueUI inside the same CanvasLayer.
+@onready var fullscreen_image: TextureRect = %FullscreenImage
 
+var _image_tween: Tween
 var _text_tween: Tween
 var current_item: DialogueItem
 var is_transitioning: bool = true  # true while advancing between lines; blocks all input
@@ -16,6 +19,8 @@ var is_transitioning: bool = true  # true while advancing between lines; blocks 
 func start_tree():
 	show()
 	Events.disable_player_action.emit()
+	if dialogue_tree.music:
+		MusicPlayer.play(dialogue_tree.music, dialogue_tree.music_fade_time)
 	show_text(0)
 
 func show_text(current_item_index: int) -> void:
@@ -27,7 +32,12 @@ func show_text(current_item_index: int) -> void:
 	
 	current_item = dialogue_tree.dialogue_items[current_item_index]
 	visible = true
-	
+
+	if current_item.music:
+		MusicPlayer.play(current_item.music, current_item.music_fade_time)
+	elif current_item.stop_music:
+		MusicPlayer.stop(current_item.music_fade_time)
+
 	if _text_tween and _text_tween.is_valid():
 		_text_tween.kill()
 	dialogue_voice_player.stop()
@@ -98,7 +108,12 @@ func advance(from_index: int, target_index: int) -> void:
 	var item: DialogueItem = dialogue_tree.dialogue_items[from_index]
 	if item.signal_on_advance:
 		Events.emit_signal(item.signal_on_advance)
-	
+
+	if item.show_image_after:
+		show_image(item.show_image_after, item.image_fade_time)
+	elif item.hide_image_after:
+		hide_image(item.image_fade_time)
+
 	for button : Button in choices_box.get_children():
 		button.disabled = true
 	
@@ -107,6 +122,35 @@ func advance(from_index: int, target_index: int) -> void:
 		visible = false
 		await get_tree().create_timer(delay).timeout
 	show_text(target_index)
+
+## Shows a full-screen image behind the dialogue box. It stays until hide_image() is called.
+func show_image(texture: Texture2D, fade_time: float = 0.5) -> void:
+	if _image_tween and _image_tween.is_valid():
+		_image_tween.kill()
+	var was_visible := fullscreen_image.visible
+	fullscreen_image.texture = texture
+	fullscreen_image.show()
+	if was_visible:
+		# Swapping one image for another: no fade, just replace
+		fullscreen_image.modulate.a = 1.0
+	elif fade_time > 0.0:
+		fullscreen_image.modulate.a = 0.0
+		_image_tween = create_tween()
+		_image_tween.tween_property(fullscreen_image, "modulate:a", 1.0, fade_time)
+	else:
+		fullscreen_image.modulate.a = 1.0
+
+func hide_image(fade_time: float = 0.5) -> void:
+	if not fullscreen_image.visible:
+		return
+	if _image_tween and _image_tween.is_valid():
+		_image_tween.kill()
+	if fade_time > 0.0:
+		_image_tween = create_tween()
+		_image_tween.tween_property(fullscreen_image, "modulate:a", 0.0, fade_time)
+		_image_tween.tween_callback(fullscreen_image.hide)
+	else:
+		fullscreen_image.hide()
 
 func slide_in() -> void:
 	var slide_tween := create_tween()

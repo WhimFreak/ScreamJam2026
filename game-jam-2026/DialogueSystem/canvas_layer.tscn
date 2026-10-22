@@ -25,6 +25,18 @@ corner_radius_top_right = 20
 [node name="CanvasLayer" type="CanvasLayer" unique_id=1556033828]
 script = ExtResource("1_fxxkg")
 
+[node name="FullscreenImage" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+mouse_filter = 2
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+stretch_mode = 6
+
 [node name="DialogueUI" type="Control" parent="." unique_id=941485854]
 visible = false
 layout_mode = 3
