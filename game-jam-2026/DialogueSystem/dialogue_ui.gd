@@ -170,7 +170,7 @@ func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> vo
 	for choice in choices_data:
 		var button := Button.new()
 		button.text = choice.text
-		button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_SHRINK_END
+		button.size_flags_horizontal = Control.SIZE_EXPAND | Control.SIZE_EXPAND_FILL
 		choices_box.add_child(button)
 		if choice.is_quit:
 			button.pressed.connect(get_tree().quit)
