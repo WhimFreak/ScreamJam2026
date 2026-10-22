@@ -9,7 +9,7 @@
 [sub_resource type="Resource" id="Resource_h18ob"]
 script = ExtResource("1_guyx0")
 delay_before_next = 2.0
-text = "(Just a splash and I'll be golden.)"
+text = "(Just a few splashes and I'll be golden.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rp8jb"]
