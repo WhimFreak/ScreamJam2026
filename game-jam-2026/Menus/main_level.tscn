@@ -390,7 +390,6 @@ position = Vector2(101, 174)
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_fgf5d")
-autoplay = &"intro"
 
 [node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
 layer = 5

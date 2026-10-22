@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_j15xm"]
 script = ExtResource("1_55ump")
+character_name = "Rudy"
 text = ". . ."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -28,12 +29,13 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_vwn1g"]
 script = ExtResource("1_55ump")
 signal_on_advance = "fade_to_black"
+character_name = "Rudy"
 text = "(It's just a name. It's been years.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5mq8a"]
 script = ExtResource("1_55ump")
-signal_on_advance = "srop_blur"
+signal_on_advance = "stop_blur"
 character_name = "Rudy"
 text = ". . ."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
