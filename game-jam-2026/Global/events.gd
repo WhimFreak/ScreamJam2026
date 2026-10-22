@@ -2,8 +2,6 @@ extends Node
 
 signal dialogue_start_request(tree: DialogueTree)
 
-signal fade_in
-
 signal disable_player_action
 signal enable_player_action
 
@@ -15,3 +13,5 @@ signal fade_to_black
 signal fade_to_color
 signal fade_to_black_then_color
 signal slow_fade_to_black
+
+signal stop_blur
