@@ -25,6 +25,7 @@ class_name DialogueItem extends BaseDialogue
 ## Fades the background music out when this line appears (ignored if music is set).
 @export var stop_music: bool = false
 @export_range(0.0, 10.0, 0.1, "or_greater", "suffix:s") var music_fade_time: float = 1.0
+@export var music_volume_db: float = 0.0
 
 func set_choices(new_choices: Array[DialogueChoices]) -> void:
 	for index in new_choices.size():

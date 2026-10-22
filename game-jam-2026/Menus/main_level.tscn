@@ -17,7 +17,9 @@
 [ext_resource type="Script" uid="uid://feh4y4xla7ks" path="res://Top Down/sink_interaction.gd" id="10_47i33"]
 [ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="10_p3igg"]
 [ext_resource type="FontFile" uid="uid://dnv45ss03g80c" path="res://Assets/Fonts/Satisfy-Regular.ttf" id="13_4q0ph"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="13_6fyp4"]
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
+[ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -201,6 +203,163 @@ _data = {
 &"pulse_blur": SubResource("Animation_q1q84")
 }
 
+[sub_resource type="Animation" id="Animation_xrmjq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullScreen/MirrorJumpscare:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.10000000149012]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FullScreen/MirrorJumpscare/RedYouCantRunAway:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FullScreen/MirrorJumpscare/Overlay:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0.6862745)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BlackScreen/BlackOverlay:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vykcn"]
+resource_name = "mirror"
+length = 6.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FullScreen/MirrorJumpscare:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2.0333333, 3.0333333, 4.0333333, 5, 5.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.50000002049012, 2.00000009174012, 0.50000002049012, 2.00000009174012, 0.50000002049012, 2.00000009174012, 0.50000002049012]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.96666664, 2.0333333, 3.0333333, 4.0333333, 5, 5.9666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.2000000095, 0.30000001425, 0.2000000095, 0.30000001425, 0.2000000095, 0.30000001425, 0.2000000095]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FullScreen/MirrorJumpscare/RedYouCantRunAway:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.0333333, 4.0333333, 5.9666667),
+"transitions": PackedFloat32Array(1, 0, 1),
+"update": 0,
+"values": [0.0, 1.0, 0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FullScreen/MirrorJumpscare/Overlay:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0.033333335, 5.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(1, 1, 1, 0.6862745), Color(1, 1, 1, 1)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BlackScreen/BlackOverlay:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6fyp4"]
+_data = {
+&"RESET": SubResource("Animation_xrmjq"),
+&"mirror": SubResource("Animation_vykcn")
+}
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_xrivr"]
 shader = ExtResource("13_q1q84")
 shader_parameter/strength = 0.10000000149012
@@ -236,6 +395,7 @@ border_color = Color(0.539872, 0, 0, 1)
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
+play_intro = false
 
 [node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
 unique_name_in_owner = true
@@ -294,8 +454,7 @@ shape = SubResource("RectangleShape2D_ch1tp")
 [node name="Marker2D" type="Marker2D" parent="TherapyOutdoors/DoorToTherapy" unique_id=1060786634]
 position = Vector2(208, 218)
 
-[node name="MayNPC" parent="TherapyOutdoors" unique_id=1332711641 instance=ExtResource("7_a5am4")]
-unique_name_in_owner = true
+[node name="OutdoorMayNPC" parent="TherapyOutdoors" unique_id=1332711641 instance=ExtResource("7_a5am4")]
 position = Vector2(113, 281)
 
 [node name="DoorToCafe" type="Node2D" parent="TherapyOutdoors" unique_id=1432927365 node_paths=PackedStringArray("washroom_door", "teleporter_to", "player_pos")]
@@ -331,7 +490,7 @@ script = ExtResource("4_y46r3")
 teleporter_to = NodePath(".")
 player_pos = NodePath("Marker2D")
 static_camera = true
-camera_pos = Vector2(77, 410)
+camera_pos = Vector2(222, 403)
 
 [node name="InteractableComponent" type="Node2D" parent="WashRoom/DoorBackToCafe" unique_id=135129802 node_paths=PackedStringArray("area_2d")]
 script = ExtResource("4_qtdy1")
@@ -363,6 +522,12 @@ shape = SubResource("CircleShape2D_xrivr")
 [node name="Cafe" parent="." unique_id=451866016 instance=ExtResource("8_jmgod")]
 position = Vector2(704, -34)
 
+[node name="CafeMayNPC" parent="Cafe" unique_id=1168464624 instance=ExtResource("7_a5am4")]
+unique_name_in_owner = true
+position = Vector2(311, 76)
+dialogue_trees = Array[ExtResource("13_6fyp4")]([])
+interactable = false
+
 [node name="DoorToOutdoor" type="Node2D" parent="Cafe" unique_id=31864474 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 position = Vector2(208, -81)
 script = ExtResource("4_y46r3")
@@ -387,9 +552,77 @@ shape = SubResource("RectangleShape2D_ch1tp")
 [node name="Marker2D" type="Marker2D" parent="Cafe/DoorToOutdoor" unique_id=1954434112]
 position = Vector2(101, 174)
 
+[node name="PostMirrorPos" type="Node2D" parent="Cafe" unique_id=17639143]
+
+[node name="PlayerPos" type="Marker2D" parent="Cafe/PostMirrorPos" unique_id=136565785]
+position = Vector2(396, 116)
+
+[node name="MayPos" type="Marker2D" parent="Cafe/PostMirrorPos" unique_id=415943224]
+position = Vector2(418, 99)
+
+[node name="CameraPos" type="Marker2D" parent="Cafe/PostMirrorPos" unique_id=1523290604]
+position = Vector2(406, 108)
+
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_fgf5d")
+
+[node name="AvaJumpscare" type="AnimationPlayer" parent="." unique_id=527868598]
+libraries/ = SubResource("AnimationLibrary_6fyp4")
+
+[node name="FullScreen" type="CanvasLayer" parent="." unique_id=1165450607]
+
+[node name="MirrorJumpscare" type="Control" parent="FullScreen" unique_id=1787436500]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="FullScreen/MirrorJumpscare" unique_id=841931605]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("14_vykcn")
+
+[node name="Overlay" type="ColorRect" parent="FullScreen/MirrorJumpscare" unique_id=409349380]
+modulate = Color(1, 1, 1, 0.6862745)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)
+
+[node name="RedYouCantRunAway" type="RichTextLabel" parent="FullScreen/MirrorJumpscare" unique_id=341366428]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -252.0
+offset_top = -20.0
+offset_right = 252.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(1, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("5_qtdy1")
+theme_override_font_sizes/normal_font_size = 24
+bbcode_enabled = true
+text = "[shake]You can't run away..."
+fit_content = true
+autowrap_mode = 0
+visible_characters = 0
+visible_characters_behavior = 1
+visible_ratio = 0.0
 
 [node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
 layer = 5

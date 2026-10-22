@@ -1,10 +1,17 @@
 extends Node2D
 
-@onready var black_overlay: ColorRect = $BlackScreen/BlackOverlay
+const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
 
-@onready var may_npc: NPC = %MayNPC
+@onready var black_overlay: ColorRect = $BlackScreen/BlackOverlay
+@onready var main_camera: Camera2D = %MainCamera
+
+@onready var player: Player = $Player
 @onready var dialogue_ui: CanvasLayer = $DialogueUI
 @onready var screen_animation_player: AnimationPlayer = %ScreenAnimationPlayer
+
+@onready var ava_jumpscare: AnimationPlayer = $AvaJumpscare
+@onready var post_mirror_pos: Node2D = $Cafe/PostMirrorPos
+@onready var cafe_may_npc: NPC = %CafeMayNPC
 
 ## Turn off while testing to skip the black-screen intro and start in the room.
 @export var play_intro: bool = true
@@ -23,6 +30,7 @@ func _ready() -> void:
 		screen_animation_player.play("intro")
 
 	Events.dialogue_start_request.connect(start_dialogue_tree)
+	Events.mirror_jumpscare_start.connect(mirror_jumpscare)
 	
 func on_fade_to_black():
 	var tween := create_tween()
@@ -44,9 +52,17 @@ func start_dialogue_tree(tree: DialogueTree):
 func on_slow_fade_to_black():
 	var tween := create_tween()
 	tween.tween_property(black_overlay, "modulate", Color.WHITE, 5)
-
-func start_blur():
-	pass
 	
-func stop_blur():
-	pass
+func mirror_jumpscare():
+	Events.disable_player_action.emit()
+	ava_jumpscare.play("mirror")
+	await ava_jumpscare.animation_finished
+	
+	ava_jumpscare.play("RESET")
+	
+	player.global_position = post_mirror_pos.find_child("PlayerPos").global_position
+	cafe_may_npc.global_position = post_mirror_pos.find_child("MayPos").global_position
+	main_camera.global_position = post_mirror_pos.find_child("CameraPos").global_position
+	
+	await get_tree().create_timer(1).timeout
+	Events.dialogue_start_request.emit(CAFE_CONVO_2)
