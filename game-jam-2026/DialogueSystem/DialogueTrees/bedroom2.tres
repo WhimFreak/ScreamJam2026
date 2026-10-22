@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://beni64xc2lnxe"]
+
+[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_qnsrk"]
+[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_rsp8y"]
+[ext_resource type="AudioStream" uid="uid://cy1qrpm4ftrhn" path="res://testing_assets/talking_synth.ogg" id="3_rw4ca"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_76hay"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_d6cb2"]
+
+[sub_resource type="Resource" id="Resource_1fe0n"]
+script = ExtResource("1_qnsrk")
+text = "Naa,I should probably just sleep......."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[resource]
+script = ExtResource("5_d6cb2")
+dialogue_items = Array[ExtResource("1_qnsrk")]([SubResource("Resource_1fe0n")])
+metadata/_custom_type_script = "uid://dq5m317pm5mk6"
