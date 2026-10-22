@@ -70,7 +70,7 @@ func mirror_jumpscare():
 	
 	await get_tree().create_timer(1).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_2)
-  await Events.tree_finished
+	await Events.tree_finished
 	Events.fade_to_black.emit()
 	await get_tree().create_timer(1).timeout
 	door_to_house.teleport_here(player)
@@ -82,4 +82,3 @@ func on_screen_fade(to_alpha: float, duration: float):
 		_screen_fade_tween.kill()
 	_screen_fade_tween = create_tween()
 	_screen_fade_tween.tween_property(black_overlay, "modulate:a", to_alpha, duration)
-
