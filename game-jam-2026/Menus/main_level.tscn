@@ -463,6 +463,8 @@ script = ExtResource("8_6ottg")
 washroom_door = NodePath("../../WashRoom/DoorBackToCafe")
 teleporter_to = NodePath("../../Cafe/DoorToOutdoor")
 player_pos = NodePath("Marker2D")
+fade_duration = 0.05
+instant = true
 
 [node name="InteractableComponent" type="Node2D" parent="TherapyOutdoors/DoorToCafe" unique_id=1949106861 node_paths=PackedStringArray("area_2d")]
 position = Vector2(207, 209)
@@ -505,7 +507,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="WashRoom/DoorBackToCafe" unique_id=1679894859]
-position = Vector2(0, 7)
+position = Vector2(0, 9)
 
 [node name="SinkInteraction" type="Node2D" parent="WashRoom" unique_id=202353798]
 position = Vector2(176, 78)
@@ -587,7 +589,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="Bedroom/DoorToHouse" unique_id=1844563490]
-position = Vector2(1, 0)
+position = Vector2(88, 35)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
