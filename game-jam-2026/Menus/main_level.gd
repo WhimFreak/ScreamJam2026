@@ -6,7 +6,7 @@ extends Node2D
 @onready var dialogue_ui: CanvasLayer = $DialogueUI
 
 func _ready() -> void:
-	black_overlay.modulate = Color.WHITE
+	#black_overlay.modulate = Color.WHITE
 	
 	Events.fade_to_black.connect(on_fade_to_black)
 	Events.fade_to_color.connect(on_fade_to_color)

@@ -322,7 +322,7 @@ shape = SubResource("RectangleShape2D_ch1tp")
 position = Vector2(208, 199)
 
 [node name="WashRoom" parent="." unique_id=261706072 instance=ExtResource("10_6ottg")]
-position = Vector2(-67, 293)
+position = Vector2(79, 288)
 
 [node name="DoorBackToCafe" type="Node2D" parent="WashRoom" unique_id=845662315 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 z_index = 1
@@ -346,7 +346,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="WashRoom/DoorBackToCafe" unique_id=1679894859]
-position = Vector2(71, 4)
+position = Vector2(0, 7)
 
 [node name="SinkInteraction" type="Node2D" parent="WashRoom" unique_id=202353798]
 position = Vector2(176, 78)
@@ -390,7 +390,6 @@ position = Vector2(101, 174)
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_fgf5d")
-autoplay = &"intro"
 
 [node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
 layer = 5

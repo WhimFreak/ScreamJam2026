@@ -13,7 +13,7 @@ var start_cafe_scene: bool = false:
 		start_cafe_scene = value
 		if area_2d:
 			area_2d.monitorable = start_cafe_scene
-var player: Player
+var player_ref: Player
 			
 func _ready() -> void:
 	super._ready()
@@ -25,7 +25,7 @@ func on_interact(player: Player):
 	if not start_cafe_scene:
 		return
 	
-	player = player
+	player_ref = player
 	start_cafe_scene = false
 		
 	Events.disable_player_action.emit()
@@ -42,7 +42,7 @@ func on_tree_finished(tree):
 	if tree != CAFE_CONVO_1:
 		return
 		
-	player.global_position = washroom_door.player_pos.global_position
+	player_ref.global_position = washroom_door.player_pos.global_position
 	main_camera.reparent(washroom_door)
 	main_camera.global_position = washroom_door.camera_pos
 		

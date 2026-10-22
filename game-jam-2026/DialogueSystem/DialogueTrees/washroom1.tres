@@ -16,6 +16,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_j15xm"]
 script = ExtResource("1_55ump")
+character_name = "Rudy"
 text = ". . ."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -28,14 +29,22 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_vwn1g"]
 script = ExtResource("1_55ump")
 signal_on_advance = "fade_to_black"
+character_name = "Rudy"
 text = "(It's just a name. It's been years.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5mq8a"]
 script = ExtResource("1_55ump")
-signal_on_advance = "srop_blur"
+signal_on_advance = "stop_blur"
 character_name = "Rudy"
 text = ". . ."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_55ump"]
+script = ExtResource("1_55ump")
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "(Is.. is this real?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_20tyg"]
@@ -71,5 +80,5 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_27ahm")
-dialogue_items = Array[ExtResource("1_55ump")]([SubResource("Resource_qs3oe"), SubResource("Resource_j15xm"), SubResource("Resource_u4a67"), SubResource("Resource_vwn1g"), SubResource("Resource_5mq8a"), SubResource("Resource_20tyg"), SubResource("Resource_sq56n"), SubResource("Resource_aijll"), SubResource("Resource_c5vim"), SubResource("Resource_oiso2")])
+dialogue_items = Array[ExtResource("1_55ump")]([SubResource("Resource_qs3oe"), SubResource("Resource_j15xm"), SubResource("Resource_u4a67"), SubResource("Resource_vwn1g"), SubResource("Resource_5mq8a"), SubResource("Resource_55ump"), SubResource("Resource_20tyg"), SubResource("Resource_sq56n"), SubResource("Resource_aijll"), SubResource("Resource_c5vim"), SubResource("Resource_oiso2")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"
