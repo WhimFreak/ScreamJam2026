@@ -35,3 +35,9 @@ func start_dialogue_tree(tree: DialogueTree):
 func on_slow_fade_to_black():
 	var tween := create_tween()
 	tween.tween_property(black_overlay, "modulate", Color.WHITE, 5)
+
+func start_blur():
+	pass
+	
+func stop_blur():
+	pass

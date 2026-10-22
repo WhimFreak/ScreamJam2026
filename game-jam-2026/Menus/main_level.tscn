@@ -14,10 +14,15 @@
 [ext_resource type="Script" uid="uid://ba4jr8srd3k3x" path="res://Menus/door_to_cafe.gd" id="8_6ottg"]
 [ext_resource type="PackedScene" uid="uid://5ppdxt1owkfc" path="res://environment scenes/cafe.tscn" id="8_jmgod"]
 [ext_resource type="PackedScene" uid="uid://4fsmj4xgt06v" path="res://environment scenes/wash_room.tscn" id="10_6ottg"]
+[ext_resource type="Script" uid="uid://feh4y4xla7ks" path="res://Top Down/sink_interaction.gd" id="10_47i33"]
+[ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="10_p3igg"]
 [ext_resource type="FontFile" uid="uid://dnv45ss03g80c" path="res://Assets/Fonts/Satisfy-Regular.ttf" id="13_4q0ph"]
+[ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 
 [sub_resource type="Animation" id="Animation_y46r3"]
 length = 0.001
@@ -68,6 +73,30 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.10000000149012]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
 }
 
 [sub_resource type="Animation" id="Animation_obwmc"]
@@ -136,11 +165,46 @@ tracks/4/keys = {
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_q1q84"]
+resource_name = "pulse_blur"
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.93333334, 1.1, 2),
+"transitions": PackedFloat32Array(2, 1, 2, 1),
+"update": 0,
+"values": [0.10000000149012, 1.5000000679901202, 1.5000000679901202, 0.10000000149012]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.93333334, 1.1, 2),
+"transitions": PackedFloat32Array(2, 1, 2, 1),
+"update": 0,
+"values": [0.0, 0.2000000095, 0.2000000095, 0.0]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgf5d"]
 _data = {
 &"RESET": SubResource("Animation_y46r3"),
-&"intro": SubResource("Animation_obwmc")
+&"intro": SubResource("Animation_obwmc"),
+&"pulse_blur": SubResource("Animation_q1q84")
 }
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xrivr"]
+shader = ExtResource("13_q1q84")
+shader_parameter/strength = 0.10000000149012
+shader_parameter/mix_percentage = 0.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
 bg_color = Color(0.007843138, 0, 0, 0.20784314)
@@ -234,9 +298,10 @@ position = Vector2(208, 218)
 unique_name_in_owner = true
 position = Vector2(113, 281)
 
-[node name="DoorToCafe" type="Node2D" parent="TherapyOutdoors" unique_id=1432927365 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+[node name="DoorToCafe" type="Node2D" parent="TherapyOutdoors" unique_id=1432927365 node_paths=PackedStringArray("washroom_door", "teleporter_to", "player_pos")]
 position = Vector2(-32, 94)
 script = ExtResource("8_6ottg")
+washroom_door = NodePath("../../WashRoom/DoorBackToCafe")
 teleporter_to = NodePath("../../Cafe/DoorToOutdoor")
 player_pos = NodePath("Marker2D")
 
@@ -259,7 +324,7 @@ position = Vector2(208, 199)
 [node name="WashRoom" parent="." unique_id=261706072 instance=ExtResource("10_6ottg")]
 position = Vector2(-67, 293)
 
-[node name="DoorToCafe" type="Node2D" parent="WashRoom" unique_id=845662315 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+[node name="DoorBackToCafe" type="Node2D" parent="WashRoom" unique_id=845662315 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 z_index = 1
 position = Vector2(105, 85)
 script = ExtResource("4_y46r3")
@@ -268,20 +333,32 @@ player_pos = NodePath("Marker2D")
 static_camera = true
 camera_pos = Vector2(77, 410)
 
-[node name="InteractableComponent" type="Node2D" parent="WashRoom/DoorToCafe" unique_id=135129802 node_paths=PackedStringArray("area_2d")]
+[node name="InteractableComponent" type="Node2D" parent="WashRoom/DoorBackToCafe" unique_id=135129802 node_paths=PackedStringArray("area_2d")]
 script = ExtResource("4_qtdy1")
 area_2d = NodePath("Area2D")
 metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
 
-[node name="Area2D" type="Area2D" parent="WashRoom/DoorToCafe/InteractableComponent" unique_id=1188312250]
+[node name="Area2D" type="Area2D" parent="WashRoom/DoorBackToCafe/InteractableComponent" unique_id=1188312250]
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WashRoom/DoorToCafe/InteractableComponent/Area2D" unique_id=1990447712]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WashRoom/DoorBackToCafe/InteractableComponent/Area2D" unique_id=1990447712]
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
-[node name="Marker2D" type="Marker2D" parent="WashRoom/DoorToCafe" unique_id=1679894859]
+[node name="Marker2D" type="Marker2D" parent="WashRoom/DoorBackToCafe" unique_id=1679894859]
 position = Vector2(71, 4)
+
+[node name="SinkInteraction" type="Node2D" parent="WashRoom" unique_id=202353798]
+position = Vector2(176, 78)
+script = ExtResource("10_47i33")
+
+[node name="InteractableComponent" parent="WashRoom/SinkInteraction" unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("10_p3igg")]
+area_2d = NodePath("Area2D")
+
+[node name="Area2D" type="Area2D" parent="WashRoom/SinkInteraction/InteractableComponent" unique_id=1129426442]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WashRoom/SinkInteraction/InteractableComponent/Area2D" unique_id=134952999]
+shape = SubResource("CircleShape2D_xrivr")
 
 [node name="Cafe" parent="." unique_id=451866016 instance=ExtResource("8_jmgod")]
 position = Vector2(704, -34)
@@ -310,7 +387,8 @@ shape = SubResource("RectangleShape2D_ch1tp")
 [node name="Marker2D" type="Marker2D" parent="Cafe/DoorToOutdoor" unique_id=1954434112]
 position = Vector2(101, 174)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
+[node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
+unique_name_in_owner = true
 libraries/ = SubResource("AnimationLibrary_fgf5d")
 autoplay = &"intro"
 
@@ -387,6 +465,16 @@ horizontal_alignment = 1
 visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
+
+[node name="BlurOverlay" type="CanvasLayer" parent="." unique_id=990399676]
+
+[node name="ColorRect" type="ColorRect" parent="BlurOverlay" unique_id=254452782]
+material = SubResource("ShaderMaterial_xrivr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="DialogueUI" parent="." unique_id=1556033828 instance=ExtResource("5_fgf5d")]
 layer = 6
