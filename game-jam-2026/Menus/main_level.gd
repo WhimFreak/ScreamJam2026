@@ -1,6 +1,7 @@
 extends Node2D
 
 const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
+const BEDROOM_1 = preload("uid://c6bpiodoi7cxl")
 
 @onready var black_overlay: ColorRect = $BlackScreen/BlackOverlay
 @onready var main_camera: Camera2D = %MainCamera
@@ -12,6 +13,7 @@ const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
 @onready var ava_jumpscare: AnimationPlayer = $AvaJumpscare
 @onready var post_mirror_pos: Node2D = $Cafe/PostMirrorPos
 @onready var cafe_may_npc: NPC = %CafeMayNPC
+@onready var door_to_house: Teleporter = $Bedroom/DoorToHouse
 
 ## Turn off while testing to skip the black-screen intro and start in the room.
 @export var play_intro: bool = true
@@ -68,6 +70,11 @@ func mirror_jumpscare():
 	
 	await get_tree().create_timer(1).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_2)
+  await Events.tree_finished
+	Events.fade_to_black.emit()
+	await get_tree().create_timer(1).timeout
+	door_to_house.teleport_here(player)
+	Events.dialogue_start_request.emit(BEDROOM_1)
 	
 
 func on_screen_fade(to_alpha: float, duration: float):
@@ -75,3 +82,4 @@ func on_screen_fade(to_alpha: float, duration: float):
 		_screen_fade_tween.kill()
 	_screen_fade_tween = create_tween()
 	_screen_fade_tween.tween_property(black_overlay, "modulate:a", to_alpha, duration)
+

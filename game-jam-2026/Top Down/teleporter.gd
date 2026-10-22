@@ -34,12 +34,15 @@ func on_interact(player: Player):
 
 ## Instant teleport with no fade (used by on_interact and by special doors with their own fades).
 func teleport_player(player: Player):
-	player.global_position = teleporter_to.player_pos.global_position
-	if teleporter_to.music:
-		MusicPlayer.play(teleporter_to.music)
-	if teleporter_to.static_camera:
-		main_camera.reparent(teleporter_to)
-		main_camera.global_position = teleporter_to.camera_pos
+	teleporter_to.teleport_here(player)
+		
+func teleport_here(player: Player):
+	player.global_position = player_pos.global_position
+	if music:
+		MusicPlayer.play(music)
+	if static_camera:
+		main_camera.reparent(self)
+		main_camera.global_position = camera_pos
 	else:
 		main_camera.reparent(player)
 		main_camera.position = Vector2.ZERO
