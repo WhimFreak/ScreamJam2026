@@ -6,7 +6,7 @@
 [ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="4_11gta"]
 
 [sub_resource type="Gradient" id="Gradient_nhx3u"]
-colors = PackedColorArray(0.16754404, 0.023005553, 0.024505839, 1, 0, 0, 0, 1)
+colors = PackedColorArray(0.07060633, 0.057856448, 0.1857683, 1, 0, 0, 0, 1)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_xrivr"]
 gradient = SubResource("Gradient_nhx3u")

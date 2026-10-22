@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cafdmuy66bfns"
+path="res://.godot/imported/Funky Man Voice 1 (Long).wav-c342147af1a866c7f680496bad0e6396.sample"
+
+[deps]
+
+source_file="res://sounds/character voices/Funky Man Voice 1 (Long).wav"
+dest_files=["res://.godot/imported/Funky Man Voice 1 (Long).wav-c342147af1a866c7f680496bad0e6396.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

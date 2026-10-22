@@ -16,12 +16,14 @@ const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
 ## Turn off while testing to skip the black-screen intro and start in the room.
 @export var play_intro: bool = true
 
+var _screen_fade_tween: Tween
+
 func _ready() -> void:
 	Events.fade_to_black.connect(on_fade_to_black)
 	Events.fade_to_color.connect(on_fade_to_color)
 	Events.fade_to_black_then_color.connect(on_fade_to_black_then_color)
 	Events.slow_fade_to_black.connect(on_slow_fade_to_black)
-
+	Events.screen_fade.connect(on_screen_fade)
 	if play_intro:
 		# Start on a black screen, run the intro text, then the intro_therapy dialogue
 		# starts at the end of the "intro" animation (it also fades the screen back in).
@@ -66,3 +68,10 @@ func mirror_jumpscare():
 	
 	await get_tree().create_timer(1).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_2)
+	
+
+func on_screen_fade(to_alpha: float, duration: float):
+	if _screen_fade_tween and _screen_fade_tween.is_valid():
+		_screen_fade_tween.kill()
+	_screen_fade_tween = create_tween()
+	_screen_fade_tween.tween_property(black_overlay, "modulate:a", to_alpha, duration)

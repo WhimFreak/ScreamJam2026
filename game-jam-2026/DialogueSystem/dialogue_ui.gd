@@ -8,8 +8,15 @@ extends Control
 @onready var dialogue_voice_player: AudioStreamPlayer = %DialogueVoicePlayer
 @onready var sound_effect_player: AudioStreamPlayer = %SoundEffectPlayer
 @onready var character_name: Label = %CharacterName
-## Sibling node drawn behind the DialogueUI inside the same CanvasLayer.
 @onready var fullscreen_image: TextureRect = %FullscreenImage
+
+var abigail_voice = preload("uid://een5bkj7ap6")
+var demonic_voice = preload("uid://bdw1i2a1fyd3e")
+var may_voice = preload("uid://dq4onou3d1n0x")
+var mark_voice = preload("uid://cafdmuy66bfns")
+var rudy_voice = preload("uid://bnmdpjo2onaij")
+var rosila_voice = preload("uid://0tf1liw4fv8i")
+
 
 var _image_tween: Tween
 var _text_tween: Tween
@@ -62,7 +69,26 @@ func show_text(current_item_index: int) -> void:
 	_text_tween.set_speed_scale(current_item.base_speed)
 	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	_text_tween.tween_property(dialogue_text, "visible_ratio", 1.0, text_appearing_duration)
-	dialogue_voice_player.stream = current_item.dialogue_sound
+	if current_item.character_name == "Rosila":
+		dialogue_voice_player.stream = rosila_voice
+	elif  current_item.character_name == "Mark":
+		dialogue_voice_player.stream = mark_voice
+	elif current_item.character_name == "Abigail":
+		dialogue_voice_player.stream = abigail_voice
+	elif current_item.character_name == "May":
+		dialogue_voice_player.stream = may_voice
+	elif current_item.character_name == "rudy":
+		dialogue_voice_player.stream = rudy_voice
+	elif current_item.character_name == "Ava":
+		dialogue_voice_player.stream = demonic_voice
+	else:
+		dialogue_voice_player.stream = rudy_voice
+	
+	
+	
+	
+	
+	
 	var sound_max_offset := maxf(dialogue_voice_player.stream.get_length() - text_appearing_duration, 0.0)
 	var sound_start_position := randf() * sound_max_offset
 	dialogue_voice_player.play(sound_start_position)

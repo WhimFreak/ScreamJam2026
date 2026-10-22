@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c8fplhgd4gh1c"
+path="res://.godot/imported/In the Cafe (2).ogg-01488a88fd560a6477f407ce61b2162d.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/osts/In the Cafe (2).ogg"
+dest_files=["res://.godot/imported/In the Cafe (2).ogg-01488a88fd560a6477f407ce61b2162d.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

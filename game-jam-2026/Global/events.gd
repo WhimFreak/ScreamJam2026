@@ -17,3 +17,5 @@ signal slow_fade_to_black
 signal stop_blur
 
 signal mirror_jumpscare_start
+
+signal screen_fade(to_alpha: float, duration: float)
