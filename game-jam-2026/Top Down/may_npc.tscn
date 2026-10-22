@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bjxhvbj6sxsyp"]
 
 [ext_resource type="Script" uid="uid://2a22v6lu8gqe" path="res://Top Down/may_npc.gd" id="1_o3xy0"]
-[ext_resource type="Texture2D" uid="uid://di7abupyvfja4" path="res://Assets/Placeholders/PlaceholderMay.png" id="1_t7rll"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_o3xy0"]
 [ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="2_uuujm"]
 [ext_resource type="Resource" uid="uid://cnthtrwxhve2h" path="res://DialogueSystem/DialogueTrees/may_conversation_1.tres" id="3_o3xy0"]
+[ext_resource type="Texture2D" uid="uid://c6uh6oody4mtt" path="res://Assets/character sprites/may.png" id="4_o3xy0"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
 radius = 14.035668
@@ -16,7 +16,8 @@ interactable = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=815685991]
 position = Vector2(0, -11)
-texture = ExtResource("1_t7rll")
+texture = ExtResource("4_o3xy0")
+hframes = 2
 
 [node name="InteractableComponent" parent="." unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("2_uuujm")]
 position = Vector2(0, -11)

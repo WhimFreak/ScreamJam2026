@@ -16,7 +16,6 @@
 [ext_resource type="PackedScene" uid="uid://4fsmj4xgt06v" path="res://environment scenes/wash_room.tscn" id="10_6ottg"]
 [ext_resource type="Script" uid="uid://feh4y4xla7ks" path="res://Top Down/sink_interaction.gd" id="10_47i33"]
 [ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="10_p3igg"]
-[ext_resource type="FontFile" uid="uid://dnv45ss03g80c" path="res://Assets/Fonts/Satisfy-Regular.ttf" id="13_4q0ph"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="13_6fyp4"]
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
 [ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
@@ -743,7 +742,7 @@ alignment = 1
 [node name="OptionsButton" type="Button" parent="PauseMenu/PausePanel/VBoxContainer" unique_id=36983998]
 custom_minimum_size = Vector2(256, 32)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("13_4q0ph")
+theme_override_fonts/font = ExtResource("5_qtdy1")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_lmjuh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lmjuh")
@@ -755,7 +754,8 @@ text = "OPTIONS"
 [node name="ReturnButton" type="Button" parent="PauseMenu/PausePanel/VBoxContainer" unique_id=541403879]
 custom_minimum_size = Vector2(256, 32)
 layout_mode = 2
-theme_override_fonts/font = ExtResource("13_4q0ph")
+size_flags_horizontal = 4
+theme_override_fonts/font = ExtResource("5_qtdy1")
 theme_override_font_sizes/font_size = 16
 theme_override_styles/normal = SubResource("StyleBoxFlat_lmjuh")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_lmjuh")
