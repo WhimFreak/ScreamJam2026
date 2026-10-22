@@ -15,3 +15,5 @@ signal fade_to_black_then_color
 signal slow_fade_to_black
 
 signal stop_blur
+
+signal mirror_jumpscare_start

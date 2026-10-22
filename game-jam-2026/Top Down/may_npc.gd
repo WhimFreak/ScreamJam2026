@@ -1,6 +1,9 @@
 extends NPC
 
 func on_tree_finished(tree: DialogueTree):
+	if dialogue_trees.is_empty():
+		return
+		
 	if tree == dialogue_trees[next_tree_idx]:
 		interactable = false
 		if dialogue_trees.size() > next_tree_idx + 1:
