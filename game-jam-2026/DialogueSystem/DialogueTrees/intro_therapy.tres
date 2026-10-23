@@ -50,7 +50,7 @@ script = ExtResource("1_npei6")
 delay_before_next = 0.5
 character_name = "Rosila"
 portrait = ExtResource("3_quxoa")
-text = "I know it won’t bring her back, but that’s something you have to accept and move on eventually..."
+text = "I know it won’t bring her back, but that’s something you have to accept and move on."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a4a14"]

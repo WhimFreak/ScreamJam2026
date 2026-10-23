@@ -7,7 +7,7 @@
 [sub_resource type="Resource" id="Resource_estei"]
 script = ExtResource("1_0pbus")
 character_name = "Abigail"
-text = "FINALLY!! YOU ARE HERE!"
+text = "Finally, you're here!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_r44pi"]
@@ -19,19 +19,17 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_qm6hb"]
 script = ExtResource("1_0pbus")
 character_name = "Abigail"
-text = "Mhhhmm... For a second there, I thought you guys weren’t coming along!"
+text = "That makes sense. For a second there, I thought you guys weren’t coming along!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_gisau"]
 script = ExtResource("1_0pbus")
-delay_before_next = 0.5
 character_name = "Mark"
-text = "YEAH! I must have inhaled like 2 whole boxes of pizza already!"
+text = "Yeah! I must have inhaled like 2 whole boxes of pizza already."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_yyecf"]
 script = ExtResource("1_0pbus")
-delay_before_next = 0.5
 character_name = "Rudy"
 text = "(Yeah, Mark hasn’t changed at all.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -47,12 +45,11 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Mark"
-text = "I'll umm.. order for you guys too.."
+text = "I'll umm.. order you guys more."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_fkywb"]
 script = ExtResource("1_0pbus")
-delay_before_next = 0.5
 character_name = "Mark"
 text = "So, where were we?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -60,7 +57,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_je0y3"]
 script = ExtResource("1_0pbus")
 character_name = "Mark"
-text = "Oh yeah, the CARNIVAL!! It’s been too long since I went to one."
+text = "Oh yeah, the carnival! It’s been too long since I went to one."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_b3rig"]
