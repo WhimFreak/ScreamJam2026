@@ -3,13 +3,15 @@
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_htiv8"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_22pjp"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_o2keh"]
-[ext_resource type="Texture2D" uid="uid://cdvnp0fo8kxr4" path="res://testing_assets/zoro2.png" id="4_drmyx"]
-[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="5_6tlgw"]
+[ext_resource type="Texture2D" uid="uid://cf003g7vif8oc" path="res://Assets/character portraits/may/may talk happy.png" id="3_22pjp"]
+[ext_resource type="Texture2D" uid="uid://bgs2j1scl62na" path="res://Assets/character portraits/may/may angry.png" id="5_22pjp"]
+[ext_resource type="Texture2D" uid="uid://d2igv3vr0aaxk" path="res://Assets/character portraits/may/may close eyes smile.png" id="5_kebsw"]
 
 [sub_resource type="Resource" id="Resource_sgrwm"]
 script = ExtResource("1_htiv8")
+delay_before_next = 0.5
 character_name = "May"
-portrait = ExtResource("4_drmyx")
+portrait = ExtResource("3_22pjp")
 text = "HERE YOU ARE! How did it go?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -23,8 +25,23 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_htiv8")
 delay_before_next = 0.5
 character_name = "May"
-portrait = ExtResource("4_drmyx")
-text = "Oh don’t worry about it, you're not the type to give up. You inspire me a lot, you know? No way I'm letting you fall off."
+portrait = ExtResource("5_kebsw")
+text = "Oh don’t worry about it, you're not the type to give up."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_r44pi"]
+script = ExtResource("1_htiv8")
+delay_before_next = 0.5
+character_name = "May"
+portrait = ExtResource("3_22pjp")
+text = "You inspired me a lot, you know? NO way I'm letting you fall off..."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_qm6hb"]
+script = ExtResource("1_htiv8")
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "(what do she even knows ?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_22pjp"]
@@ -36,8 +53,8 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_kebsw"]
 script = ExtResource("1_htiv8")
 character_name = "May"
-portrait = ExtResource("4_drmyx")
-text = "Well anyway, the group's hanging out over at HamJam. We're already late, so let’s hurry up."
+portrait = ExtResource("5_kebsw")
+text = "Well anyway, the group's hanging out over at HamJam. We're already late, so let’s HURRY UP!!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_drmyx"]
@@ -49,7 +66,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_6tlgw"]
 script = ExtResource("1_htiv8")
 character_name = "May"
-portrait = ExtResource("4_drmyx")
+portrait = ExtResource("5_22pjp")
 text = "-deserve it? Oh please, don’t start with that right now. Let’s just go already!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -57,10 +74,10 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_htiv8")
 signal_on_advance = "enable_cafe_scene"
 character_name = "Rudy"
-text = "Sorry, you're right. Let's go."
+text = "Sorry, you're right I guess. Let's go..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("2_o2keh")
-dialogue_items = Array[ExtResource("1_htiv8")]([SubResource("Resource_sgrwm"), SubResource("Resource_rqe4x"), SubResource("Resource_peqf4"), SubResource("Resource_22pjp"), SubResource("Resource_kebsw"), SubResource("Resource_drmyx"), SubResource("Resource_6tlgw"), SubResource("Resource_cnwnk")])
+dialogue_items = Array[ExtResource("1_htiv8")]([SubResource("Resource_sgrwm"), SubResource("Resource_rqe4x"), SubResource("Resource_peqf4"), SubResource("Resource_r44pi"), SubResource("Resource_qm6hb"), SubResource("Resource_22pjp"), SubResource("Resource_kebsw"), SubResource("Resource_drmyx"), SubResource("Resource_6tlgw"), SubResource("Resource_cnwnk")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

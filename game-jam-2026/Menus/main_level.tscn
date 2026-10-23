@@ -395,7 +395,6 @@ border_color = Color(0.539872, 0, 0, 1)
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
-play_intro = false
 
 [node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
 unique_name_in_owner = true

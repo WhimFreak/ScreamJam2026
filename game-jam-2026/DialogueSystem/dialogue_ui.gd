@@ -10,12 +10,13 @@ extends Control
 @onready var character_name: Label = %CharacterName
 @onready var fullscreen_image: TextureRect = %FullscreenImage
 
-var abigail_voice = preload("uid://een5bkj7ap6")
+var abigail_voice = preload("uid://iy3oituvre6y")
 var demonic_voice = preload("uid://bdw1i2a1fyd3e")
 var may_voice = preload("uid://dq4onou3d1n0x")
 var mark_voice = preload("uid://cafdmuy66bfns")
 var rudy_voice = preload("uid://bnmdpjo2onaij")
 var rosila_voice = preload("uid://0tf1liw4fv8i")
+var phone_voice = preload("uid://een5bkj7ap6")
 
 
 var _image_tween: Tween

@@ -3,22 +3,23 @@
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_npei6"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_quxoa"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_utxen"]
-[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_i1u5e"]
-[ext_resource type="Texture2D" uid="uid://b0x13fyugbge0" path="res://testing_assets/sanji.png" id="4_oj845"]
+[ext_resource type="Texture2D" uid="uid://g0x4p3j2mmc" path="res://Assets/character portraits/rosila/rosila confused.png" id="3_quxoa"]
+[ext_resource type="Texture2D" uid="uid://ifbs75stcuqx" path="res://Assets/character portraits/rosila/rosila angry.png" id="4_i1u5e"]
+[ext_resource type="Texture2D" uid="uid://chsf1e3nm2xcp" path="res://Assets/character portraits/rosila/rosila smile.png" id="5_10y5h"]
 
 [sub_resource type="Resource" id="Resource_quxoa"]
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
 signal_on_advance = "fade_to_color"
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
-text = "It's not your fault."
+text = "It's not your fault..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_oj845"]
 script = ExtResource("1_npei6")
+delay_before_next = 1.0
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
+portrait = ExtResource("3_quxoa")
 text = "You could have never guessed.. that this could have happened."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -31,24 +32,25 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_10y5h"]
 script = ExtResource("1_npei6")
-delay_before_next = 1.0
+delay_before_next = 0.5
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
+portrait = ExtResource("4_i1u5e")
 text = "..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ujjlp"]
 script = ExtResource("1_npei6")
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
+portrait = ExtResource("5_10y5h")
 text = "You know what…. You should really start talking and socializing more."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rdqbo"]
 script = ExtResource("1_npei6")
+delay_before_next = 0.5
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
-text = "I know it wouldn’t bring her back, but that’s something you have to accept and move on."
+portrait = ExtResource("3_quxoa")
+text = "I know it won’t bring her back, but that’s something you have to accept and move on."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a4a14"]
@@ -60,10 +62,9 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_eguiy"]
 script = ExtResource("1_npei6")
-delay_before_next = 1.0
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
-text = "..."
+portrait = ExtResource("4_i1u5e")
+text = "....."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a8nu7"]
@@ -93,8 +94,8 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_j05eh"]
 script = ExtResource("1_npei6")
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
-text = "Believe me son… You will get your answers, but first you have to let it go."
+portrait = ExtResource("5_10y5h")
+text = "Believe me son… You will get your answers, but first you have to find yourself."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_eut1p"]
@@ -106,7 +107,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_u67jc"]
 script = ExtResource("1_npei6")
 character_name = "Rudy"
-text = "May made plans with the group today, and she was really strict about me being there."
+text = "May made plans with the group today, and she was REALLY STRICT about me being there."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_nv1j6"]
@@ -118,7 +119,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_4vygj"]
 script = ExtResource("1_npei6")
 character_name = "Rosila"
-portrait = ExtResource("4_oj845")
+portrait = ExtResource("5_10y5h")
 text = "Ah, that’s really good to hear. I'll see you then."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
