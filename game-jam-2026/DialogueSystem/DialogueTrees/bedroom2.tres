@@ -55,8 +55,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_76hay"]
 script = ExtResource("1_qnsrk")
-delay_before_next = 1.0
-signal_on_advance = "fade_to_color"
+delay_before_next = 2.0
 character_name = "Rudy"
 text = "(I'm sorry, May.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

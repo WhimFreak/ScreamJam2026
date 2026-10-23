@@ -7,8 +7,9 @@
 
 [sub_resource type="Resource" id="Resource_s1dya"]
 script = ExtResource("1_1hmoe")
+signal_on_advance = "fade_to_color"
 character_name = "May"
-text = "Hi im may im gonna go find a dead body now"
+text = "Rudy?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
