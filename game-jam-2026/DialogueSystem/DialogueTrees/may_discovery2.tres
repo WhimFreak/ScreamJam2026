@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="DialogueTree" format=3 uid="uid://4e1o2qxisd2a"]
+
+[ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_gqvqg"]
+[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_ncbjm"]
+[ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_s1dya"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="3_qkjhy"]
+
+[sub_resource type="Resource" id="Resource_qkjhy"]
+script = ExtResource("1_gqvqg")
+character_name = "May"
+text = "holy fuck"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[resource]
+script = ExtResource("2_ncbjm")
+dialogue_items = Array[ExtResource("1_gqvqg")]([SubResource("Resource_qkjhy")])
+metadata/_custom_type_script = "uid://dq5m317pm5mk6"
