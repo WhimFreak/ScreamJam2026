@@ -2,18 +2,19 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_guyx0"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_4lyxq"]
+[ext_resource type="Texture2D" uid="uid://dtjq07ybygbf1" path="res://Assets/Images/MirrorNormal.webp" id="3_h18ob"]
 [ext_resource type="Texture2D" uid="uid://bjrk26wsb88pw" path="res://Assets/Images/black.jpg" id="4_j648x"]
 [ext_resource type="AudioStream" uid="uid://l14ab45slumq" path="res://sounds/osts/LEAVE ME ALONE.ogg" id="4_ybuti"]
-[ext_resource type="Texture2D" uid="uid://dlvutpafxuf6y" path="res://Assets/Placeholders/MirrorPlaceholderNormal.png" id="5_4lyxq"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_ybuti"]
 [ext_resource type="Texture2D" uid="uid://bnu40dtrrsrku" path="res://Assets/Images/ava_ghost.jpg" id="6_va3ua"]
 [ext_resource type="AudioStream" uid="uid://bkjha5a4jptsl" path="res://sounds/sfx/Door Open Slowly.wav" id="6_ybuti"]
 [ext_resource type="AudioStream" uid="uid://05hr2lprf1w2" path="res://testing_assets/universfield-door-knock-291150.mp3" id="7_va3ua"]
+[ext_resource type="AudioStream" uid="uid://fl1xuiswmdq6" path="res://sounds/sfx/jumpscare.mp3" id="9_h18ob"]
 
 [sub_resource type="Resource" id="Resource_h18ob"]
 script = ExtResource("1_guyx0")
 delay_before_next = 2.0
-show_image_after = ExtResource("5_4lyxq")
+show_image_after = ExtResource("3_h18ob")
 character_name = "Rudy"
 text = "(Just a few splashes and I'll be golden.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -100,8 +101,9 @@ script = ExtResource("1_guyx0")
 click_advance = false
 auto_advance_delay = 0.3
 show_image_after = ExtResource("6_va3ua")
-image_fade_time = 0.0
 character_name = "Rudy"
+text = "..."
+sound_effect = ExtResource("9_h18ob")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_1r6t8"]
@@ -109,8 +111,9 @@ script = ExtResource("1_guyx0")
 click_advance = false
 auto_advance_delay = 1.0
 show_image_after = ExtResource("4_j648x")
+hide_image_after = true
 image_fade_time = 0.0
-text = "........"
+text = "(**closes door**)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_itiwr"]

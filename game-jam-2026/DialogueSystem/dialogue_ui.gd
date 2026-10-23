@@ -59,6 +59,7 @@ func show_text(current_item_index: int) -> void:
 	
 	character_name.text = current_item.character_name
 	character_name.visible = not current_item.character_name.is_empty()
+	dialogue_text.visible = not current_item.text.is_empty()
 	
 	dialogue_text.text = current_item.text
 	portrait.texture = current_item.portrait
@@ -66,10 +67,9 @@ func show_text(current_item_index: int) -> void:
 	create_buttons(current_item_index, current_item.choices)
 	
 	if current_item.sound_effect != null:
+		sound_effect_player.stop()
 		sound_effect_player.stream = current_item.sound_effect
 		sound_effect_player.play()
-	else:
-		sound_effect_player.stop()
 	
 	_text_tween = create_tween()
 	_text_tween.set_speed_scale(current_item.base_speed)
@@ -90,7 +90,7 @@ func show_text(current_item_index: int) -> void:
 	elif current_item.character_name == "Rudy":
 		dialogue_voice_player.stream = rudy_voice
 		character_name.get_theme_stylebox("normal").bg_color = Color(0.157, 0.128, 0.71, 1.0)
-	elif current_item.character_name == "???":
+	elif current_item.character_name == "Ava?":
 		dialogue_voice_player.stream = demonic_voice
 	else:
 		dialogue_voice_player.stream = rudy_voice
@@ -165,7 +165,7 @@ func advance(from_index: int, target_index: int) -> void:
 	show_text(target_index)
 
 ## Shows a full-screen image behind the dialogue box. It stays until hide_image() is called.
-func show_image(texture: Texture2D, fade_time: float = 0.5) -> void:
+func show_image(texture: Texture2D, fade_time: float = 0.0) -> void:
 	if _image_tween and _image_tween.is_valid():
 		_image_tween.kill()
 	var was_visible := fullscreen_image.visible

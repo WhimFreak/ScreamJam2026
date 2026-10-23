@@ -6,6 +6,9 @@
 [ext_resource type="AudioStream" uid="uid://7r287s63e78b" path="res://sounds/sfx/interaction.mp3" id="4_hi3kf"]
 [ext_resource type="AudioStream" uid="uid://bsdwt2avjo2tf" path="res://sounds/osts/I Will Try To Have Fun.ogg" id="5_5hvgm"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_j5gvr"]
+[ext_resource type="Texture2D" uid="uid://blmh7mnj1dhe4" path="res://Assets/phone_ava.webp" id="7_j5gvr"]
+[ext_resource type="AudioStream" uid="uid://fl1xuiswmdq6" path="res://sounds/sfx/jumpscare.mp3" id="8_2kklm"]
+[ext_resource type="AudioStream" uid="uid://05hr2lprf1w2" path="res://testing_assets/universfield-door-knock-291150.mp3" id="8_5bm4o"]
 
 [sub_resource type="Resource" id="Resource_no05o"]
 script = ExtResource("1_no05o")
@@ -198,6 +201,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_no05o")
 click_advance = false
 delay_before_next = 1.0
+stop_music = true
 character_name = "May"
 text = "Are you-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -256,6 +260,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_bdccp"]
 script = ExtResource("1_no05o")
+stop_music = true
 character_name = "Rudy"
 text = "(Huh? She cut off.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -289,8 +294,11 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_mrep6"]
 script = ExtResource("1_no05o")
+show_image_after = ExtResource("7_j5gvr")
+image_fade_time = 0.0
 character_name = "Rudy"
 text = "How...?"
+sound_effect = ExtResource("8_2kklm")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_n84hd"]
@@ -302,12 +310,14 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_md7ri"]
 script = ExtResource("2_bqta7")
 text = "Pick up the phone."
-target_line_idx = 45
+target_line_idx = 43
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_6ekic"]
 script = ExtResource("1_no05o")
 choices = Array[ExtResource("2_bqta7")]([SubResource("Resource_md7ri")])
+hide_image_after = true
+image_fade_time = 0.0
 character_name = "Rudy"
 text = "Have I slept already…?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -341,19 +351,20 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_7kj7r"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "!"
+text = "(phone cuts)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_7onqh"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "(The phone cut out..)"
+text = "....."
+sound_effect = ExtResource("8_5bm4o")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_v1r67"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "(What the hell was that noise? It came from the door?)"
+text = "(just kill me already...)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_phq1a"]
