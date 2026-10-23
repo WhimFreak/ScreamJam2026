@@ -6,6 +6,7 @@
 
 [sub_resource type="Resource" id="Resource_m7sxa"]
 script = ExtResource("1_om4f4")
+hide_image_after = true
 character_name = "May"
 text = "Oh my god, you're out! Are you alright?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

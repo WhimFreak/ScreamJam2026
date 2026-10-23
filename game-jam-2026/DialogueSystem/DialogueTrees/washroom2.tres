@@ -2,10 +2,12 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_guyx0"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_4lyxq"]
+[ext_resource type="Texture2D" uid="uid://bjrk26wsb88pw" path="res://Assets/Images/black.jpg" id="4_j648x"]
 [ext_resource type="Texture2D" uid="uid://dlvutpafxuf6y" path="res://Assets/Placeholders/MirrorPlaceholderNormal.png" id="5_4lyxq"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_ybuti"]
-[ext_resource type="AudioStream" uid="uid://5qu8gxtublph" path="res://testing_assets/indistinctwhispering.mp3" id="6_j648x"]
+[ext_resource type="Texture2D" uid="uid://bnu40dtrrsrku" path="res://Assets/Images/ava_ghost.jpg" id="6_va3ua"]
 [ext_resource type="AudioStream" uid="uid://05hr2lprf1w2" path="res://testing_assets/universfield-door-knock-291150.mp3" id="7_va3ua"]
+[ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="7_ybuti"]
 
 [sub_resource type="Resource" id="Resource_h18ob"]
 script = ExtResource("1_guyx0")
@@ -28,25 +30,13 @@ character_name = "Rudy"
 text = "(Wow, I look rough.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
-[sub_resource type="Resource" id="Resource_m0sdt"]
-script = ExtResource("1_guyx0")
-character_name = "Rudy"
-text = "(I shouldn't take too long. Just enough to look presentable.)"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
 [sub_resource type="Resource" id="Resource_j648x"]
 script = ExtResource("1_guyx0")
-music = ExtResource("6_j648x")
-music_fade_time = 4.0
-music_volume_db = -25.0
+delay_before_next = 1.5
+show_image_after = ExtResource("4_j648x")
+image_fade_time = 0.0
 character_name = "Rudy"
-text = ". . ?"
-metadata/_custom_type_script = "uid://dsklo1nyldsmy"
-
-[sub_resource type="Resource" id="Resource_va3ua"]
-script = ExtResource("1_guyx0")
-character_name = "Rudy"
-text = "Hello?"
+text = "knock knock knock"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ybuti"]
@@ -54,55 +44,52 @@ script = ExtResource("1_guyx0")
 delay_before_next = 1.0
 signal_on_advance = "fade_to_black"
 character_name = "Rudy"
-text = "(I swear I could hear someone talking. To me?)"
+text = "....??"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_4jp8f"]
 script = ExtResource("1_guyx0")
-hide_image_after = true
-music = ExtResource("6_j648x")
-music_fade_time = 0.0
-music_volume_db = -25.0
+delay_before_next = 2.0
 character_name = "Rudy"
-text = "(I close my eyes, trying to gauge where the noise is coming from. But it feels like it's everywhere.)"
+text = "who's there??"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_e72ou"]
 script = ExtResource("1_guyx0")
 character_name = "Rudy"
-text = "Jesus!"
+text = "(there's no answer..)"
 sound_effect = ExtResource("7_va3ua")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_xnt8u"]
 script = ExtResource("1_guyx0")
 character_name = "Rudy"
-text = "(My eyes snapped to the door, startled by the sudden knocking.)"
+text = "knock knock knock"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5yqmh"]
 script = ExtResource("1_guyx0")
 character_name = "Rudy"
-text = "(Was that May? God, I hope that was May. And I hope that was her doing the whispering too.)"
+text = "is it may ??"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_3r06q"]
 script = ExtResource("1_guyx0")
 character_name = "Rudy"
-text = "(Why would she do something like that to try and scare me though?)"
+text = "(I feel my heartwrenching)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_722cl"]
 script = ExtResource("1_guyx0")
-character_name = "May"
-text = "Rudy, are you okay?"
+character_name = "Rudy"
+text = "May????"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_lb505"]
 script = ExtResource("1_guyx0")
-stop_music = true
+delay_before_next = 4.0
 character_name = "Rudy"
-text = "(I let out a breath. Of course it's her. I don't know what I was so afraid of.)"
+text = "I open the glate slowly...."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_jk8av"]
@@ -110,11 +97,31 @@ script = ExtResource("1_guyx0")
 click_advance = false
 auto_advance_delay = 0.3
 signal_on_advance = "mirror_jumpscare_start"
+show_image_after = ExtResource("6_va3ua")
 character_name = "Rudy"
-text = "(Relieved, I turn my gaze back to the mirror.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_1r6t8"]
+script = ExtResource("1_guyx0")
+show_image_after = ExtResource("4_j648x")
+text = "........"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_itiwr"]
+script = ExtResource("1_guyx0")
+text = "I'll just wash my face and get....."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_fwfeu"]
+script = ExtResource("1_guyx0")
+click_advance = false
+delay_before_next = 1.0
+show_image_after = ExtResource("7_ybuti")
+hide_image_after = true
+image_fade_time = 0.0
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_ybuti")
-dialogue_items = Array[ExtResource("1_guyx0")]([SubResource("Resource_h18ob"), SubResource("Resource_5xjo7"), SubResource("Resource_rp8jb"), SubResource("Resource_m0sdt"), SubResource("Resource_j648x"), SubResource("Resource_va3ua"), SubResource("Resource_ybuti"), SubResource("Resource_4jp8f"), SubResource("Resource_e72ou"), SubResource("Resource_xnt8u"), SubResource("Resource_5yqmh"), SubResource("Resource_3r06q"), SubResource("Resource_722cl"), SubResource("Resource_lb505"), SubResource("Resource_jk8av")])
+dialogue_items = Array[ExtResource("1_guyx0")]([SubResource("Resource_h18ob"), SubResource("Resource_5xjo7"), SubResource("Resource_rp8jb"), SubResource("Resource_j648x"), SubResource("Resource_ybuti"), SubResource("Resource_4jp8f"), SubResource("Resource_e72ou"), SubResource("Resource_xnt8u"), SubResource("Resource_5yqmh"), SubResource("Resource_3r06q"), SubResource("Resource_722cl"), SubResource("Resource_lb505"), SubResource("Resource_jk8av"), SubResource("Resource_1r6t8"), SubResource("Resource_itiwr"), SubResource("Resource_fwfeu")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

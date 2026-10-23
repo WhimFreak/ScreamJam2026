@@ -86,8 +86,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_1me10"]
 script = ExtResource("1_0pbus")
 character_name = "Rudy"
-text = "(I just don't quite get the pyschological aspect of that behaviour....
-well,.... who am I to talk about psychology)"
+text = "(well,.... who am I to talk about weird psychological behaviour..?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_hhu8m"]
@@ -105,7 +104,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_k2rqm"]
 script = ExtResource("1_0pbus")
 character_name = "Rudy"
-text = "(I try to ignore May stearing right through my soul..)"
+text = "(I try to ignore May staring right through my soul..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0u6xh"]
@@ -215,8 +214,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_i6v1t"]
 script = ExtResource("1_0pbus")
-delay_before_next = 3.0
-signal_on_advance = "fade_to_black_then_color"
+delay_before_next = 1.0
 character_name = "Mark"
 text = "Hey Man!! it's a new era we live in! don't you know about CATBOYS?!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -255,7 +253,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Rudy"
-text = "(I look down at my drink.)"
+text = "(I look down at my drink with no emotions on face)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_0pbus"]
@@ -268,8 +266,8 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Rudy"
-text = "I try to look forward. I Really do... But I guess the hard part is not about moving on.
-It's about accepting the reality first which I don't think I do for now.."
+text = "But I guess the hard part is not about moving on.
+It's about accepting the reality first..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_300mh"]
@@ -320,7 +318,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_pb4ad"]
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
-character_name = "May"
+character_name = "Rudy"
 text = "(She gives me a warm smile. I return it.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -376,7 +374,6 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rkoaw"]
 script = ExtResource("1_0pbus")
-click_advance = false
 character_name = "May"
 text = "I'll take it."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -442,7 +439,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Rudy"
-text = "(I don't have a good feeling about this, I can't afford open in front of them)"
+text = "(I don't have a good feeling about this, I can't afford to open in front of them)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_51idl"]
@@ -575,7 +572,6 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_6mmp3"]
 script = ExtResource("1_0pbus")
-delay_before_next = 0.5
 character_name = "Mark"
 text = "Fine, fine. I'm just saying..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -584,7 +580,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 click_advance = false
 auto_advance_delay = 1.0
-delay_before_next = 1.0
+delay_before_next = 2.0
 base_speed = 0.8
 signal_on_advance = "slow_fade_to_black"
 character_name = "Mark"
@@ -593,7 +589,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_qxla0"]
 script = ExtResource("1_0pbus")
-delay_before_next = 1.0
+delay_before_next = 2.0
 character_name = "Rudy"
 text = "(..huh?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -610,7 +606,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 click_advance = false
 auto_advance_delay = 1.0
-delay_before_next = 0.5
+delay_before_next = 3.0
 show_image_after = ExtResource("3_mjbcj")
 character_name = "Abigail"
 text = "Mark! Oh my god."
