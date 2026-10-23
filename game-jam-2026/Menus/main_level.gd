@@ -12,7 +12,9 @@ const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
 
 @onready var ava_jumpscare: AnimationPlayer = $AvaJumpscare
 @onready var post_mirror_pos: Node2D = $Cafe/PostMirrorPos
-@onready var cafe_may_npc: NPC = %CafeMayNPC
+@onready var cafe_may_npc: Sprite2D = $Cafe/CafeMayNPC
+@onready var abigail_npc: Sprite2D = $Cafe/AbigailNPC
+@onready var mark_npc: Sprite2D = $Cafe/MarkNPC
 @onready var door_to_house: Teleporter = $Bedroom/DoorToHouse
 
 ## Turn off while testing to skip the black-screen intro and start in the room.
@@ -79,8 +81,12 @@ func mirror_jumpscare():
 	ava_jumpscare.play("RESET")
 	
 	player.global_position = post_mirror_pos.find_child("PlayerPos").global_position
+	player.sitting = false
 	cafe_may_npc.global_position = post_mirror_pos.find_child("MayPos").global_position
+	cafe_may_npc.frame = 0
 	main_camera.global_position = post_mirror_pos.find_child("CameraPos").global_position
+	abigail_npc.hide()
+	mark_npc.hide()
 	
 	await get_tree().create_timer(1).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_2)
