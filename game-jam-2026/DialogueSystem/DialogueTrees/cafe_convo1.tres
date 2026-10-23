@@ -353,7 +353,6 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Rudy"
-portrait = ExtResource("11_8pha5")
 text = "(She looks at me with too much hope..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -367,7 +366,6 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_0pbus")
 delay_before_next = 0.5
 character_name = "Rudy"
-portrait = ExtResource("14_r2cj4")
 text = "(She gives me a warm smile. I return it.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -700,6 +698,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_qkjhy"]
 script = ExtResource("1_0pbus")
 delay_before_next = 1.0
+character_name = "May"
 text = "RUDY WAIT!!!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 

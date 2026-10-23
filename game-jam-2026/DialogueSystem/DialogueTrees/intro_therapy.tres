@@ -13,6 +13,7 @@ script = ExtResource("1_npei6")
 delay_before_next = 1.0
 signal_on_advance = "fade_to_color"
 music = ExtResource("3_i1u5e")
+music_volume_db = -5.0
 character_name = "Rosila"
 text = "It's not your fault..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -22,7 +23,7 @@ script = ExtResource("1_npei6")
 delay_before_next = 1.0
 character_name = "Rosila"
 portrait = ExtResource("3_quxoa")
-text = "You could have never guessed.. that that could have happened."
+text = "You could have never guessed.. that this could have happened."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_i1u5e"]

@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_s1dya"]
 [ext_resource type="AudioStream" uid="uid://cmyt4qwrsk4c0" path="res://sounds/osts/REALLY FUN (ver. 2).ogg" id="3_qkjhy"]
 [ext_resource type="Texture2D" uid="uid://cktqgut0noecg" path="res://Assets/Images/Untitled_Artwork.jpg" id="4_0s2ov"]
+[ext_resource type="AudioStream" uid="uid://fl1xuiswmdq6" path="res://sounds/sfx/jumpscare.mp3" id="5_0s2ov"]
 
 [sub_resource type="Resource" id="Resource_qkjhy"]
 script = ExtResource("1_gqvqg")
@@ -20,35 +21,41 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_k5wku"]
 script = ExtResource("1_gqvqg")
-delay_before_next = 0.8
+delay_before_next = 1.0
 show_image_after = ExtResource("4_0s2ov")
 image_fade_time = 0.0
 music = ExtResource("3_qkjhy")
 text = ".........."
+sound_effect = ExtResource("5_0s2ov")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_neo7c"]
 script = ExtResource("1_gqvqg")
+delay_before_next = 2.0
 text = "WHY....."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_bjru4"]
 script = ExtResource("1_gqvqg")
-text = "I think I will puke...."
+delay_before_next = 2.0
+text = "I think I am gonna puke...."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vr1wr"]
 script = ExtResource("1_gqvqg")
+delay_before_next = 1.0
 text = "was it because of me?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a64en"]
 script = ExtResource("1_gqvqg")
+delay_before_next = 1.0
 text = "NO......"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_1y0cb"]
 script = ExtResource("1_gqvqg")
+delay_before_next = 1.0
 text = "PLEASE NO......"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
