@@ -86,11 +86,11 @@ func show_text(current_item_index: int) -> void:
 		character_name.get_theme_stylebox("normal").bg_color = Color(0.117, 0.117, 0.117, 1.0)
 	elif current_item.character_name == "May":
 		dialogue_voice_player.stream = may_voice
-		character_name.get_theme_stylebox("normal").bg_color = Color(0.767, 0.601, 0.346, 1.0)
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.786, 0.568, 0.559, 1.0)
 	elif current_item.character_name == "Rudy":
 		dialogue_voice_player.stream = rudy_voice
 		character_name.get_theme_stylebox("normal").bg_color = Color(0.157, 0.128, 0.71, 1.0)
-	elif current_item.character_name == "Ava":
+	elif current_item.character_name == "???":
 		dialogue_voice_player.stream = demonic_voice
 	else:
 		dialogue_voice_player.stream = rudy_voice

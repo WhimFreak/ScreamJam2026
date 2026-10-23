@@ -8,40 +8,42 @@
 script = ExtResource("1_55ump")
 delay_before_next = 2.0
 signal_on_advance = "fade_to_color"
+hide_image_after = true
+image_fade_time = 0.0
 character_name = "Rudy"
-text = "Excuse me...."
+text = "(Only If I could.....)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_j15xm"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = ". . ."
+text = "(What else was I supposed to do?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_u4a67"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(Come on, you.. you can't be reacting this way.)"
+text = "(why am I even thinking about this?...because of may?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vwn1g"]
 script = ExtResource("1_55ump")
 signal_on_advance = "fade_to_black"
 character_name = "Rudy"
-text = "(It's just a name. It's been years.)"
+text = "(I guess I shouldn't have come)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5mq8a"]
 script = ExtResource("1_55ump")
 signal_on_advance = "stop_blur"
 character_name = "Rudy"
-text = ". . ."
+text = "(Ava was right I guess....I deserve this..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_20tyg"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(I shouldn't have joined May.)"
+text = "(It's not a big deal tho....)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_sq56n"]
@@ -49,25 +51,25 @@ script = ExtResource("1_55ump")
 delay_before_next = 1.0
 signal_on_advance = "fade_to_color"
 character_name = "Rudy"
-text = "(I should have just went home.)"
+text = "It's normal..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_aijll"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = ". . ."
+text = "( It wasn't my fault!!!)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_c5vim"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(God, how pathetic. Look at yourself.)"
+text = "(I need to wake up)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_oiso2"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(I need to wash up before they start looking for me.)"
+text = "(I should head home...)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
