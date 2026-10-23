@@ -1,0 +1,140 @@
+[gd_scene format=3 uid="uid://cjjhpqbpd83ig"]
+
+[ext_resource type="Script" uid="uid://cg8rw4sopnv1w" path="res://Menus/options_menu.gd" id="1_4idlw"]
+[ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="2_7gq10"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(1, 0, 0, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13qdw"]
+bg_color = Color(1, 1, 1, 1)
+border_width_top = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_11gta"]
+bg_color = Color(0.78352344, 0.7835234, 0.7835234, 1)
+border_width_top = 1
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+corner_detail = 2
+
+[node name="OptionsMenu" type="Panel" unique_id=825560660]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_4idlw")
+
+[node name="Panel" type="Panel" parent="." unique_id=452906565]
+custom_minimum_size = Vector2(250, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel" unique_id=364271550]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 56
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer" unique_id=1055371271]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=1447315452]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=1442809545]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_7gq10")
+bbcode_enabled = true
+text = "MUSIC"
+fit_content = true
+autowrap_mode = 0
+
+[node name="MusicSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer" unique_id=313663031]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.5
+step = 0.05
+value = 1.0
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer" unique_id=550879052]
+layout_mode = 2
+theme_override_constants/separation = 12
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1017904031]
+layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_7gq10")
+bbcode_enabled = true
+text = "SFX"
+fit_content = true
+autowrap_mode = 0
+
+[node name="SFXSlider" type="HSlider" parent="Panel/MarginContainer/VBoxContainer/HBoxContainer2" unique_id=1356190900]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 10
+max_value = 1.5
+step = 0.05
+value = 1.0
+
+[node name="ReturnButton" type="Button" parent="Panel/MarginContainer/VBoxContainer" unique_id=2021065484]
+layout_mode = 2
+size_flags_vertical = 10
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_7gq10")
+theme_override_styles/normal = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/hover = SubResource("StyleBoxFlat_11gta")
+theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/disabled = SubResource("StyleBoxFlat_13qdw")
+theme_override_styles/focus = SubResource("StyleBoxFlat_13qdw")
+text = "RETURN"
+
+[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer/MusicSlider" to="." method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/SFXSlider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/ReturnButton" to="." method="_on_return_button_pressed"]
