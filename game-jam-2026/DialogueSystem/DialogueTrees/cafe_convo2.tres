@@ -2,24 +2,29 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_om4f4"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_6ibqm"]
+[ext_resource type="Texture2D" uid="uid://br3awegow4al5" path="res://Assets/character portraits/may/may worried.png" id="3_om4f4"]
+[ext_resource type="Texture2D" uid="uid://qsfqne426igb" path="res://Assets/character portraits/may/may sad.png" id="4_6ibqm"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_b0k55"]
 
 [sub_resource type="Resource" id="Resource_m7sxa"]
 script = ExtResource("1_om4f4")
 hide_image_after = true
 character_name = "May"
+portrait = ExtResource("3_om4f4")
 text = "Oh my god, you're out! Are you alright?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8e8q0"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("4_6ibqm")
 text = "I am so sorry for what happened! I shouldn’t have invited Mark. He said he wouldn't bring it up but-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_wp56q"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("4_6ibqm")
 text = "Oh, this is all my fault!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -57,6 +62,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_12tud"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("3_om4f4")
 text = "I should walk you home at least."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -70,18 +76,21 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_2eiqw"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("4_6ibqm")
 text = "Okay, if you say so.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_ufytj"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("3_om4f4")
 text = "Just.. please take care of yourself, Rudy.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_513vo"]
 script = ExtResource("1_om4f4")
 character_name = "May"
+portrait = ExtResource("3_om4f4")
 text = "And know you can call me anytime you need me.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
