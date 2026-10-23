@@ -2,11 +2,13 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_0pbus"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_300mh"]
+[ext_resource type="AudioStream" uid="uid://c8fplhgd4gh1c" path="res://sounds/osts/In the Cafe (2).ogg" id="3_crq3r"]
 [ext_resource type="Texture2D" uid="uid://bjrk26wsb88pw" path="res://Assets/Images/black.jpg" id="3_mjbcj"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="6_nb3rr"]
 
 [sub_resource type="Resource" id="Resource_estei"]
 script = ExtResource("1_0pbus")
+music = ExtResource("3_crq3r")
 character_name = "Abigail"
 text = "FINALLY!! YOU ARE HERE!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -227,6 +229,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_5bcis"]
 script = ExtResource("1_0pbus")
+stop_music = true
 character_name = "Abigail"
 text = "and I know things haven't exactly been easy for you, Rudy."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -336,6 +339,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8pha5"]
 script = ExtResource("1_0pbus")
+music = ExtResource("3_crq3r")
 character_name = "Mark"
 text = "There it is!! My people.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -509,6 +513,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_fflk1"]
 script = ExtResource("1_0pbus")
 delay_before_next = 1.0
+stop_music = true
 character_name = "Mark"
 text = "I'm pretty sure she's BEEN WAITING for this moment since forever!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
