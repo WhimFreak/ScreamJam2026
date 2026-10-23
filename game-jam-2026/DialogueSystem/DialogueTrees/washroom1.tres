@@ -37,13 +37,13 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_55ump")
 signal_on_advance = "stop_blur"
 character_name = "Rudy"
-text = "(Ava was right I guess....I deserve this..)"
+text = "(Ava was right. I guess....I deserve this..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_20tyg"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(It's not a big deal tho....)"
+text = "(It's not a big deal though....)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_sq56n"]
@@ -57,19 +57,20 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_aijll"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "( It wasn't my fault!!!)"
+text = "(It wasn't my fault!!!)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_c5vim"]
 script = ExtResource("1_55ump")
+delay_before_next = 1.0
 character_name = "Rudy"
-text = "(I need to wake up)"
+text = "(I need to wake up.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_oiso2"]
 script = ExtResource("1_55ump")
 character_name = "Rudy"
-text = "(I should head home...)"
+text = "(I.. I need to wash up. Maybe I'll feel better.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
