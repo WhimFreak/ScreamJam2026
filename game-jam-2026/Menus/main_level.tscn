@@ -26,6 +26,7 @@
 [ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
 [ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
 [ext_resource type="Script" uid="uid://djov07bsvjnor" path="res://Top Down/door_to_bedroom.gd" id="17_1r6t8"]
+[ext_resource type="PackedScene" uid="uid://cjjhpqbpd83ig" path="res://Menus/options_menu.tscn" id="27_rhgd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -422,9 +423,6 @@ shader = ExtResource("13_q1q84")
 shader_parameter/strength = 0.10000000149012
 shader_parameter/mix_percentage = 0.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
-bg_color = Color(0.007843138, 0, 0, 0.20784314)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmjuh"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 2
@@ -448,6 +446,8 @@ border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.539872, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxdly"]
 
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
@@ -864,7 +864,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PausePanel" unique_id=814541264]
 layout_mode = 1
@@ -906,4 +905,9 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
 text = "RETURN TO MENU"
 
+[node name="OptionsMenu" parent="PauseMenu/PausePanel" unique_id=825560660 instance=ExtResource("27_rhgd5")]
+layout_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cxdly")
+
+[connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/OptionsButton" to="PauseMenu" method="_on_options_button_pressed"]
 [connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/ReturnButton" to="PauseMenu" method="_on_return_button_pressed"]
