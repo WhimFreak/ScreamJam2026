@@ -10,12 +10,13 @@ extends Control
 @onready var character_name: Label = %CharacterName
 @onready var fullscreen_image: TextureRect = %FullscreenImage
 
-var abigail_voice = preload("uid://een5bkj7ap6")
+var abigail_voice = preload("uid://iy3oituvre6y")
 var demonic_voice = preload("uid://bdw1i2a1fyd3e")
 var may_voice = preload("uid://dq4onou3d1n0x")
 var mark_voice = preload("uid://cafdmuy66bfns")
 var rudy_voice = preload("uid://bnmdpjo2onaij")
 var rosila_voice = preload("uid://0tf1liw4fv8i")
+var phone_voice = preload("uid://een5bkj7ap6")
 
 
 var _image_tween: Tween
@@ -70,15 +71,20 @@ func show_text(current_item_index: int) -> void:
 	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	_text_tween.tween_property(dialogue_text, "visible_ratio", 1.0, text_appearing_duration)
 	if current_item.character_name == "Rosila":
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.434, 0.094, 0.1, 1.0)
 		dialogue_voice_player.stream = rosila_voice
 	elif  current_item.character_name == "Mark":
 		dialogue_voice_player.stream = mark_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.256, 0.543, 0.228, 1.0)
 	elif current_item.character_name == "Abigail":
 		dialogue_voice_player.stream = abigail_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.117, 0.117, 0.117, 1.0)
 	elif current_item.character_name == "May":
 		dialogue_voice_player.stream = may_voice
-	elif current_item.character_name == "rudy":
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.767, 0.601, 0.346, 1.0)
+	elif current_item.character_name == "Rudy":
 		dialogue_voice_player.stream = rudy_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.157, 0.128, 0.71, 1.0)
 	elif current_item.character_name == "Ava":
 		dialogue_voice_player.stream = demonic_voice
 	else:

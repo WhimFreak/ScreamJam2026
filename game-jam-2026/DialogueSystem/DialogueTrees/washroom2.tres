@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_guyx0"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_4lyxq"]
-[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_va3ua"]
 [ext_resource type="Texture2D" uid="uid://dlvutpafxuf6y" path="res://Assets/Placeholders/MirrorPlaceholderNormal.png" id="5_4lyxq"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_ybuti"]
 [ext_resource type="AudioStream" uid="uid://5qu8gxtublph" path="res://testing_assets/indistinctwhispering.mp3" id="6_j648x"]

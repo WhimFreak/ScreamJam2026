@@ -18,7 +18,7 @@ const OLD_AGE_GRANNY__LONG_ = preload("uid://0tf1liw4fv8i")
 
 
 @export var character_name := ""
-@export var portrait := preload("res://testing_assets/nigum.png")
+@export var portrait : Texture2D = null
 
 @export_multiline var text := ""
 
