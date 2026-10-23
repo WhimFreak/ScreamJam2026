@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://l14ab45slumq"
+path="res://.godot/imported/LEAVE ME ALONE.ogg-a2980c19a3e8fec420966995682b2e1e.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/osts/LEAVE ME ALONE.ogg"
+dest_files=["res://.godot/imported/LEAVE ME ALONE.ogg-a2980c19a3e8fec420966995682b2e1e.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

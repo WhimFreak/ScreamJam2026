@@ -460,10 +460,11 @@ position = Vector2(87, 89)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(25, 95)
+position = Vector2(106, 105)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
+metadata/_edit_lock_ = true
 
 [node name="DoorToOutdoor" type="Node2D" parent="TherapyRoom" unique_id=191470821 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 position = Vector2(207, 210)

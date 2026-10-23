@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://bsdwt2avjo2tf"
+path="res://.godot/imported/I Will Try To Have Fun.ogg-60e7bea28cf7f6e3ac11d48b8839fad3.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/osts/I Will Try To Have Fun.ogg"
+dest_files=["res://.godot/imported/I Will Try To Have Fun.ogg-60e7bea28cf7f6e3ac11d48b8839fad3.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
