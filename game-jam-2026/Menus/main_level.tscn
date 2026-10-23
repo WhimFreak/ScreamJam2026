@@ -20,12 +20,12 @@
 [ext_resource type="Texture2D" uid="uid://c6uh6oody4mtt" path="res://Assets/character sprites/may.png" id="13_1r6t8"]
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
 [ext_resource type="Texture2D" uid="uid://cmw8ebug4d0b1" path="res://Assets/character sprites/abigail.png" id="14_fwfeu"]
-[ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
 [ext_resource type="PackedScene" uid="uid://ccmp7hiijpb17" path="res://environment scenes/bedroom.tscn" id="14_xrmjq"]
 [ext_resource type="Texture2D" uid="uid://dg6jtk8sfno6n" path="res://Assets/character sprites/mark.png" id="15_kx5wr"]
 [ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
 [ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
 [ext_resource type="Script" uid="uid://djov07bsvjnor" path="res://Top Down/door_to_bedroom.gd" id="17_1r6t8"]
+[ext_resource type="Texture2D" uid="uid://dmtc6ixgtc7v6" path="res://Assets/Images/MirrorNormalGhost.webp" id="22_rhgd5"]
 [ext_resource type="PackedScene" uid="uid://cjjhpqbpd83ig" path="res://Menus/options_menu.tscn" id="27_rhgd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
@@ -323,18 +323,6 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)]
 }
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("FullScreen/MirrorJumpscare:scale")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1.1, 1.1)]
-}
 
 [sub_resource type="Animation" id="Animation_vykcn"]
 resource_name = "mirror"
@@ -394,7 +382,7 @@ tracks/4/path = NodePath("OverDialogueOverlays/RedTint:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0.033333335, 5.9666667),
+"times": PackedFloat32Array(0, 5.9666667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Color(1, 1, 1, 0.6862745), Color(1, 1, 1, 1)]
@@ -422,18 +410,6 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1), Color(0.7804822, 0.0015278625, 0.0008373788, 1)]
-}
-tracks/7/type = "value"
-tracks/7/imported = false
-tracks/7/enabled = true
-tracks/7/path = NodePath("FullScreen/MirrorJumpscare:scale")
-tracks/7/interp = 1
-tracks/7/loop_wrap = true
-tracks/7/keys = {
-"times": PackedFloat32Array(0, 3.9666667),
-"transitions": PackedFloat32Array(0.5, 1),
-"update": 0,
-"values": [Vector2(1.05, 1.05), Vector2(1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6fyp4"]
@@ -733,7 +709,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.1, 1.1)
+scale = Vector2(1.05, 1.05)
 pivot_offset_ratio = Vector2(0.5, 0.5)
 
 [node name="TextureRect" type="TextureRect" parent="FullScreen/MirrorJumpscare" unique_id=841931605]
@@ -743,7 +719,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("14_vykcn")
+texture = ExtResource("22_rhgd5")
 
 [node name="RedYouCantRunAway" type="RichTextLabel" parent="FullScreen/MirrorJumpscare" unique_id=341366428]
 layout_mode = 1
