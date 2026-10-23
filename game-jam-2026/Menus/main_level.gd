@@ -39,7 +39,7 @@ func _ready() -> void:
 	Events.dialogue_start_request.connect(start_dialogue_tree)
 	Events.mirror_jumpscare_start.connect(mirror_jumpscare)
 	
-	door_to_house.start_scene(player)
+	#door_to_house.start_scene(player)
 	
 func on_fade_to_black():
 	var tween := create_tween()
