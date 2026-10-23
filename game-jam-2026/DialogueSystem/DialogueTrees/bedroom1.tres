@@ -281,6 +281,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_no05o")
 click_advance = false
 delay_before_next = 1.0
+signal_on_advance = "fade_in_red_tint"
 show_image_after = ExtResource("4_no05o")
 character_name = "Rudy"
 text = "(I’ll just..)"
@@ -307,7 +308,6 @@ metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 [sub_resource type="Resource" id="Resource_6ekic"]
 script = ExtResource("1_no05o")
 choices = Array[ExtResource("2_bqta7")]([SubResource("Resource_md7ri")])
-signal_on_advance = "fade_in_red_tint"
 character_name = "Rudy"
 text = "Have I slept already…?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

@@ -22,11 +22,15 @@
 [ext_resource type="PackedScene" uid="uid://ccmp7hiijpb17" path="res://environment scenes/bedroom.tscn" id="14_xrmjq"]
 [ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
 [ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
+[ext_resource type="Script" uid="uid://djov07bsvjnor" path="res://Top Down/door_to_bedroom.gd" id="17_1r6t8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_xrivr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnkns"]
+size = Vector2(32, 10)
 
 [sub_resource type="Animation" id="Animation_y46r3"]
 length = 0.001
@@ -422,13 +426,13 @@ border_color = Color(0.539872, 0, 0, 1)
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
 
-[node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
-unique_name_in_owner = true
-position = Vector2(87, 89)
-zoom = Vector2(2, 2)
-
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
 position = Vector2(39, 95)
+
+[node name="MainCamera" type="Camera2D" parent="Player" unique_id=668706807]
+unique_name_in_owner = true
+position = Vector2(48, -6)
+zoom = Vector2(2, 2)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
@@ -593,13 +597,13 @@ position = Vector2(406, 108)
 [node name="Bedroom" parent="." unique_id=1954048674 instance=ExtResource("14_xrmjq")]
 position = Vector2(456, 406)
 
-[node name="DoorToHouse" type="Node2D" parent="Bedroom" unique_id=1331273990 node_paths=PackedStringArray("player_pos")]
+[node name="DoorToHouse" type="Node2D" parent="Bedroom" unique_id=1331273990 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 z_index = 1
 position = Vector2(160, 79)
 script = ExtResource("15_xrmjq")
+teleporter_to = NodePath("../../House/DoorToBedroom")
 player_pos = NodePath("Marker2D")
-static_camera = true
-camera_pos = Vector2(664, 544)
+instant = true
 
 [node name="InteractableComponent" type="Node2D" parent="Bedroom/DoorToHouse" unique_id=1408388303 node_paths=PackedStringArray("area_2d")]
 script = ExtResource("4_qtdy1")
@@ -618,6 +622,28 @@ position = Vector2(88, 35)
 
 [node name="House" parent="." unique_id=937627250 instance=ExtResource("16_lnkns")]
 position = Vector2(912, 485)
+
+[node name="DoorToBedroom" type="Node2D" parent="House" unique_id=1996883040 node_paths=PackedStringArray("teleporter_to", "player_pos")]
+z_index = 1
+position = Vector2(239, 110)
+script = ExtResource("17_1r6t8")
+teleporter_to = NodePath("../../Bedroom/DoorToHouse")
+player_pos = NodePath("Marker2D")
+
+[node name="InteractableComponent" type="Node2D" parent="House/DoorToBedroom" unique_id=2035047054 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("4_qtdy1")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
+
+[node name="Area2D" type="Area2D" parent="House/DoorToBedroom/InteractableComponent" unique_id=1544633582]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/DoorToBedroom/InteractableComponent/Area2D" unique_id=1436334480]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_lnkns")
+
+[node name="Marker2D" type="Marker2D" parent="House/DoorToBedroom" unique_id=1455536097]
+position = Vector2(1, -15)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true

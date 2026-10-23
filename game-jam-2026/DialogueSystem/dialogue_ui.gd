@@ -33,9 +33,9 @@ func start_tree():
 
 func show_text(current_item_index: int) -> void:
 	if current_item_index < 0 or current_item_index >= dialogue_tree.dialogue_items.size():
+		hide()
 		Events.enable_player_action.emit()
 		Events.tree_finished.emit(dialogue_tree)
-		hide()
 		return
 	
 	current_item = dialogue_tree.dialogue_items[current_item_index]
