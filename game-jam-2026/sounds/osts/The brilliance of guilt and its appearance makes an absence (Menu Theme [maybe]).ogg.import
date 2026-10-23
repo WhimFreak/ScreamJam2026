@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cti6ee0vte6tf"
+path="res://.godot/imported/The brilliance of guilt and its appearance makes an absence (Menu Theme [maybe]).ogg-e116950f4ee1376bb0634bfc785af87c.oggvorbisstr"
+
+[deps]
+
+source_file="res://sounds/osts/The brilliance of guilt and its appearance makes an absence (Menu Theme [maybe]).ogg"
+dest_files=["res://.godot/imported/The brilliance of guilt and its appearance makes an absence (Menu Theme [maybe]).ogg-e116950f4ee1376bb0634bfc785af87c.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
