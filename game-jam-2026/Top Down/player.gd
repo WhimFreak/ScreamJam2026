@@ -21,6 +21,7 @@ func _ready() -> void:
 
 func _physics_process(delta:float) -> void:
 	if not can_act:
+		animation_player.play("RESET")
 		interaction_label.hide()
 		return
 		
@@ -45,6 +46,7 @@ func _physics_process(delta:float) -> void:
 		animation_player.stop()
 		sprite_2d.frame = 0
 		walker.stop()
+		
 # Interaction
 func _input(event: InputEvent) -> void:
 	if not can_act:

@@ -7,6 +7,7 @@ extends Node2D
 @export var camera_pos: Vector2 ## If camera is static, it's set to this position when teleported here
 @export var music: AudioStream ## Optional room music that starts when the player is teleported here
 @export_range(0.05, 3.0, 0.05, "suffix:s") var fade_duration: float = 0.4 ## Length of each fade (out and in) when using this door
+@export var instant: bool = false
 
 var _teleporting: bool = false
 
@@ -20,6 +21,11 @@ func _ready() -> void:
 func on_interact(player: Player):
 	if _teleporting:
 		return
+	
+	if instant:
+		teleport_player(player)
+		return
+		
 	_teleporting = true
 	Events.disable_player_action.emit()
 	Events.screen_fade.emit(1.0, fade_duration)
@@ -34,12 +40,15 @@ func on_interact(player: Player):
 
 ## Instant teleport with no fade (used by on_interact and by special doors with their own fades).
 func teleport_player(player: Player):
-	player.global_position = teleporter_to.player_pos.global_position
-	if teleporter_to.music:
-		MusicPlayer.play(teleporter_to.music)
-	if teleporter_to.static_camera:
-		main_camera.reparent(teleporter_to)
-		main_camera.global_position = teleporter_to.camera_pos
+	teleporter_to.teleport_here(player)
+		
+func teleport_here(player: Player):
+	player.global_position = player_pos.global_position
+	if music:
+		MusicPlayer.play(music)
+	if static_camera:
+		main_camera.reparent(self)
+		main_camera.global_position = camera_pos
 	else:
 		main_camera.reparent(player)
 		main_camera.position = Vector2.ZERO

@@ -19,6 +19,7 @@
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="13_6fyp4"]
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
 [ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
+[ext_resource type="PackedScene" uid="uid://ccmp7hiijpb17" path="res://environment scenes/bedroom.tscn" id="14_xrmjq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -402,7 +403,7 @@ position = Vector2(87, 89)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(38, 96)
+position = Vector2(39, 95)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
@@ -462,6 +463,8 @@ script = ExtResource("8_6ottg")
 washroom_door = NodePath("../../WashRoom/DoorBackToCafe")
 teleporter_to = NodePath("../../Cafe/DoorToOutdoor")
 player_pos = NodePath("Marker2D")
+fade_duration = 0.05
+instant = true
 
 [node name="InteractableComponent" type="Node2D" parent="TherapyOutdoors/DoorToCafe" unique_id=1949106861 node_paths=PackedStringArray("area_2d")]
 position = Vector2(207, 209)
@@ -504,7 +507,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="WashRoom/DoorBackToCafe" unique_id=1679894859]
-position = Vector2(0, 7)
+position = Vector2(0, 9)
 
 [node name="SinkInteraction" type="Node2D" parent="WashRoom" unique_id=202353798]
 position = Vector2(176, 78)
@@ -561,6 +564,32 @@ position = Vector2(418, 99)
 
 [node name="CameraPos" type="Marker2D" parent="Cafe/PostMirrorPos" unique_id=1523290604]
 position = Vector2(406, 108)
+
+[node name="Bedroom" parent="." unique_id=1954048674 instance=ExtResource("14_xrmjq")]
+position = Vector2(456, 406)
+
+[node name="DoorToHouse" type="Node2D" parent="Bedroom" unique_id=1331273990 node_paths=PackedStringArray("player_pos")]
+z_index = 1
+position = Vector2(160, 79)
+script = ExtResource("4_y46r3")
+player_pos = NodePath("Marker2D")
+static_camera = true
+camera_pos = Vector2(664, 544)
+
+[node name="InteractableComponent" type="Node2D" parent="Bedroom/DoorToHouse" unique_id=1408388303 node_paths=PackedStringArray("area_2d")]
+script = ExtResource("4_qtdy1")
+area_2d = NodePath("Area2D")
+metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
+
+[node name="Area2D" type="Area2D" parent="Bedroom/DoorToHouse/InteractableComponent" unique_id=1865793494]
+monitorable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bedroom/DoorToHouse/InteractableComponent/Area2D" unique_id=1378124206]
+position = Vector2(1, -2)
+shape = SubResource("RectangleShape2D_ch1tp")
+
+[node name="Marker2D" type="Marker2D" parent="Bedroom/DoorToHouse" unique_id=1844563490]
+position = Vector2(88, 35)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
