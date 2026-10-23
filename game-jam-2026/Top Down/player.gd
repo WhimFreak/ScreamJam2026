@@ -47,7 +47,7 @@ func _physics_process(delta:float) -> void:
 		animation_player.play("idle_" + cur_char.to_lower())
 		interaction_label.hide()
 		return
-		
+	
 	var dir: Vector2 = Input.get_vector("move_left", "move_right", "move_up", "move_down")
 	
 	velocity = velocity.move_toward(dir * speed, accel * delta)
@@ -66,8 +66,7 @@ func _physics_process(delta:float) -> void:
 		if not walker.playing:
 			walker.play()
 	else:
-		animation_player.stop()
-		sprite_2d.frame = 0
+		animation_player.play("idle_" + cur_char.to_lower())
 		walker.stop()
 		
 # Interaction

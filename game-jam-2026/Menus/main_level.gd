@@ -44,6 +44,10 @@ func _ready() -> void:
 	#door_to_house.start_scene(player)
 	#$House/DoorToBedroom.start_scene(player)
 	
+	await get_tree().create_timer(1).timeout
+	$TherapyOutdoors/DoorToCafe.start_cafe_scene = true
+	$TherapyOutdoors/DoorToCafe.on_interact(player)
+	
 func on_fade_to_black():
 	var tween := create_tween()
 	tween.tween_property(black_overlay, "modulate", Color.WHITE, 1)
