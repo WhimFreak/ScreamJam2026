@@ -425,6 +425,7 @@ border_color = Color(0.539872, 0, 0, 1)
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
+play_intro = false
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
 position = Vector2(39, 95)
