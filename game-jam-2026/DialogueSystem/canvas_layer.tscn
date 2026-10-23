@@ -133,3 +133,4 @@ pitch_scale = 1.2
 
 [node name="SoundEffectPlayer" type="AudioStreamPlayer" parent="DialogueUI" unique_id=1671635211]
 unique_name_in_owner = true
+bus = &"SFX"

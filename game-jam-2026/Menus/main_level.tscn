@@ -460,7 +460,7 @@ position = Vector2(87, 89)
 zoom = Vector2(2, 2)
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(106, 105)
+position = Vector2(24, 89)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
