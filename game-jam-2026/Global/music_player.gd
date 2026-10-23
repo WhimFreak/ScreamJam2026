@@ -18,7 +18,7 @@ func _ready() -> void:
 	process_mode = Node.PROCESS_MODE_ALWAYS # keep playing while the game is paused
 	for i in 2:
 		var player := AudioStreamPlayer.new()
-		player.bus = &"Master"
+		player.bus = &"Music"
 		player.volume_db = SILENT_DB
 		add_child(player)
 		_players.append(player)
