@@ -6,12 +6,35 @@
 
 [sub_resource type="Resource" id="Resource_s1dya"]
 script = ExtResource("1_1hmoe")
+delay_before_next = 1.0
 signal_on_advance = "fade_to_color"
 character_name = "May"
 text = "Rudy?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
+[sub_resource type="Resource" id="Resource_yokab"]
+script = ExtResource("1_1hmoe")
+delay_before_next = 0.5
+text = "(he hasn't picked up my call since last night...)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_3ktke"]
+script = ExtResource("1_1hmoe")
+delay_before_next = 0.5
+text = "was that too much???"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_wnxa0"]
+script = ExtResource("1_1hmoe")
+text = "I hope he's okay..."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_ht03o"]
+script = ExtResource("1_1hmoe")
+text = "I better check him out!"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
 [resource]
 script = ExtResource("2_eeojc")
-dialogue_items = Array[ExtResource("1_1hmoe")]([SubResource("Resource_s1dya")])
+dialogue_items = Array[ExtResource("1_1hmoe")]([SubResource("Resource_s1dya"), SubResource("Resource_yokab"), SubResource("Resource_3ktke"), SubResource("Resource_wnxa0"), SubResource("Resource_ht03o")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

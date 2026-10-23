@@ -645,7 +645,7 @@ position = Vector2(704, -34)
 z_index = 1
 position = Vector2(300, 67)
 texture = ExtResource("13_1r6t8")
-hframes = 2
+hframes = 3
 frame = 1
 
 [node name="AbigailNPC" type="Sprite2D" parent="Cafe" unique_id=736874643]

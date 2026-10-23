@@ -3,14 +3,61 @@
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_gqvqg"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_ncbjm"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_s1dya"]
+[ext_resource type="AudioStream" uid="uid://cmyt4qwrsk4c0" path="res://sounds/osts/REALLY FUN (ver. 2).ogg" id="3_qkjhy"]
+[ext_resource type="Texture2D" uid="uid://cktqgut0noecg" path="res://Assets/Images/Untitled_Artwork.jpg" id="4_0s2ov"]
 
 [sub_resource type="Resource" id="Resource_qkjhy"]
 script = ExtResource("1_gqvqg")
 character_name = "May"
-text = "D:"
+text = "rudy...."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_5r4yn"]
+script = ExtResource("1_gqvqg")
+click_advance = false
+text = "WHAT THE-"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_k5wku"]
+script = ExtResource("1_gqvqg")
+delay_before_next = 0.8
+show_image_after = ExtResource("4_0s2ov")
+image_fade_time = 0.0
+music = ExtResource("3_qkjhy")
+text = ".........."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_neo7c"]
+script = ExtResource("1_gqvqg")
+text = "WHY....."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_bjru4"]
+script = ExtResource("1_gqvqg")
+text = "I think I will puke...."
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_vr1wr"]
+script = ExtResource("1_gqvqg")
+text = "was it because of me?"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_a64en"]
+script = ExtResource("1_gqvqg")
+text = "NO......"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_1y0cb"]
+script = ExtResource("1_gqvqg")
+text = "PLEASE NO......"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_e71o6"]
+script = ExtResource("1_gqvqg")
+text = "IT'S ALL MY FAULT!!!!!!!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("2_ncbjm")
-dialogue_items = Array[ExtResource("1_gqvqg")]([SubResource("Resource_qkjhy")])
+dialogue_items = Array[ExtResource("1_gqvqg")]([SubResource("Resource_qkjhy"), SubResource("Resource_5r4yn"), SubResource("Resource_k5wku"), SubResource("Resource_neo7c"), SubResource("Resource_bjru4"), SubResource("Resource_vr1wr"), SubResource("Resource_a64en"), SubResource("Resource_1y0cb"), SubResource("Resource_e71o6")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

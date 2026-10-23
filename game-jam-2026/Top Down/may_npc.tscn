@@ -17,7 +17,7 @@ interactable = true
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=815685991]
 position = Vector2(0, -11)
 texture = ExtResource("4_o3xy0")
-hframes = 2
+hframes = 3
 
 [node name="InteractableComponent" parent="." unique_id=287546589 node_paths=PackedStringArray("area_2d") instance=ExtResource("2_uuujm")]
 position = Vector2(0, -11)
