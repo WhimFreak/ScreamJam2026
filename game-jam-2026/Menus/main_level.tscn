@@ -25,6 +25,7 @@
 [ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
 [ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
 [ext_resource type="Script" uid="uid://djov07bsvjnor" path="res://Top Down/door_to_bedroom.gd" id="17_1r6t8"]
+[ext_resource type="AudioStream" uid="uid://cgpt4wqpbg25w" path="res://sounds/sfx/intense.mp3" id="22_leiwj"]
 [ext_resource type="Texture2D" uid="uid://dmtc6ixgtc7v6" path="res://Assets/Images/MirrorNormalGhost.webp" id="22_rhgd5"]
 [ext_resource type="PackedScene" uid="uid://cjjhpqbpd83ig" path="res://Menus/options_menu.tscn" id="27_rhgd5"]
 
@@ -323,6 +324,18 @@ tracks/6/keys = {
 "update": 0,
 "values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)]
 }
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AvaJumpscare/AudioStreamPlayer:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-80.0]
+}
 
 [sub_resource type="Animation" id="Animation_vykcn"]
 resource_name = "mirror"
@@ -410,6 +423,46 @@ tracks/6/keys = {
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1), Color(0.7804822, 0.0015278625, 0.0008373788, 1)]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("AvaJumpscare/AudioStreamPlayer:volume_db")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0.06666667, 1, 5.7, 6.2),
+"transitions": PackedFloat32Array(0.46651644, 0, 2, 1),
+"update": 0,
+"values": [-80.0, -5.0, -5.0, 10.0]
+}
+tracks/8/type = "method"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("AvaJumpscare/AudioStreamPlayer")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"times": PackedFloat32Array(0.033333335, 6.4666667),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [65.0],
+"method": &"play"
+}, {
+"args": [],
+"method": &"stop"
+}]
+}
+tracks/9/type = "method"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("AvaJumpscare/AudioStreamPlayer")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"values": []
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6fyp4"]
@@ -699,6 +752,10 @@ libraries/ = SubResource("AnimationLibrary_fgf5d")
 
 [node name="AvaJumpscare" type="AnimationPlayer" parent="." unique_id=527868598]
 libraries/ = SubResource("AnimationLibrary_6fyp4")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="AvaJumpscare" unique_id=2006627852]
+stream = ExtResource("22_leiwj")
+volume_db = -80.0
 
 [node name="FullScreen" type="CanvasLayer" parent="." unique_id=1165450607]
 
