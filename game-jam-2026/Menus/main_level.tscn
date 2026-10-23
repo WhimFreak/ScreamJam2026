@@ -477,14 +477,11 @@ border_color = Color(0.539872, 0, 0, 1)
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
 play_intro = false
-<<<<<<< HEAD
-=======
 
 [node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
 unique_name_in_owner = true
 position = Vector2(87, 89)
 zoom = Vector2(2, 2)
->>>>>>> main
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
 position = Vector2(25, 95)
