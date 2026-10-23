@@ -74,12 +74,20 @@ func on_fade_out_red_tint():
 	tween.tween_property(red_tint, "modulate", Color.TRANSPARENT, 1)
 	
 func mirror_jumpscare():
+	# Wait for the washroom dialogue to fully end first, so the jumpscare and the
+	# dialogue never run at the same time (the dialogue's end re-enables the player,
+	# so we lock the player again right after).
+	await Events.tree_finished
 	Events.disable_player_action.emit()
+
 	ava_jumpscare.play("mirror")
 	await ava_jumpscare.animation_finished
-	
+
+	# Reset the mirror image / red tint / blur, then go dark again
 	ava_jumpscare.play("RESET")
-	
+	ava_jumpscare.advance(0) # apply the reset right now
+	black_overlay.modulate = Color.WHITE
+
 	player.global_position = post_mirror_pos.find_child("PlayerPos").global_position
 	player.sitting = false
 	cafe_may_npc.global_position = post_mirror_pos.find_child("MayPos").global_position
@@ -88,6 +96,8 @@ func mirror_jumpscare():
 	abigail_npc.hide()
 	mark_npc.hide()
 	
+	await get_tree().create_timer(1).timeout
+	Events.fade_to_color.emit() # fade in from black
 	await get_tree().create_timer(1).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_2)
 	await Events.tree_finished

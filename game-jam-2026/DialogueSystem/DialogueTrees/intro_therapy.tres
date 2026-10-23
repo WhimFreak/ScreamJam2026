@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_npei6"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_quxoa"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="2_utxen"]
+[ext_resource type="AudioStream" uid="uid://bsw36247ul7pw" path="res://sounds/osts/Im Scared.ogg" id="3_i1u5e"]
 [ext_resource type="Texture2D" uid="uid://g0x4p3j2mmc" path="res://Assets/character portraits/rosila/rosila confused.png" id="3_quxoa"]
 [ext_resource type="Texture2D" uid="uid://ifbs75stcuqx" path="res://Assets/character portraits/rosila/rosila angry.png" id="4_i1u5e"]
 [ext_resource type="Texture2D" uid="uid://chsf1e3nm2xcp" path="res://Assets/character portraits/rosila/rosila smile.png" id="5_10y5h"]
@@ -11,6 +12,7 @@
 script = ExtResource("1_npei6")
 delay_before_next = 1.0
 signal_on_advance = "fade_to_color"
+music = ExtResource("3_i1u5e")
 character_name = "Rosila"
 text = "It's not your fault..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -77,6 +79,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_a8nu7"]
 script = ExtResource("1_npei6")
+stop_music = true
 character_name = "Rudy"
 text = "Alright, I'll try."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

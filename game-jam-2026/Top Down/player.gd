@@ -22,7 +22,11 @@ var last_dir: Vector2
 var can_act: bool = true
 
 func _ready() -> void:
-	Events.disable_player_action.connect(func(): can_act = false)
+	Events.disable_player_action.connect(
+		func():
+			can_act = false
+			velocity = Vector2.ZERO
+			walker.stop())
 	Events.enable_player_action.connect(
 		func():
 			can_act = true
@@ -31,13 +35,15 @@ func _ready() -> void:
 
 func _physics_process(delta:float) -> void:
 	if sitting:
+		walker.stop()
 		animation_player.play("sit_rudy")
 		sprite_2d.z_index = 2
 		return
-		
+
 	sprite_2d.z_index = 0
-	
+
 	if not can_act:
+		walker.stop() # no footsteps while a dialogue/cutscene has control
 		animation_player.play("idle_" + cur_char.to_lower())
 		interaction_label.hide()
 		return

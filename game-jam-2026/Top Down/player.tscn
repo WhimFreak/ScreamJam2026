@@ -133,7 +133,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_brhrl"]
 resource_name = "sit_rudy"
-length = 0.009999999999999998
+length = 0.00999999999999999
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
