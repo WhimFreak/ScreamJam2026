@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bkjha5a4jptsl"
+path="res://.godot/imported/Door Open Slowly.wav-c7c11e19df01f622f79a82de0c98bcfe.sample"
+
+[deps]
+
+source_file="res://sounds/sfx/Door Open Slowly.wav"
+dest_files=["res://.godot/imported/Door Open Slowly.wav-c7c11e19df01f622f79a82de0c98bcfe.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
