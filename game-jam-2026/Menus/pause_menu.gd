@@ -4,9 +4,6 @@ extends CanvasLayer
 @onready var options_button: Button = $PausePanel/VBoxContainer/OptionsButton
 @onready var options_menu: Panel = $PausePanel/OptionsMenu
 
-func _ready() -> void:
-	options_button.pressed.connect(_on_options_button_pressed)
-
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("pause"):
 		get_tree().paused = not get_tree().paused
