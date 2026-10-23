@@ -6,9 +6,10 @@
 [ext_resource type="AudioStream" uid="uid://7r287s63e78b" path="res://sounds/sfx/interaction.mp3" id="4_hi3kf"]
 [ext_resource type="AudioStream" uid="uid://bsdwt2avjo2tf" path="res://sounds/osts/I Will Try To Have Fun.ogg" id="5_5hvgm"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_j5gvr"]
+[ext_resource type="AudioStream" uid="uid://bsw36247ul7pw" path="res://sounds/osts/Im Scared.ogg" id="6_5bm4o"]
 [ext_resource type="Texture2D" uid="uid://blmh7mnj1dhe4" path="res://Assets/phone_ava.webp" id="7_j5gvr"]
 [ext_resource type="AudioStream" uid="uid://fl1xuiswmdq6" path="res://sounds/sfx/jumpscare.mp3" id="8_2kklm"]
-[ext_resource type="AudioStream" uid="uid://05hr2lprf1w2" path="res://testing_assets/universfield-door-knock-291150.mp3" id="8_5bm4o"]
+[ext_resource type="AudioStream" uid="uid://cc1fsy3g6ipk" path="res://sounds/sfx/glass break.mp3" id="9_2kklm"]
 
 [sub_resource type="Resource" id="Resource_no05o"]
 script = ExtResource("1_no05o")
@@ -296,6 +297,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_no05o")
 show_image_after = ExtResource("7_j5gvr")
 image_fade_time = 0.0
+music = ExtResource("6_5bm4o")
 character_name = "Rudy"
 text = "How...?"
 sound_effect = ExtResource("8_2kklm")
@@ -357,8 +359,8 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_7onqh"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "....."
-sound_effect = ExtResource("8_5bm4o")
+text = "......."
+sound_effect = ExtResource("9_2kklm")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_v1r67"]
@@ -370,6 +372,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_phq1a"]
 script = ExtResource("1_no05o")
 delay_before_next = 0.5
+stop_music = true
 character_name = "Rudy"
 text = "(Should I check it out?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"

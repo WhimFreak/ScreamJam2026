@@ -1,6 +1,7 @@
 extends Node2D
 
 const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
+const MAY_DISCOVERY_2 = preload("uid://4e1o2qxisd2a") # last dialogue of the game
 
 @onready var black_overlay: ColorRect = $Overlays/BlackOverlay
 @onready var main_camera: Camera2D = %MainCamera
@@ -40,7 +41,8 @@ func _ready() -> void:
 
 	Events.dialogue_start_request.connect(start_dialogue_tree)
 	Events.mirror_jumpscare_start.connect(mirror_jumpscare)
-	
+	Events.tree_finished.connect(_on_tree_finished)
+
 	#door_to_house.start_scene(player)
 	#$House/DoorToBedroom.start_scene(player)
 	
@@ -109,6 +111,45 @@ func mirror_jumpscare():
 	await get_tree().create_timer(1).timeout
 	door_to_house.start_scene(player)
 	
+func _on_tree_finished(tree: DialogueTree) -> void:
+	if tree == MAY_DISCOVERY_2:
+		play_ending()
+
+## Black fade, "Thanks for playing", then quit the game.
+func play_ending() -> void:
+	Events.disable_player_action.emit()
+	MusicPlayer.stop(3.0)
+
+	# Built in code on a top layer so it covers everything, including the dialogue
+	var layer := CanvasLayer.new()
+	layer.layer = 100
+	add_child(layer)
+
+	var black := ColorRect.new()
+	black.color = Color.BLACK
+	black.set_anchors_preset(Control.PRESET_FULL_RECT)
+	black.mouse_filter = Control.MOUSE_FILTER_STOP # block clicks
+	black.modulate.a = 0.0
+	layer.add_child(black)
+
+	var label := Label.new()
+	label.text = "Thanks for playing"
+	label.set_anchors_preset(Control.PRESET_FULL_RECT)
+	label.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	label.vertical_alignment = VERTICAL_ALIGNMENT_CENTER
+	label.add_theme_font_override("font", load("res://fonts/PressStart2P-Regular.ttf"))
+	label.add_theme_font_size_override("font_size", 16)
+	label.modulate.a = 0.0
+	layer.add_child(label)
+
+	var tween := create_tween()
+	tween.tween_property(black, "modulate:a", 1.0, 2.0)
+	tween.tween_property(label, "modulate:a", 1.0, 1.5)
+	tween.tween_interval(3.0)
+	tween.tween_property(label, "modulate:a", 0.0, 1.5)
+	tween.tween_interval(0.5)
+	tween.tween_callback(get_tree().quit)
+
 func on_screen_fade(to_alpha: float, duration: float):
 	if _screen_fade_tween and _screen_fade_tween.is_valid():
 		_screen_fade_tween.kill()
