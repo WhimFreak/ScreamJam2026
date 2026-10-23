@@ -425,6 +425,7 @@ border_color = Color(0.539872, 0, 0, 1)
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
+play_intro = false
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
 position = Vector2(39, 95)
@@ -643,7 +644,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_lnkns")
 
 [node name="Marker2D" type="Marker2D" parent="House/DoorToBedroom" unique_id=1455536097]
-position = Vector2(1, -15)
+position = Vector2(-155, -29)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true

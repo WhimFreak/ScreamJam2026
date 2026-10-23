@@ -24,6 +24,4 @@ func on_interact(player: Player):
 	await Events.tree_finished
 	
 	night_overlay.modulate = Color.TRANSPARENT
-	
-	teleport_player(player)
 	teleporter_to.start_scene(player)
