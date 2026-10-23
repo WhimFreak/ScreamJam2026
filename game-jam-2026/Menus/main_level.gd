@@ -1,10 +1,10 @@
 extends Node2D
 
 const CAFE_CONVO_2 = preload("uid://dg620lcleuhem")
-const BEDROOM_1 = preload("uid://c6bpiodoi7cxl")
 
-@onready var black_overlay: ColorRect = $BlackScreen/BlackOverlay
+@onready var black_overlay: ColorRect = $Overlays/BlackOverlay
 @onready var main_camera: Camera2D = %MainCamera
+@onready var red_tint: ColorRect = $OverDialogueOverlays/RedTint
 
 @onready var player: Player = $Player
 @onready var dialogue_ui: CanvasLayer = $DialogueUI
@@ -26,6 +26,9 @@ func _ready() -> void:
 	Events.fade_to_black_then_color.connect(on_fade_to_black_then_color)
 	Events.slow_fade_to_black.connect(on_slow_fade_to_black)
 	Events.screen_fade.connect(on_screen_fade)
+	Events.fade_in_red_tint.connect(on_fade_in_red_tint)
+	Events.fade_out_red_tint.connect(on_fade_out_red_tint)
+	
 	if play_intro:
 		# Start on a black screen, run the intro text, then the intro_therapy dialogue
 		# starts at the end of the "intro" animation (it also fades the screen back in).
@@ -35,6 +38,8 @@ func _ready() -> void:
 
 	Events.dialogue_start_request.connect(start_dialogue_tree)
 	Events.mirror_jumpscare_start.connect(mirror_jumpscare)
+	
+	door_to_house.start_scene(player)
 	
 func on_fade_to_black():
 	var tween := create_tween()
@@ -57,6 +62,14 @@ func on_slow_fade_to_black():
 	var tween := create_tween()
 	tween.tween_property(black_overlay, "modulate", Color.WHITE, 5)
 	
+func on_fade_in_red_tint():
+	var tween := create_tween()
+	tween.tween_property(red_tint, "modulate", Color("ffffff40"), 1)
+	
+func on_fade_out_red_tint():
+	var tween := create_tween()
+	tween.tween_property(red_tint, "modulate", Color.TRANSPARENT, 1)
+	
 func mirror_jumpscare():
 	Events.disable_player_action.emit()
 	ava_jumpscare.play("mirror")
@@ -73,10 +86,8 @@ func mirror_jumpscare():
 	await Events.tree_finished
 	Events.fade_to_black.emit()
 	await get_tree().create_timer(1).timeout
-	door_to_house.teleport_here(player)
-	Events.dialogue_start_request.emit(BEDROOM_1)
+	door_to_house.start_scene(player)
 	
-
 func on_screen_fade(to_alpha: float, duration: float):
 	if _screen_fade_tween and _screen_fade_tween.is_valid():
 		_screen_fade_tween.kill()

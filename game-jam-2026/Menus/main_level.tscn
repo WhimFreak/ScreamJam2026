@@ -20,6 +20,8 @@
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
 [ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
 [ext_resource type="PackedScene" uid="uid://ccmp7hiijpb17" path="res://environment scenes/bedroom.tscn" id="14_xrmjq"]
+[ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
+[ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -31,7 +33,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScreen/YouCantRunAway:visible_ratio")
+tracks/0/path = NodePath("Overlays/YouCantRunAway:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -43,7 +45,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BlackScreen/VBoxContainer/IAmNotRunningAway:visible_ratio")
+tracks/1/path = NodePath("Overlays/VBoxContainer/IAmNotRunningAway:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -55,7 +57,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BlackScreen/VBoxContainer/IKnowWhatIDid:visible_ratio")
+tracks/2/path = NodePath("Overlays/VBoxContainer/IKnowWhatIDid:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -67,7 +69,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("BlackScreen/YouCantRunAway:self_modulate")
+tracks/3/path = NodePath("Overlays/YouCantRunAway:self_modulate")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -79,7 +81,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/4/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/strength")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -91,7 +93,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/5/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/mix_percentage")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -107,7 +109,7 @@ length = 13.5
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BlackScreen/YouCantRunAway:visible_ratio")
+tracks/0/path = NodePath("Overlays/YouCantRunAway:visible_ratio")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -119,7 +121,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BlackScreen/VBoxContainer/IAmNotRunningAway:visible_ratio")
+tracks/1/path = NodePath("Overlays/VBoxContainer/IAmNotRunningAway:visible_ratio")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -131,7 +133,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BlackScreen/VBoxContainer/IKnowWhatIDid:visible_ratio")
+tracks/2/path = NodePath("Overlays/VBoxContainer/IKnowWhatIDid:visible_ratio")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -157,7 +159,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("BlackScreen/YouCantRunAway:self_modulate")
+tracks/4/path = NodePath("Overlays/YouCantRunAway:self_modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -174,7 +176,7 @@ loop_mode = 1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/0/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/strength")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -186,7 +188,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/1/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/mix_percentage")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -220,7 +222,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/1/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/strength")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -232,7 +234,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/2/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/mix_percentage")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -256,19 +258,19 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("FullScreen/MirrorJumpscare/Overlay:modulate")
+tracks/4/path = NodePath("OverDialogueOverlays/RedTint:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 0,
-"values": [Color(1, 1, 1, 0.6862745)]
+"values": [Color(1, 1, 1, 0)]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BlackScreen/BlackOverlay:modulate")
+tracks/5/path = NodePath("Overlays/BlackOverlay:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -276,6 +278,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OverDialogueOverlays/RedTint:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)]
 }
 
 [sub_resource type="Animation" id="Animation_vykcn"]
@@ -296,7 +310,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/strength")
+tracks/1/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/strength")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -308,7 +322,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("BlurOverlay/ColorRect:material:shader_parameter/mix_percentage")
+tracks/2/path = NodePath("Overlays/BlurOverlay:material:shader_parameter/mix_percentage")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -332,7 +346,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("FullScreen/MirrorJumpscare/Overlay:modulate")
+tracks/4/path = NodePath("OverDialogueOverlays/RedTint:modulate")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -344,7 +358,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("BlackScreen/BlackOverlay:modulate")
+tracks/5/path = NodePath("Overlays/BlackOverlay:modulate")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -352,6 +366,18 @@ tracks/5/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Color(1, 1, 1, 0)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("OverDialogueOverlays/RedTint:color")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 5.9666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1), Color(0.7804822, 0.0015278625, 0.0008373788, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_6fyp4"]
@@ -570,7 +596,7 @@ position = Vector2(456, 406)
 [node name="DoorToHouse" type="Node2D" parent="Bedroom" unique_id=1331273990 node_paths=PackedStringArray("player_pos")]
 z_index = 1
 position = Vector2(160, 79)
-script = ExtResource("4_y46r3")
+script = ExtResource("15_xrmjq")
 player_pos = NodePath("Marker2D")
 static_camera = true
 camera_pos = Vector2(664, 544)
@@ -589,6 +615,9 @@ shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="Bedroom/DoorToHouse" unique_id=1844563490]
 position = Vector2(88, 35)
+
+[node name="House" parent="." unique_id=937627250 instance=ExtResource("16_lnkns")]
+position = Vector2(912, 485)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
@@ -617,16 +646,6 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("14_vykcn")
 
-[node name="Overlay" type="ColorRect" parent="FullScreen/MirrorJumpscare" unique_id=409349380]
-modulate = Color(1, 1, 1, 0.6862745)
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)
-
 [node name="RedYouCantRunAway" type="RichTextLabel" parent="FullScreen/MirrorJumpscare" unique_id=341366428]
 layout_mode = 1
 anchors_preset = 8
@@ -651,10 +670,10 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
-[node name="BlackScreen" type="CanvasLayer" parent="." unique_id=1327207953]
-layer = 5
+[node name="Overlays" type="CanvasLayer" parent="." unique_id=1327207953]
+layer = 6
 
-[node name="BlackOverlay" type="ColorRect" parent="BlackScreen" unique_id=1144414068]
+[node name="BlackOverlay" type="ColorRect" parent="Overlays" unique_id=1144414068]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -663,7 +682,25 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="YouCantRunAway" type="RichTextLabel" parent="BlackScreen" unique_id=946196420]
+[node name="NightOverlay" type="ColorRect" parent="Overlays" unique_id=1789216008]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="BlurOverlay" type="ColorRect" parent="Overlays" unique_id=254452782]
+material = SubResource("ShaderMaterial_xrivr")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="YouCantRunAway" type="RichTextLabel" parent="Overlays" unique_id=946196420]
 self_modulate = Color(1, 1, 1, 0)
 anchors_preset = 8
 anchor_left = 0.5
@@ -686,7 +723,7 @@ autowrap_mode = 0
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="VBoxContainer" type="VBoxContainer" parent="BlackScreen" unique_id=1534931078]
+[node name="VBoxContainer" type="VBoxContainer" parent="Overlays" unique_id=1534931078]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -699,7 +736,7 @@ offset_bottom = 42.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="IAmNotRunningAway" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=267774569]
+[node name="IAmNotRunningAway" type="RichTextLabel" parent="Overlays/VBoxContainer" unique_id=267774569]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(1, 1, 1, 1)
@@ -711,7 +748,7 @@ autowrap_mode = 0
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="IKnowWhatIDid" type="RichTextLabel" parent="BlackScreen/VBoxContainer" unique_id=404477357]
+[node name="IKnowWhatIDid" type="RichTextLabel" parent="Overlays/VBoxContainer" unique_id=404477357]
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/default_color = Color(1, 1, 1, 1)
@@ -725,18 +762,22 @@ visible_characters = 0
 visible_characters_behavior = 1
 visible_ratio = 0.0
 
-[node name="BlurOverlay" type="CanvasLayer" parent="." unique_id=990399676]
+[node name="DialogueUI" parent="." unique_id=1556033828 instance=ExtResource("5_fgf5d")]
+layer = 6
 
-[node name="ColorRect" type="ColorRect" parent="BlurOverlay" unique_id=254452782]
-material = SubResource("ShaderMaterial_xrivr")
+[node name="OverDialogueOverlays" type="CanvasLayer" parent="." unique_id=990399676]
+layer = 6
+
+[node name="RedTint" type="ColorRect" parent="OverDialogueOverlays" unique_id=409349380]
+modulate = Color(1, 1, 1, 0)
+top_level = true
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-
-[node name="DialogueUI" parent="." unique_id=1556033828 instance=ExtResource("5_fgf5d")]
-layer = 6
+mouse_filter = 2
+color = Color(0.24892989, 9.746477e-07, 5.2342193e-07, 1)
 
 [node name="PauseMenu" type="CanvasLayer" parent="." unique_id=1697650757]
 process_mode = 3
