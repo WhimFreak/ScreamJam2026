@@ -10,19 +10,23 @@
 [ext_resource type="PackedScene" uid="uid://bjoug8gmbvr5r" path="res://DialogueSystem/canvas_layer.tscn" id="5_fgf5d"]
 [ext_resource type="FontFile" uid="uid://d1scseabuvm71" path="res://fonts/PressStart2P-Regular.ttf" id="5_qtdy1"]
 [ext_resource type="PackedScene" uid="uid://bmlbt24a14chh" path="res://environment scenes/therapy_outdoors.tscn" id="6_ch1tp"]
+[ext_resource type="Texture2D" uid="uid://dclfjs0o5lw0t" path="res://Assets/character sprites/rosila.png" id="6_kx5wr"]
 [ext_resource type="PackedScene" uid="uid://bjxhvbj6sxsyp" path="res://Top Down/may_npc.tscn" id="7_a5am4"]
 [ext_resource type="Script" uid="uid://ba4jr8srd3k3x" path="res://Menus/door_to_cafe.gd" id="8_6ottg"]
 [ext_resource type="PackedScene" uid="uid://5ppdxt1owkfc" path="res://environment scenes/cafe.tscn" id="8_jmgod"]
 [ext_resource type="PackedScene" uid="uid://4fsmj4xgt06v" path="res://environment scenes/wash_room.tscn" id="10_6ottg"]
 [ext_resource type="Script" uid="uid://feh4y4xla7ks" path="res://Top Down/sink_interaction.gd" id="10_47i33"]
 [ext_resource type="PackedScene" uid="uid://bd1ygvo32gmjs" path="res://Top Down/interactable_component.tscn" id="10_p3igg"]
-[ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="13_6fyp4"]
+[ext_resource type="Texture2D" uid="uid://c6uh6oody4mtt" path="res://Assets/character sprites/may.png" id="13_1r6t8"]
 [ext_resource type="Shader" uid="uid://5amhk1alwy7" path="res://Resources/blur.gdshader" id="13_q1q84"]
+[ext_resource type="Texture2D" uid="uid://cmw8ebug4d0b1" path="res://Assets/character sprites/abigail.png" id="14_fwfeu"]
 [ext_resource type="Texture2D" uid="uid://cxwhc427d7q28" path="res://Assets/Placeholders/MirrorPlaceholderAva.png" id="14_vykcn"]
 [ext_resource type="PackedScene" uid="uid://ccmp7hiijpb17" path="res://environment scenes/bedroom.tscn" id="14_xrmjq"]
+[ext_resource type="Texture2D" uid="uid://dg6jtk8sfno6n" path="res://Assets/character sprites/mark.png" id="15_kx5wr"]
 [ext_resource type="Script" uid="uid://culjjkm0vb1kk" path="res://Top Down/door_to_house.gd" id="15_xrmjq"]
 [ext_resource type="PackedScene" uid="uid://b86dwhw8uvmxl" path="res://environment scenes/house.tscn" id="16_lnkns"]
 [ext_resource type="Script" uid="uid://djov07bsvjnor" path="res://Top Down/door_to_bedroom.gd" id="17_1r6t8"]
+[ext_resource type="PackedScene" uid="uid://cjjhpqbpd83ig" path="res://Menus/options_menu.tscn" id="27_rhgd5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ch1tp"]
 size = Vector2(32, 10)
@@ -106,6 +110,18 @@ tracks/5/keys = {
 "update": 0,
 "values": [0.0]
 }
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Player:sitting")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
 
 [sub_resource type="Animation" id="Animation_obwmc"]
 resource_name = "intro"
@@ -171,6 +187,18 @@ tracks/4/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1),
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Player:sitting")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
 }
 
 [sub_resource type="Animation" id="Animation_q1q84"]
@@ -395,9 +423,6 @@ shader = ExtResource("13_q1q84")
 shader_parameter/strength = 0.10000000149012
 shader_parameter/mix_percentage = 0.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xrivr"]
-bg_color = Color(0.007843138, 0, 0, 0.20784314)
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lmjuh"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 2
@@ -422,18 +447,23 @@ border_width_right = 2
 border_width_bottom = 2
 border_color = Color(0.539872, 0, 0, 1)
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cxdly"]
+
 [node name="MainLevel" type="Node2D" unique_id=2017510965]
 y_sort_enabled = true
 script = ExtResource("1_obwmc")
 play_intro = false
+<<<<<<< HEAD
+=======
+
+[node name="MainCamera" type="Camera2D" parent="." unique_id=668706807]
+unique_name_in_owner = true
+position = Vector2(87, 89)
+zoom = Vector2(2, 2)
+>>>>>>> main
 
 [node name="Player" parent="." unique_id=688360018 instance=ExtResource("2_fv5ia")]
-position = Vector2(39, 95)
-
-[node name="MainCamera" type="Camera2D" parent="Player" unique_id=668706807]
-unique_name_in_owner = true
-position = Vector2(48, -6)
-zoom = Vector2(2, 2)
+position = Vector2(25, 95)
 
 [node name="TherapyRoom" parent="." unique_id=1874367335 instance=ExtResource("2_b7mpt")]
 position = Vector2(-123, -34)
@@ -459,6 +489,12 @@ metadata/_custom_type_script = "uid://bnwb8nm08j6fa"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TherapyRoom/DoorToOutdoor/InteractableComponent/Area2D" unique_id=2083130817]
 position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
+
+[node name="RosilaNPC" type="Sprite2D" parent="TherapyRoom" unique_id=510626805]
+z_index = 1
+position = Vector2(270, 113)
+texture = ExtResource("6_kx5wr")
+flip_h = true
 
 [node name="TherapyOutdoors" parent="." unique_id=2077428685 instance=ExtResource("6_ch1tp")]
 position = Vector2(265, -63)
@@ -554,11 +590,24 @@ shape = SubResource("CircleShape2D_xrivr")
 [node name="Cafe" parent="." unique_id=451866016 instance=ExtResource("8_jmgod")]
 position = Vector2(704, -34)
 
-[node name="CafeMayNPC" parent="Cafe" unique_id=1168464624 instance=ExtResource("7_a5am4")]
-unique_name_in_owner = true
-position = Vector2(311, 76)
-dialogue_trees = Array[ExtResource("13_6fyp4")]([])
-interactable = false
+[node name="CafeMayNPC" type="Sprite2D" parent="Cafe" unique_id=458112311]
+z_index = 1
+position = Vector2(300, 67)
+texture = ExtResource("13_1r6t8")
+hframes = 2
+frame = 1
+
+[node name="AbigailNPC" type="Sprite2D" parent="Cafe" unique_id=736874643]
+z_index = 1
+position = Vector2(365, 66)
+texture = ExtResource("14_fwfeu")
+flip_h = true
+
+[node name="MarkNPC" type="Sprite2D" parent="Cafe" unique_id=1705656994]
+z_index = 1
+position = Vector2(366, 77)
+texture = ExtResource("15_kx5wr")
+flip_h = true
 
 [node name="DoorToOutdoor" type="Node2D" parent="Cafe" unique_id=31864474 node_paths=PackedStringArray("teleporter_to", "player_pos")]
 position = Vector2(208, -81)
@@ -582,7 +631,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_ch1tp")
 
 [node name="Marker2D" type="Marker2D" parent="Cafe/DoorToOutdoor" unique_id=1954434112]
-position = Vector2(101, 174)
+position = Vector2(92, 170)
 
 [node name="PostMirrorPos" type="Node2D" parent="Cafe" unique_id=17639143]
 
@@ -644,7 +693,7 @@ position = Vector2(1, -2)
 shape = SubResource("RectangleShape2D_lnkns")
 
 [node name="Marker2D" type="Marker2D" parent="House/DoorToBedroom" unique_id=1455536097]
-position = Vector2(1, -15)
+position = Vector2(-155, -29)
 
 [node name="ScreenAnimationPlayer" type="AnimationPlayer" parent="." unique_id=553942841]
 unique_name_in_owner = true
@@ -818,7 +867,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_xrivr")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/PausePanel" unique_id=814541264]
 layout_mode = 1
@@ -860,4 +908,9 @@ theme_override_styles/hover_pressed = SubResource("StyleBoxFlat_chd2j")
 theme_override_styles/disabled = SubResource("StyleBoxFlat_chd2j")
 text = "RETURN TO MENU"
 
+[node name="OptionsMenu" parent="PauseMenu/PausePanel" unique_id=825560660 instance=ExtResource("27_rhgd5")]
+layout_mode = 1
+theme_override_styles/panel = SubResource("StyleBoxEmpty_cxdly")
+
+[connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/OptionsButton" to="PauseMenu" method="_on_options_button_pressed"]
 [connection signal="pressed" from="PauseMenu/PausePanel/VBoxContainer/ReturnButton" to="PauseMenu" method="_on_return_button_pressed"]

@@ -34,6 +34,7 @@ func on_interact(player: Player):
 	await get_tree().create_timer(1.5).timeout
 		
 	super.on_interact(player)
+	player.sitting = true
 	Events.fade_to_color.emit()
 	await get_tree().create_timer(1.0).timeout
 	Events.dialogue_start_request.emit(CAFE_CONVO_1)
@@ -42,10 +43,11 @@ func on_tree_finished(tree):
 	if tree != CAFE_CONVO_1:
 		return
 		
+	player_ref.sitting = false
 	player_ref.global_position = washroom_door.player_pos.global_position
 	main_camera.reparent(washroom_door)
 	main_camera.global_position = washroom_door.camera_pos
-		
+	
 	screen_animation_player.play("pulse_blur")
 	Events.dialogue_start_request.emit(WASHROOM_1)
 		

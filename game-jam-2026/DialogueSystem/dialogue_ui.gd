@@ -24,8 +24,13 @@ var _text_tween: Tween
 var current_item: DialogueItem
 var is_transitioning: bool = true  # true while advancing between lines; blocks all input
 	
+var in_choice_branch: bool = false
+var branch_end_idx: int = 0
+var convergence_idx: int = 0
+
 func start_tree():
 	show()
+	in_choice_branch = false
 	Events.disable_player_action.emit()
 	if dialogue_tree.music:
 		MusicPlayer.play(dialogue_tree.music, dialogue_tree.music_fade_time)
@@ -90,11 +95,6 @@ func show_text(current_item_index: int) -> void:
 	else:
 		dialogue_voice_player.stream = rudy_voice
 	
-	
-	
-	
-	
-	
 	var sound_max_offset := maxf(dialogue_voice_player.stream.get_length() - text_appearing_duration, 0.0)
 	var sound_start_position := randf() * sound_max_offset
 	dialogue_voice_player.play(sound_start_position)
@@ -137,6 +137,13 @@ func _on_text_finished(item_index: int) -> void:
 func advance(from_index: int, target_index: int) -> void:
 	if is_transitioning:
 		return
+		
+	if in_choice_branch:
+		if from_index == branch_end_idx:
+			in_choice_branch = false
+			advance(from_index, convergence_idx)
+			return
+			
 	is_transitioning = true
 	
 	var item: DialogueItem = dialogue_tree.dialogue_items[from_index]
@@ -207,7 +214,12 @@ func create_buttons(item_index: int, choices_data: Array[DialogueChoices]) -> vo
 		if choice.is_quit:
 			button.pressed.connect(get_tree().quit)
 		else:
-			button.pressed.connect(advance.bind(item_index, choice.target_line_idx))
+			button.pressed.connect(
+				func():
+					advance(item_index, choice.target_line_idx)
+					in_choice_branch = true
+					branch_end_idx = choice.end_branch_idx
+					convergence_idx = choice.convergence_idx)
 
 func _get_configuration_warnings() -> PackedStringArray:
 	if dialogue_tree.dialogue_items.is_empty():

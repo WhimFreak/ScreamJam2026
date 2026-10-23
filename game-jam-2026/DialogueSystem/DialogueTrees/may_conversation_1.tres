@@ -34,14 +34,14 @@ script = ExtResource("1_htiv8")
 delay_before_next = 0.5
 character_name = "May"
 portrait = ExtResource("3_22pjp")
-text = "You inspired me a lot, you know? NO way I'm letting you fall off..."
+text = "You inspire me a lot, you know? NO way I'm letting you fall off..."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_qm6hb"]
 script = ExtResource("1_htiv8")
 delay_before_next = 0.5
 character_name = "Rudy"
-text = "(what do she even knows ?)"
+text = "(What does she even know?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_22pjp"]

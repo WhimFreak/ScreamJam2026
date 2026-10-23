@@ -6,6 +6,8 @@ const MAY_DISCOVERY_2 = preload("uid://4e1o2qxisd2a")
 @onready var area_2d: Area2D = $InteractableComponent/Area2D
 
 func start_scene(player: Player):
+	teleport_here(player)
+	player.cur_char = "May"
 	Events.dialogue_start_request.emit(MAY_DISCOVERY_1)
 	
 	await Events.tree_finished
