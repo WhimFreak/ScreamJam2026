@@ -98,6 +98,7 @@ func mirror_jumpscare():
 	player.sitting = false
 	cafe_may_npc.global_position = post_mirror_pos.find_child("MayPos").global_position
 	cafe_may_npc.frame = 0
+	cafe_may_npc.flip_h = true
 	main_camera.global_position = post_mirror_pos.find_child("CameraPos").global_position
 	abigail_npc.hide()
 	mark_npc.hide()
