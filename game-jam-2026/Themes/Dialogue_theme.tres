@@ -55,9 +55,9 @@ anti_aliasing_size = 0.01
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vn4vu"]
 content_margin_left = 30.0
-content_margin_top = 35.0
+content_margin_top = 20.0
 content_margin_right = 20.0
-content_margin_bottom = 10.0
+content_margin_bottom = 20.0
 bg_color = Color(1, 1, 1, 1)
 border_width_left = 4
 border_width_top = 4
@@ -75,6 +75,7 @@ Button/styles/hover = SubResource("StyleBoxFlat_h5v0o")
 Button/styles/normal = SubResource("StyleBoxFlat_xjhej")
 Button/styles/pressed = SubResource("StyleBoxFlat_iswho")
 RichTextLabel/colors/default_color = Color(0, 0, 0, 1)
+RichTextLabel/constants/line_separation = 4
 RichTextLabel/font_sizes/normal_font_size = 16
 RichTextLabel/fonts/normal_font = ExtResource("1_h5v0o")
 RichTextLabel/styles/normal = SubResource("StyleBoxFlat_vn4vu")

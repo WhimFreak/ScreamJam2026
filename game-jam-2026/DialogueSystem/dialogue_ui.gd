@@ -70,15 +70,20 @@ func show_text(current_item_index: int) -> void:
 	var text_appearing_duration: float = current_item["text"].length() / 30.0
 	_text_tween.tween_property(dialogue_text, "visible_ratio", 1.0, text_appearing_duration)
 	if current_item.character_name == "Rosila":
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.434, 0.094, 0.1, 1.0)
 		dialogue_voice_player.stream = rosila_voice
 	elif  current_item.character_name == "Mark":
 		dialogue_voice_player.stream = mark_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.256, 0.543, 0.228, 1.0)
 	elif current_item.character_name == "Abigail":
 		dialogue_voice_player.stream = abigail_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.117, 0.117, 0.117, 1.0)
 	elif current_item.character_name == "May":
 		dialogue_voice_player.stream = may_voice
-	elif current_item.character_name == "rudy":
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.767, 0.601, 0.346, 1.0)
+	elif current_item.character_name == "Rudy":
 		dialogue_voice_player.stream = rudy_voice
+		character_name.get_theme_stylebox("normal").bg_color = Color(0.157, 0.128, 0.71, 1.0)
 	elif current_item.character_name == "Ava":
 		dialogue_voice_player.stream = demonic_voice
 	else:

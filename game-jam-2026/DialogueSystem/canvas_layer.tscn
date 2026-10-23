@@ -11,7 +11,7 @@
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fxxkg"]
 content_margin_left = 20.0
-content_margin_top = 10.0
+content_margin_top = 15.0
 content_margin_right = 20.0
 content_margin_bottom = 10.0
 bg_color = Color(0.19215687, 0.36078432, 0.627451, 1)
