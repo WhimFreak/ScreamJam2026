@@ -2,14 +2,69 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_qnsrk"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_rsp8y"]
+<<<<<<< HEAD
+=======
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_76hay"]
+>>>>>>> 792dc988185200b70e8a7c489580f97732e76099
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_d6cb2"]
 
 [sub_resource type="Resource" id="Resource_1fe0n"]
 script = ExtResource("1_qnsrk")
-text = "Naa,I should probably just sleep......."
+character_name = "Rudy"
+text = "(I place a hand on the door handle and stopped before I could turn it.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_d6cb2"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 1.0
+signal_on_advance = "fade_to_black"
+character_name = "Rudy"
+text = "(I.. I don't think I want to check it out. Whatever it is.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_npqgw"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 4.0
+character_name = "Rudy"
+text = "(I slowly make my way back to bed, hoping for a better chance at sleep now that I'm drained.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_vfixx"]
+script = ExtResource("1_qnsrk")
+character_name = "Rudy"
+text = "(Still, the thoughts won't leave.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_qnsrk"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "(I hate this. I want it all to end.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_rsp8y"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 1.0
+character_name = "Rudy"
+text = "(Why can't she just.. follow through and.. and..)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_rw4ca"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 2.0
+character_name = "Rudy"
+text = "(I wish I could just die.)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_76hay"]
+script = ExtResource("1_qnsrk")
+delay_before_next = 1.0
+signal_on_advance = "fade_to_color"
+character_name = "Rudy"
+text = "(I'm sorry, May.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_d6cb2")
-dialogue_items = Array[ExtResource("1_qnsrk")]([SubResource("Resource_1fe0n")])
+dialogue_items = Array[ExtResource("1_qnsrk")]([SubResource("Resource_1fe0n"), SubResource("Resource_d6cb2"), SubResource("Resource_npqgw"), SubResource("Resource_vfixx"), SubResource("Resource_qnsrk"), SubResource("Resource_rsp8y"), SubResource("Resource_rw4ca"), SubResource("Resource_76hay")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

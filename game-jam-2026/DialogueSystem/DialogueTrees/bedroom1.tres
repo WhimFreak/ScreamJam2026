@@ -2,6 +2,8 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_no05o"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_bqta7"]
+[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_5hvgm"]
+[ext_resource type="Texture2D" uid="uid://blmh7mnj1dhe4" path="res://Assets/phone_ava.webp" id="4_no05o"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_j5gvr"]
 
 [sub_resource type="Resource" id="Resource_no05o"]
@@ -27,7 +29,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_5bm4o"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = " (What a hell of a day…..)"
+text = "(What a hell of a day…..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_2kklm"]
@@ -46,7 +48,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_no05o")
 click_advance = false
 character_name = "Rudy"
-text = "(I wouldn’t have to suffer through all these nightmares only if I had-)"
+text = "(I wouldn’t have to suffer through all these nightmares if only I had-)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_lpa2l"]
@@ -59,7 +61,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_oobxc"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "(There’s no way. Who can call right now?)"
+text = "(There’s no way. Who can call me at this time?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vdaeh"]
@@ -70,6 +72,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vafw4"]
 script = ExtResource("1_no05o")
+delay_before_next = 0.5
 character_name = "Rudy"
 text = "(Is it her? No… It can’t be.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -206,6 +209,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_mfb3g"]
 script = ExtResource("1_no05o")
 delay_before_next = 1.0
+character_name = "Rudy"
 text = "(Why would she cut the call?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
@@ -270,12 +274,14 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_sldyx"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "(That must be her.)"
+text = "(Looks like she called back before I got to.)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_f03i5"]
 script = ExtResource("1_no05o")
 click_advance = false
+delay_before_next = 1.0
+show_image_after = ExtResource("4_no05o")
 character_name = "Rudy"
 text = "(I’ll just..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
@@ -289,54 +295,75 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 [sub_resource type="Resource" id="Resource_n84hd"]
 script = ExtResource("1_no05o")
 character_name = "Rudy"
-text = "No way…."
+text = "No way…. Again?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_md7ri"]
 script = ExtResource("2_bqta7")
-text = "Pickup"
-target_line_idx = 47
+text = "Pick up the phone."
+target_line_idx = 45
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_6ekic"]
 script = ExtResource("1_no05o")
 choices = Array[ExtResource("2_bqta7")]([SubResource("Resource_md7ri")])
+signal_on_advance = "fade_in_red_tint"
 character_name = "Rudy"
-text = "Have I slept already…..?"
+text = "Have I slept already…?"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_52gjk"]
 script = ExtResource("1_no05o")
 click_advance = false
-text = "you will get what you deserved! I’ll fking kill you"
+base_speed = 0.5
+character_name = "Ava?"
+text = "[shake]YOU WILL GET WHAT YOU DESERVE"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vh26l"]
 script = ExtResource("1_no05o")
-text = "(phone cuts)"
+character_name = "Rudy"
+text = "Stop.. Ava.."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_8siae"]
 script = ExtResource("1_no05o")
-text = "Glass breaking and loud screaming sound"
+click_advance = false
+auto_advance_delay = 0.1
+delay_before_next = 0.5
+base_speed = 0.5
+signal_on_advance = "fade_out_red_tint"
+hide_image_after = true
+character_name = "Ava?"
+text = "[shake]I WILL FUCKING KILL YOU, YOU TRAITO-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_7kj7r"]
 script = ExtResource("1_no05o")
-text = "(what the fk was that?)"
+character_name = "Rudy"
+text = "!"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_7onqh"]
 script = ExtResource("1_no05o")
-text = "(should I check it out?)"
+character_name = "Rudy"
+text = "(The phone cut out..)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_v1r67"]
 script = ExtResource("1_no05o")
-text = "(I wish I could just die)"
+character_name = "Rudy"
+text = "(What the hell was that noise? It came from the door?)"
+metadata/_custom_type_script = "uid://dsklo1nyldsmy"
+
+[sub_resource type="Resource" id="Resource_phq1a"]
+script = ExtResource("1_no05o")
+delay_before_next = 0.5
+character_name = "Rudy"
+text = "(Should I check it out?)"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [resource]
 script = ExtResource("5_j5gvr")
-dialogue_items = Array[ExtResource("1_no05o")]([SubResource("Resource_no05o"), SubResource("Resource_bqta7"), SubResource("Resource_hi3kf"), SubResource("Resource_5bm4o"), SubResource("Resource_2kklm"), SubResource("Resource_pg76u"), SubResource("Resource_ottku"), SubResource("Resource_lpa2l"), SubResource("Resource_oobxc"), SubResource("Resource_vdaeh"), SubResource("Resource_vafw4"), SubResource("Resource_00q0h"), SubResource("Resource_8vaw5"), SubResource("Resource_u8xtk"), SubResource("Resource_jeh8w"), SubResource("Resource_dqs1g"), SubResource("Resource_4brng"), SubResource("Resource_hmrb7"), SubResource("Resource_y60xr"), SubResource("Resource_j77sa"), SubResource("Resource_wy7no"), SubResource("Resource_kmu5t"), SubResource("Resource_irmhx"), SubResource("Resource_evlyi"), SubResource("Resource_o7flv"), SubResource("Resource_ifllj"), SubResource("Resource_ofsqs"), SubResource("Resource_0ewxm"), SubResource("Resource_k3o2i"), SubResource("Resource_68m42"), SubResource("Resource_mfb3g"), SubResource("Resource_5q5jc"), SubResource("Resource_jb6f2"), SubResource("Resource_ynx06"), SubResource("Resource_31hhv"), SubResource("Resource_bdccp"), SubResource("Resource_mi0rx"), SubResource("Resource_lrs1g"), SubResource("Resource_x6vay"), SubResource("Resource_rc6d2"), SubResource("Resource_sldyx"), SubResource("Resource_f03i5"), SubResource("Resource_mrep6"), SubResource("Resource_n84hd"), SubResource("Resource_6ekic"), SubResource("Resource_52gjk"), SubResource("Resource_vh26l"), SubResource("Resource_8siae"), SubResource("Resource_7kj7r"), SubResource("Resource_7onqh"), SubResource("Resource_v1r67")])
+dialogue_items = Array[ExtResource("1_no05o")]([SubResource("Resource_no05o"), SubResource("Resource_bqta7"), SubResource("Resource_hi3kf"), SubResource("Resource_5bm4o"), SubResource("Resource_2kklm"), SubResource("Resource_pg76u"), SubResource("Resource_ottku"), SubResource("Resource_lpa2l"), SubResource("Resource_oobxc"), SubResource("Resource_vdaeh"), SubResource("Resource_vafw4"), SubResource("Resource_00q0h"), SubResource("Resource_8vaw5"), SubResource("Resource_u8xtk"), SubResource("Resource_jeh8w"), SubResource("Resource_dqs1g"), SubResource("Resource_4brng"), SubResource("Resource_hmrb7"), SubResource("Resource_y60xr"), SubResource("Resource_j77sa"), SubResource("Resource_wy7no"), SubResource("Resource_kmu5t"), SubResource("Resource_irmhx"), SubResource("Resource_evlyi"), SubResource("Resource_o7flv"), SubResource("Resource_ifllj"), SubResource("Resource_ofsqs"), SubResource("Resource_0ewxm"), SubResource("Resource_k3o2i"), SubResource("Resource_68m42"), SubResource("Resource_mfb3g"), SubResource("Resource_5q5jc"), SubResource("Resource_jb6f2"), SubResource("Resource_ynx06"), SubResource("Resource_31hhv"), SubResource("Resource_bdccp"), SubResource("Resource_mi0rx"), SubResource("Resource_lrs1g"), SubResource("Resource_x6vay"), SubResource("Resource_rc6d2"), SubResource("Resource_sldyx"), SubResource("Resource_f03i5"), SubResource("Resource_mrep6"), SubResource("Resource_n84hd"), SubResource("Resource_6ekic"), SubResource("Resource_52gjk"), SubResource("Resource_vh26l"), SubResource("Resource_8siae"), SubResource("Resource_7kj7r"), SubResource("Resource_7onqh"), SubResource("Resource_v1r67"), SubResource("Resource_phq1a")])
 metadata/_custom_type_script = "uid://dq5m317pm5mk6"

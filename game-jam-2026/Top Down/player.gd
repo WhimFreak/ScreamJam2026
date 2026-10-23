@@ -2,7 +2,12 @@ class_name Player
 extends CharacterBody2D
 
 @export var speed: float = 50
-@export var accel: float = 1500
+@export var accel: float = 600
+@export_enum("Rudy", "May") var cur_char: String = "Rudy":
+	set(val):
+		cur_char = val
+		if animation_player:
+			animation_player.play("idle_" + val.to_lower())
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var interaction_label: RichTextLabel = $InteractionLabel
@@ -18,10 +23,11 @@ var can_act: bool = true
 func _ready() -> void:
 	Events.disable_player_action.connect(func(): can_act = false)
 	Events.enable_player_action.connect(func(): can_act = true)
+	cur_char = cur_char
 
 func _physics_process(delta:float) -> void:
 	if not can_act:
-		animation_player.play("RESET")
+		animation_player.play("idle_" + cur_char.to_lower())
 		interaction_label.hide()
 		return
 		
@@ -39,7 +45,7 @@ func _physics_process(delta:float) -> void:
 		sprite_2d.flip_h = last_dir.x < 0
 	
 	if velocity.length() > 0.0:
-		animation_player.play("walk")
+		animation_player.play("walk_" + cur_char.to_lower())
 		if not walker.playing:
 			walker.play()
 	else:
