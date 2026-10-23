@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://dsklo1nyldsmy" path="res://DialogueSystem/dialogue_items.gd" id="1_no05o"]
 [ext_resource type="Script" uid="uid://cpa1tl0l7wdrq" path="res://DialogueSystem/dialogue_choices.gd" id="2_bqta7"]
-[ext_resource type="Texture2D" uid="uid://dyemk75vu6h6a" path="res://testing_assets/nigum.png" id="4_5hvgm"]
 [ext_resource type="Texture2D" uid="uid://blmh7mnj1dhe4" path="res://Assets/phone_ava.webp" id="4_no05o"]
 [ext_resource type="Script" uid="uid://dq5m317pm5mk6" path="res://DialogueSystem/DialogueTrees/dialogue_tree.gd" id="5_j5gvr"]
 
@@ -159,12 +158,16 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("2_bqta7")
 text = "I love you too."
 target_line_idx = 25
+end_branch_idx = 31
+convergence_idx = 39
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_awux1"]
 script = ExtResource("2_bqta7")
 text = "I'm sorry."
 target_line_idx = 32
+end_branch_idx = 38
+convergence_idx = 39
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_o7flv"]
@@ -317,7 +320,7 @@ script = ExtResource("1_no05o")
 click_advance = false
 base_speed = 0.5
 character_name = "Ava?"
-text = "[shake]YOU WILL GET WHAT YOU DESERVE"
+text = "[shake][color=red]YOU WILL GET WHAT YOU DESERVE"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_vh26l"]
@@ -335,7 +338,7 @@ base_speed = 0.5
 signal_on_advance = "fade_out_red_tint"
 hide_image_after = true
 character_name = "Ava?"
-text = "[shake]I WILL FUCKING KILL YOU, YOU TRAITO-"
+text = "[shake][color=red]I WILL FUCKING KILL YOU, YOU TRAITO-"
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_7kj7r"]

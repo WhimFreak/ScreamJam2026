@@ -8,6 +8,7 @@ extends CharacterBody2D
 		cur_char = val
 		if animation_player:
 			animation_player.play("idle_" + val.to_lower())
+@export var sitting: bool = false
 
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var interaction_label: RichTextLabel = $InteractionLabel
@@ -22,10 +23,20 @@ var can_act: bool = true
 
 func _ready() -> void:
 	Events.disable_player_action.connect(func(): can_act = false)
-	Events.enable_player_action.connect(func(): can_act = true)
+	Events.enable_player_action.connect(
+		func():
+			can_act = true
+			sitting = false)
 	cur_char = cur_char
 
 func _physics_process(delta:float) -> void:
+	if sitting:
+		animation_player.play("sit_rudy")
+		sprite_2d.z_index = 2
+		return
+		
+	sprite_2d.z_index = 0
+	
 	if not can_act:
 		animation_player.play("idle_" + cur_char.to_lower())
 		interaction_label.hide()

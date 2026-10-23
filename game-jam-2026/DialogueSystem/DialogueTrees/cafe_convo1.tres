@@ -335,12 +335,16 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("2_300mh")
 text = "I've had worse days"
 target_line_idx = 54
+end_branch_idx = 57
+convergence_idx = 64
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_r2cj4"]
 script = ExtResource("2_300mh")
 text = "I'm having a good time"
 target_line_idx = 58
+end_branch_idx = 63
+convergence_idx = 64
 metadata/_custom_type_script = "uid://cpa1tl0l7wdrq"
 
 [sub_resource type="Resource" id="Resource_ik3ie"]
@@ -365,7 +369,6 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
 [sub_resource type="Resource" id="Resource_rkoaw"]
 script = ExtResource("1_0pbus")
-click_advance = false
 character_name = "May"
 text = "I'll take it."
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
