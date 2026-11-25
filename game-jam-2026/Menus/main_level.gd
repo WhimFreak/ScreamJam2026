@@ -121,7 +121,7 @@ func play_ending() -> void:
 	Events.disable_player_action.emit()
 	MusicPlayer.stop(3.0)
 
-	# Built in code on a top layer so it covers everything, including the dialogue
+	
 	var layer := CanvasLayer.new()
 	layer.layer = 100
 	add_child(layer)

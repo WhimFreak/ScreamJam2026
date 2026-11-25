@@ -92,7 +92,7 @@ metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 script = ExtResource("1_guyx0")
 delay_before_next = 4.0
 character_name = "Rudy"
-text = "I open the glate slowly...."
+text = "I open the gate slowly...."
 sound_effect = ExtResource("6_ybuti")
 metadata/_custom_type_script = "uid://dsklo1nyldsmy"
 
